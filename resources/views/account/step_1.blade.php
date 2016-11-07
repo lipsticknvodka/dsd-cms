@@ -5,7 +5,7 @@
 
 @include('errors.list')
 
-{!! Form::open() !!}
+{!! Form::model($account) !!}
 
 
 <div class="row" id="progress-bar">
