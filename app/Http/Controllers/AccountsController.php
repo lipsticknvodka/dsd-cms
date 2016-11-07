@@ -230,7 +230,7 @@ class AccountsController extends Controller
     public function postAccount(Request $request)
     {
         $this->validate($request, [
-            'account_no' => 'required|account_no'
+            'account_no' => 'required'
         ]);
 
         $account = Account::firstOrCreate(['account_no' => $request->input('account_no')]);
