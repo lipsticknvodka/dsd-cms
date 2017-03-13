@@ -3,7 +3,8 @@
 namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use App\Account;
+
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class User extends Authenticatable
 {
@@ -15,6 +16,10 @@ class User extends Authenticatable
      *
      * @var array
      */
+    use SoftDeletes;
+
+    protected $dates = ['deleted_at'];
+
     protected $fillable = [
         'name', 'email', 'password',
     ];
@@ -39,4 +44,9 @@ class User extends Authenticatable
         return $this->hasMany('App\Account');
     }
 
+
+    public function revisions(){
+
+        return $this->hasMany('\App\Revision');
+    }
 }

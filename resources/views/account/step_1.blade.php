@@ -1,40 +1,57 @@
-<h1>Step 1</h1>
-
-@include('errors.list')
+@extends('layouts.app')
 
 
-@include('errors.list')
 
-{!! Form::open() !!}
+@section('content')
+
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                {{--<div class="panel panel-default" id="content">--}}
+                    {{--<div class="panel-heading">Create New Account</div>--}}
+
+                    <div class="content-body">
+                                <div class="arrow-steps clearfix">
+                                    <div class="step current"><div class="glyphicon glyphicon-folder-open"></div><span>General</span> </div>
+                                    <div class="step"> <div class="glyphicon glyphicon-credit-card"></div><span>Billing</span> </div>
+                                    <div class="step"> <div class="glyphicon glyphicon-phone-alt"></div><span>Contact</span> </div>
+                                </div>
+
+                        @include('errors.list')
 
 
-<div class="row" id="progress-bar">
+                        {!! Form::model($account) !!}
 
-    <img src="/images/dsd-admin-icons/progress-bars/new-acct-1.png" class="img-responsive">
+<div class="col-sm-6 col-sm-offset-3">
+                        <div class="form-group col-xs-12">
+                            {!! Form::label('account_no','Account Number')  !!}
+                            {!! Form::text('account_no', null, ['class'=>'form-control']) !!}
 
+                            {{csrf_field()}}
+                        </div>
+
+                        <div class="form-group col-xs-12">
+                            {!! Form::label('name','Account Name')  !!}
+                            {!! Form::text('name', null, ['class'=>'form-control']) !!}
+
+                        </div>
+
+                        <div class="form-group col-xs-12">
+                            {!! Form::label('acct_type','Account Type')  !!}
+                            {!! Form::select('acct_type', ['CFS' => 'CFS', 'Trucking' => 'Trucking', 'CFS & Trucking' => 'CFS & Trucking'], null, ['class'=>'form-control']) !!}
+                        </div>
+
+                            <div class="col-xs-12">
+                                <button type="submit" class="btn btn-warning pull-right">Continue</button>
+                            </div>
 </div>
-<div class="form-group">
-    {!! Form::label('account_no','Account Number')  !!}
-    {!! Form::text('account_no', null, ['class'=>'form-control']) !!}
-
-    {{csrf_field()}}
-</div>
-
-<div class="form-group">
-    {!! Form::label('name','Customer Name')  !!}
-    {!! Form::text('name', null, ['class'=>'form-control']) !!}
-
-</div>
-
-<div class="form-group">
-    {!! Form::label('acct_type','Account Type')  !!}
-    {!! Form::select('acct_type', ['cfs' => 'CFS', 'trucking' => 'Trucking'], null, ['class'=>'form-control']) !!}
-</div>
-
-<button type="submit">Submit</button>
-{!! Form::close() !!}
+                        {!! Form::close() !!}
 
 
-{{--{!! Form::model($account) !!}--}}
-{{--{!! Form::label('name', 'What is your name?') !!}<br>--}}
-{{--{!! Form::text('name') !!}<br>--}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+

@@ -2,6 +2,10 @@
 
 return [
 
+    'fileDestinationPath' =>'uploads',
+    'allowedFileTypes' =>'jpg,jpeg,bmp,pdf',
+    'maxFileSize' => 3000,
+    //3000 = 3MB
     /*
     |--------------------------------------------------------------------------
     | Application Environment
@@ -150,6 +154,9 @@ return [
         Collective\Html\HtmlServiceProvider::class,
 
 
+//        Spatie\MediaLibrary\MediaLibraryServiceProvider::class,
+
+
 
 
 
@@ -161,6 +168,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        Intervention\Image\ImageServiceProvider::class,
+        'Maatwebsite\Excel\ExcelServiceProvider',
     ],
 
     /*
@@ -208,7 +217,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
-
+        'Image' => Intervention\Image\Facades\Image::class,
+        'Excel' => 'Maatwebsite\Excel\Facades\Excel',
 
     ],
 

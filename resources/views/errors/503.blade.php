@@ -1,47 +1,20 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Be right back.</title>
+@extends('layouts.customer')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+@section('content')
 
-        <style>
-            html, body {
-                height: 100%;
-            }
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                <div class="panel panel-default" id="content">
+                    <div class="panel-heading">Error 503</div>
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                color: #B0BEC5;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 72px;
-                margin-bottom: 40px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Be right back.</div>
+                    <div class="panel-body">
+                        <h3>Error 503</h3>
+                        <h4>The page your are looking for cannot be found. </h4>
+                        <a href="{{ URL::previous() }}">Return to previous page.</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </body>
-</html>
+    </div>
+@endsection

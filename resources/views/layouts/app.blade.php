@@ -1,3 +1,4 @@
+<base href="{{url('/')}}" />
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,689 +7,625 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>DSD Companies</title>
+{{--    {{ HTML::style('css/style.css') }}--}}
 
-    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css" >
+
+{{--    <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" >--}}
+
+    {{--<link type="text/css" href="css/bootstrap-timepicker.min.css" />--}}
+
+    {{--<link rel="stylesheet" type="text/css" href="/css/lity.css" >--}}
+
+
+    {{--LIGHTBOX --}}
+    <link rel="stylesheet" type="text/css" href="/css/lightbox.css">
+    <script src="/js/lightbox.min.js" type="text/javascript"></script>
+    {{--END LIGHTBOX --}}
+
+    <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/Eonasdan/bootstrap-datetimepicker/master/build/css/bootstrap-datetimepicker.min.css" >
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
+
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    {{--<link rel="preload" type="text/css" href="/css/style.css" as="style" onload="this.rel='stylesheet'">--}}
+    {{--<link rel="preload" type="text/css" href="../css/style.css" as="style" onload="this.rel='stylesheet'">--}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.css" >
 
-    {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
+    {{--="{{ elixir('css/app.css') }}" rel="stylesheet">--}}
 
     <style>
-        body {
-            font-family: 'Lato';
-        }
 
-        .fa-btn {
-            margin-right: 6px;
-        }
-
-        .side-menu {
-            position: fixed;
-            width: 300px;
-            height: 100%;
-            background-color: #f8f8f8;
-            border-right: 1px solid #e7e7e7;
-        }
-        .side-menu .navbar {
-            border: none;
-        }
-        .side-menu .navbar-header {
-            width: 100%;
-            border-bottom: 1px solid #e7e7e7;
-        }
-        .side-menu .navbar-nav .active a {
-            background-color: transparent;
-            margin-right: -1px;
-            border-right: 5px solid #e7e7e7;
-        }
-        .side-menu .navbar-nav li {
+        .clearfix:after {
+            clear: both;
+            content: "";
             display: block;
-            width: 100%;
-            border-bottom: 1px solid #e7e7e7;
-        }
-        .side-menu .navbar-nav li a {
-            padding: 15px 75px;
-        }
-        .side-menu .navbar-nav li a .glyphicon {
-            padding-right: 25px;
-        }
-        .side-menu #dropdown {
-            border: 0;
-            margin-bottom: 0;
-            border-radius: 0;
-            background-color: transparent;
-            box-shadow: none;
-        }
-        .side-menu #dropdown .caret {
-            float: right;
-            margin: 9px 5px 0;
-        }
-        .side-menu #dropdown .indicator {
-            float: right;
-        }
-        .side-menu #dropdown > a {
-            border-bottom: 1px solid #e7e7e7;
-        }
-        .side-menu #dropdown .panel-body {
-            padding: 0;
-            background-color: #f3f3f3;
-        }
-        .side-menu #dropdown .panel-body .navbar-nav {
-            width: 100%;
-        }
-        .side-menu #dropdown .panel-body .navbar-nav li {
-            padding-left: 15px;
-            border-bottom: 1px solid #e7e7e7;
-        }
-        .side-menu #dropdown .panel-body .navbar-nav li:last-child {
-            border-bottom: none;
-        }
-        .side-menu #dropdown .panel-body .panel > a {
-            margin-left: -20px;
-            padding-left: 35px;
-        }
-        .side-menu #dropdown .panel-body .panel-body {
-            margin-left: -15px;
-        }
-        .side-menu #dropdown .panel-body .panel-body li {
-            padding-left: 30px;
-        }
-        .side-menu #dropdown .panel-body .panel-body li:last-child {
-            border-bottom: 1px solid #e7e7e7;
-        }
-        .side-menu #search-trigger {
-            background-color: #f3f3f3;
-            border: 0;
-            border-radius: 0;
-            position: absolute;
-            top: 0;
-            right: 0;
-            padding: 15px 18px;
-        }
-        .side-menu .brand-name-wrapper {
-            min-height: 50px;
-        }
-        .side-menu .brand-name-wrapper .navbar-brand {
-            display: block;
-        }
-        .side-menu #search {
-            position: relative;
-            z-index: 1000;
-        }
-        .side-menu #search .panel-body {
-            padding: 0;
-        }
-        .side-menu #search .panel-body .navbar-form {
-            padding: 0;
-            padding-right: 50px;
-            width: 100%;
-            margin: 0;
-            position: relative;
-            border-top: 1px solid #e7e7e7;
-        }
-        .side-menu #search .panel-body .navbar-form .form-group {
-            width: 100%;
-            position: relative;
-        }
-        .side-menu #search .panel-body .navbar-form input {
-            border: 0;
-            border-radius: 0;
-            box-shadow: none;
-            width: 100%;
-            height: 50px;
-        }
-        .side-menu #search .panel-body .navbar-form .btn {
-            position: absolute;
-            right: 0;
-            top: 0;
-            border: 0;
-            border-radius: 0;
-            background-color: #f3f3f3;
-            padding: 15px 18px;
-        }
-        /* Main body section */
-        .side-body {
-            /*margin-left: 310px;*/
-            margin-left: 287px;
+            height: 0;
         }
 
+        /*.container {*/
+        /*font-family: 'Lato', sans-serif;*/
+        /*width: 1000px;*/
+        /*margin: 0 auto;*/
+        /*}*/
 
-        .center-block {
-            float: none;
+        /*.wrapper {*/
+        /*display: table-cell;*/
+        /*height: 400px;*/
+        /*vertical-align: middle;*/
+        /*}*/
+
+        .nav {
+            margin-top: 40px;
+        }
+
+        /*.pull-right {*/
+            /*float: right;*/
+        /*}*/
+
+        /*a, a:active {*/
+            /*color: #333;*/
+            /*text-decoration: none;*/
+        /*}*/
+
+        /*a:hover {*/
+            /*color: #999;*/
+        /*}*/
+
+        /* Breadcrups CSS */
+
+        .arrow-steps{
             margin-left: auto;
             margin-right: auto;
+            width:90%;
+            margin-top:150px;
+            margin-bottom:50px;
         }
-
-        .input-group .icon-addon .form-control {
-            border-radius: 0;
-        }
-
-        .icon-addon {
-            position: relative;
-            color: #555;
-            display: block;
-        }
-
-        .icon-addon:after,
-        .icon-addon:before {
-            display: table;
-            content: " ";
-        }
-
-        .icon-addon:after {
-            clear: both;
-        }
-
-        .icon-addon.addon-md .glyphicon,
-        .icon-addon .glyphicon,
-        .icon-addon.addon-md .fa,
-        .icon-addon .fa {
-            position: absolute;
-            z-index: 2;
-            left: 10px;
-            font-size: 14px;
-            width: 20px;
-            margin-left: -2.5px;
+        .arrow-steps .step {
             text-align: center;
-            padding: 10px 0;
-            top: 1px
-        }
-
-        .icon-addon.addon-md .form-control,
-        .icon-addon .form-control {
-            padding-left: 30px;
+            color: #fff;
+            cursor: default;
+            margin: 0 3px;
+            padding: 10px 10px 10px 20px;
+            width: 150px;
+            font-size: 16px;
+            letter-spacing: 2px;
+            font-weight: bold;
             float: left;
-            font-weight: normal;
+            position: relative;
+            background-color: #ccc;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            transition: background-color 0.2s ease;
         }
 
-        #search-bar {
+        .arrow-steps .step:after,
+        .arrow-steps .step:before {
+            content: " ";
+            position: absolute;
+            top: 0;
+            right: -17px;
+            width: 0;
+            height: 0;
+            border-top: 45px solid transparent;
+            border-bottom: 45px solid transparent;
+            border-left: 17px solid #ccc;
+            z-index: 2;
+            transition: border-color 0.2s ease;
+        }
+
+        .arrow-steps .step:before {
+            right: auto;
+            left: 0;
+            border-left: 17px solid #fff;
+            z-index: 0;
+        }
+
+        .arrow-steps .step:first-child:before {
+            border: none;
+        }
+
+        .arrow-steps .step:first-child {
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+
+        .arrow-steps .step span {
+            position: relative;
+        }
+
+        .arrow-steps .step span:before {
+            opacity: 0;
+            content: "✔";
+            position: absolute;
+            top: -2px;
+            left: -20px;
+        }
+
+        .arrow-steps .step.done span:before {
+            opacity: 1;
+            -webkit-transition: opacity 0.3s ease 0.5s;
+            -moz-transition: opacity 0.3s ease 0.5s;
+            -ms-transition: opacity 0.3s ease 0.5s;
+            transition: opacity 0.3s ease 0.5s;
+        }
+
+        .arrow-steps .step.current {
+            color: #fff;
             background-color: #960a0a;
-            padding: 0px 10px;
         }
 
-        #search-input {
-            margin-bottom:0px;
-            padding:10px 0px;
-
+        .arrow-steps .step.current:after {
+            border-left: 17px solid #960a0a;
         }
 
-        #admin-nav{
-            margin-bottom:0px;
-
+        .arrow-steps .glyphicon.glyphicon {
+            display: block;
+            font-size: 25px;
+            line-height: 2;
         }
 
-        .image-swap{
-            width: 27px;
-            height: 37px;
-            background-image: url('/images/dsd-admin-icons/trucking-hover.png');
-            background-repeat: no-repeat;
-            background-position: 0 0;
+
+        nav.sidebar, .main{
+            margin-top:150px;
+            -webkit-transition: margin 200ms ease-out;
+            -moz-transition: margin 200ms ease-out;
+            -o-transition: margin 200ms ease-out;
+            transition: margin 200ms ease-out;
         }
 
-        .image-swap:hover {
-            background-position: 0 100%;
-            padding:0;
-            font-color:#fff;
+        .main{
+            padding: 10px 10px 0 10px;
         }
 
-        #progress-bar img{
-
-            max-width: 363px;
-            margin: 15px auto 25px auto;
+        nav.sidebar .navbar-nav .open .dropdown-menu>li>a:hover, nav.sidebar .navbar-nav .open .dropdown-menu>li>a:focus {
+            color: #CCC;
+            background-color: transparent;
+            margin-left:15px;
         }
 
-        /* small screen */
-        @media (max-width: 768px) {
-            .side-menu {
-                position: relative;
+        /*nav:hover .forAnimate{*/
+            /*opacity: 1;*/
+        /*}*/
+
+
+
+        /*@media (min-width: 765px) {*/
+
+
+        /*.navbar-nav>li {*/
+            /*float: left;*/
+            /*!* width: 10; *!*/
+            /*width: 200px;*/
+        /*}*/
+            .main{
+                position: absolute;
+                width: calc(100% - 40px);
+                margin-left: 40px;
+                float: right;
+            }
+
+            nav.sidebar:hover + .main{
+                margin-left: 200px;
+            }
+
+            nav.sidebar.navbar.sidebar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+                margin-left: 0px;
+            }
+
+            nav.sidebar .navbar-brand, nav.sidebar .navbar-header{
+                text-align: center;
                 width: 100%;
-                height: 0;
-                border-right: 0;
-                border-bottom: 1px solid #e7e7e7;
+                margin-left: 0px;
             }
-            .side-menu .brand-name-wrapper .navbar-brand {
-                display: inline-block;
+
+            nav.sidebar a{
+                padding-right: 13px;
             }
-            /* Slide in animation */
-            @-moz-keyframes slidein {
-                0% {
-                    left: -300px;
-                }
-                100% {
-                    left: 10px;
-                }
+
+            nav.sidebar .navbar-nav > li:first-child{
+                border-top: 1px #e5e5e5 solid;
             }
-            @-webkit-keyframes slidein {
-                0% {
-                    left: -300px;
-                }
-                100% {
-                    left: 10px;
-                }
+
+            nav.sidebar .navbar-nav > li{
+                border-bottom: 1px #e5e5e5 solid;
+                margin-bottom: 0px;
             }
-            @keyframes slidein {
-                0% {
-                    left: -300px;
-                }
-                100% {
-                    left: 10px;
-                }
-            }
-            @-moz-keyframes slideout {
-                0% {
-                    left: 0;
-                }
-                100% {
-                    left: -300px;
-                }
-            }
-            @-webkit-keyframes slideout {
-                0% {
-                    left: 0;
-                }
-                100% {
-                    left: -300px;
-                }
-            }
-            @keyframes slideout {
-                0% {
-                    left: 0;
-                }
-                100% {
-                    left: -300px;
-                }
-            }
-            /* Slide side menu*/
-            /* Add .absolute-wrapper.slide-in for scrollable menu -> see top comment */
-            .side-menu-container > .navbar-nav.slide-in {
-                -moz-animation: slidein 300ms forwards;
-                -o-animation: slidein 300ms forwards;
-                -webkit-animation: slidein 300ms forwards;
-                animation: slidein 300ms forwards;
-                -webkit-transform-style: preserve-3d;
-                transform-style: preserve-3d;
-            }
-            .side-menu-container > .navbar-nav {
-                /* Add position:absolute for scrollable menu -> see top comment */
-                position: fixed;
-                left: -300px;
-                width: 300px;
-                top: 43px;
-                height: 100%;
-                border-right: 1px solid #e7e7e7;
-                background-color: #f8f8f8;
-                -moz-animation: slideout 300ms forwards;
-                -o-animation: slideout 300ms forwards;
-                -webkit-animation: slideout 300ms forwards;
-                animation: slideout 300ms forwards;
-                -webkit-transform-style: preserve-3d;
-                transform-style: preserve-3d;
-            }
-            /* Uncomment for scrollable menu -> see top comment */
-            /*.absolute-wrapper{
-                  width:285px;
-                  -moz-animation: slideout 300ms forwards;
-                  -o-animation: slideout 300ms forwards;
-                  -webkit-animation: slideout 300ms forwards;
-                  animation: slideout 300ms forwards;
-                  -webkit-transform-style: preserve-3d;
-                  transform-style: preserve-3d;
-              }*/
-            @-moz-keyframes bodyslidein {
-                0% {
-                    left: 0;
-                }
-                100% {
-                    left: 300px;
-                }
-            }
-            @-webkit-keyframes bodyslidein {
-                0% {
-                    left: 0;
-                }
-                100% {
-                    left: 300px;
-                }
-            }
-            @keyframes bodyslidein {
-                0% {
-                    left: 0;
-                }
-                100% {
-                    left: 300px;
-                }
-            }
-            @-moz-keyframes bodyslideout {
-                0% {
-                    left: 300px;
-                }
-                100% {
-                    left: 0;
-                }
-            }
-            @-webkit-keyframes bodyslideout {
-                0% {
-                    left: 300px;
-                }
-                100% {
-                    left: 0;
-                }
-            }
-            @keyframes bodyslideout {
-                0% {
-                    left: 300px;
-                }
-                100% {
-                    left: 0;
-                }
-            }
-            /* Slide side body*/
-            .side-body {
-                margin-left: 5px;
-                margin-top: 70px;
-                position: relative;
-                -moz-animation: bodyslideout 300ms forwards;
-                -o-animation: bodyslideout 300ms forwards;
-                -webkit-animation: bodyslideout 300ms forwards;
-                animation: bodyslideout 300ms forwards;
-                -webkit-transform-style: preserve-3d;
-                transform-style: preserve-3d;
-            }
-            .body-slide-in {
-                -moz-animation: bodyslidein 300ms forwards;
-                -o-animation: bodyslidein 300ms forwards;
-                -webkit-animation: bodyslidein 300ms forwards;
-                animation: bodyslidein 300ms forwards;
-                -webkit-transform-style: preserve-3d;
-                transform-style: preserve-3d;
-            }
-            /* Hamburger */
-            .navbar-toggle {
+
+            nav.sidebar .navbar-nav .open .dropdown-menu {
+                position: static;
+                float: none;
+                width: auto;
+                margin-top: 0;
+                background-color: transparent;
                 border: 0;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+            }
+
+            nav.sidebar .navbar-collapse, nav.sidebar .container-fluid{
+                padding: 0 0px 0 0px;
+            }
+
+            .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+                color: #777;
+            }
+
+            nav.sidebar{
+                width: 200px;
+                height: 100%;
+                margin-left: -160px;
                 float: left;
-                padding: 18px;
-                margin: 0;
-                border-radius: 0;
-                background-color: #f3f3f3;
+                margin-bottom: 0px;
             }
-            /* Search */
-            #search .panel-body .navbar-form {
-                border-bottom: 0;
-            }
-            #search .panel-body .navbar-form .form-group {
-                margin: 0;
+
+            nav.sidebar li {
+                width: 100%;
             }
 
 
-            .navbar-header {
-                /* this is probably redundant */
-                position: fixed;
-                z-index: 3;
-                background-color: #f8f8f8;
+
+            .forAnimate{
+                opacity: 0;
             }
-            /* Dropdown tweek */
-            #dropdown .panel-body .navbar-nav {
-                margin: 0;
+        /*}*/
+
+        /*@media (min-width: 330px) {*/
+
+            .main{
+                width: calc(100% - 200px);
+                margin-left: 200px;
             }
-        }
+
+            nav.sidebar{
+                margin-left: 0px;
+                float: left;
+            }
+
+            nav.sidebar .forAnimate{
+                opacity: 1;
+            }
+        /*}*/
+
     </style>
 </head>
 <body id="app-layout">
-    <nav class="navbar navbar-default navbar-static-top" id="admin-nav">
+{{--<div class="wrapper">--}}
+
+
+<header>
+    <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-            <div class="navbar-header">
+            <div class="row hidden-xs" id="user-links">
+                <div class="pull-right" role="group" aria-label="">
+                    {{--<img src="/images/dsd-admin-icons/user-loggedin.png">--}}
+                    {{--<p>Welcome, {‌{ Auth::user()->name }} --}}
+                    <div class="user-loggedIn" style="display:flex;">
+                        @if(Auth::check())
+                            <img src="/images/dsd-admin-icons/user-loggedin.png" height="22px" style="padding-right:5px;"><p>Welcome, {{Auth::user()->name}} | {{link_to_route('logout', 'Logout')}}</p>
 
-                <!-- Collapsed Hamburger -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+                            @else
+{{--                                                          {{link_to_route('login', 'Login')}}--}}
+                            {{--<a href="/login">Login</a>--}}
 
-                <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    <!--<img src="/images/logo.png" width="50px">--> DSD Companies
-                </a>
-
-                {{--<!-- Search -->--}}
-                {{--<a data-toggle="collapse" href="#search" class="btn btn-default" id="search-trigger">--}}
-                    {{--<span class="glyphicon glyphicon-search"></span>--}}
-                {{--</a>--}}
-
-
-
+                        @endif
+                    </div>
+                </div>
             </div>
 
-                <!-- Search body -->
-                {{--<div id="search" class="panel-collapse collapse">--}}
-                    {{--<div class="panel-body">--}}
-                        {{--<form class="navbar-form" role="search">--}}
-                            {{--<div class="form-group">--}}
-                                {{--<input type="text" class="form-control" placeholder="Search by MAWB or Reference No.">--}}
-                            {{--</div>--}}
-                            {{--<button type="submit" class="btn btn-default "><span class="glyphicon glyphicon-search"></span></button>--}}
-                        {{--</form>--}}
+            <a href="home" class="navbar-brand"><img src="images/logo.png" id="header-logo" alt="dsd trucking">DSD Companies</a>
+
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navHeaderCollapse" aria-expanded="false" aria-controls="navbar">
+                <!--<button type="button" class="navbar-toggle menu-top push-body" data-toggle="collapse" data-target=".navHeaderCollapse">-->
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse navHeaderCollapse">
+                {{--<!-- <div class="collapse navbar-collapse cbp-spmenu cbp-spmenu-horizonal cbp-spmenu-top navHeaderCollapse">-->--}}
+                {{--<div class="visible-xs row" id="header-buttons">--}}
+                    {{--<div class="btn-group" role="group" aria-label="">--}}
+                        {{--<a href="/request-quote"><button type="button" class="btn btn-warning">Request Quote</button></a>--}}
+                        {{--<a href="/request-account"><button type="button" class="btn btn-warning" href="request-account.php">Request Account</button></a>--}}
                     {{--</div>--}}
+
+                <div class="row visible-xs" id="user-links">
+                    <div class="pull-left" role="group" aria-label="">
+                        {{--<img src="/images/dsd-admin-icons/user-loggedin.png">--}}
+                        {{--<p>Welcome, {‌{ Auth::user()->name }} --}}
+                        <div class=" col-xs-12 user-loggedIn" style="display:flex;">
+                            @if(Auth::check())
+                                <img src="/images/dsd-admin-icons/user-loggedin.png" height="22px" style="padding-right:5px;"><p>Welcome, {{Auth::user()->name}} | {{link_to_route('logout', 'Logout')}}</p>
+
+                            @else
+                                {{--<li>{{link_to_route('login', 'Login')}}</li>--}}
+
+                            @endif
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li class=""><a href="home">Home</a></li>
+                    <li class="dropdown">
+                        <a href="about" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about">About DSD</a></li>
+                            <li><a href="facilities">Facilities</a></li>
+                            <!--<li><a href="sustainability.php">Sustainability</a></li>-->
+                            <li><a href="faq">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="services" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="air-freight">Air Freight</a></li>
+                            <li><a href="ocean-freight">Ocean Freight</a></li>
+                            <li><a href="trucking">Trucking</a></li>
+                            <li><a href="hot-shot">Hot Shot Service</a></li>
+                            <li><a href="warehousing">Warehousing</a></li>
+                            <li><a href="cargo-screening">Cargo Screening</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="freight-availability">Freight Availability</a></li>
+                    <li class="last-item"><a href="contact">Contact</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="row-fluid" id="search-bar">
+            <div class="container">
+                <form action="/search-results-admin" method="POST" role="search">
+                    {{ csrf_field() }}
+                    {{--<div class="input-group col-xs-12">--}}
+                        {{--{{Form::open(['method'=>'GET','url'=>'search-results', 'role'=>'search'])}}--}}
+
+
+                        {{--<input type="text" class="form-control" name="adminQuery"--}}
+                               {{--placeholder="xxx-xxxx xxxx, xxxxxxxxxxx, or xxxxxxxxxx"> <span class="input-group-btn">--}}
+                                    {{--<button type="submit" id='search' class="btn btn-warning">--}}
+                                    {{--<span class="glyphicon glyphicon-search"></span>--}}
+                                    {{--</button>--}}
+                                    {{--</span>--}}
+                        {{--{{Form::close()}}--}}
+                    {{--</div>--}}
+                {{--</form>--}}
+
+                <div class="form-group col-xs-12 col-sm-4" id="search-input">
+                    {{--<form action="/search-results-admin" method="POST" role="search">--}}
+                   {{--<div class="input-group">--}}
+                    <div class="icon-addon addon-sm">
+
+                        <input type="text" class="form-control" name="adminQuery"
+                               placeholder="Search accounts, cfs and trucking" id="search">
+                        <label for="search" class="glyphicon glyphicon-search" rel="tooltip" title="search"></label>
+                        <span class="input-group-btn">
+                        <button type="submit" id='search' class="btn btn-warning hidden-xs hidden-sm hidden-md hidden-lg hidden-xl" >Submit</button>
+
+                        </span>
+                                    {{--<span class="glyphicon glyphicon-search"></span>--}}
+                    </div>
+
                 {{--</div>--}}
 
+            </div>
+                </form>
+        </div>
+    </div>
+</header>
+
+
+<section class="row-fluid">
+    <nav class="navbar navbar-default sidebar" role="navigation">
+        {{--<div class="container-fluid">--}}
+            {{--<div class="navbar-header">--}}
+                {{--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">--}}
+                    {{--<span class="sr-only">Toggle navigation</span>--}}
+                    {{--<span class="icon-bar"></span>--}}
+                    {{--<span class="icon-bar"></span>--}}
+                    {{--<span class="icon-bar"></span>--}}
+                {{--</button>--}}
             {{--</div>--}}
+        {{--<div class="container">--}}
+            {{--<div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">--}}
 
-            <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
-                    <li><a href="{{ url('/home') }}">About</a></li>
-                    <li><a href="{{ url('/home') }}">Services</a></li>
-                    <li><a href="{{ url('/home') }}">Freight Availability</a></li>
-                    <li><a href="{{ url('/home') }}">Contact</a></li>
-                </ul>
+                    <li class="panel panel-default"><a href="/dashboard">Dashboard<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-dashboard"></span></a></li>
+                        <!-- Dropdown-->
+                        <li class="panel panel-default" id="dropdown">
+                        <a data-toggle="collapse" href="#dropdown-accounts">
+                       Accounts <span class="caret"></span> <span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-user"></span>
+                        </a>
 
-                <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right">
-                    <!-- Authentication Links -->
-                    @if (Auth::guest())
-                        {{--<li><a href="{{ url('/login') }}">Login</a></li>--}}
-                        {{--<li><a href="{{ url('/register') }}">Register</a></li>--}}
-                    @else
-                        <li> <a href="#"><img src="/images/dsd-admin-icons/user-loggedin.png" width="20px">Welcome,    {{ Auth::user()->name }} |</a></li>
-                       <li><a href="{{ url('/logout') }}">Logout</a></li>
-                    @endif
+                        <div id="dropdown-accounts" class="panel-collapse collapse">
+                        <div class="panel-body">
+                        <ul class="nav navbar-nav">
+                        <li><a href="/account">View All<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-list"></span></a></li>
+                        {{--<li><a href="/account/step/1">Add New<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-plus"></span></a></li>--}}
+                        <li><a href="/account/trash">Trash<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-trash"></span></a></li>
+                        {{--<li><a href="/account/history"> History<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-time"></span></a></li>--}}
+                        </ul>
+                        </div>
+                        </div><!-- /.navbar-collapse -->
+                        </li>
+
+                        <!-- Dropdown-->
+                    <li class="panel panel-default" id="dropdown">
+                        <a data-toggle="collapse" href="#dropdown-cfs">
+                            CFS <span class="caret"></span> <span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-plane"></span>
+                        </a>
+
+                        <div id="dropdown-cfs" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="/cfs">View All <span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-list"></span></a></li>
+                                    <li><a href="/cfs/open">Open/Pending<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-pushpin"></span></a></li>
+                                    <li><a href="/cfs/trash">Trash<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-trash"></span></a></li>
+                                    {{--<li><a href="/cfs/history"> History<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-time"></span></a></li>--}}
+                                </ul>
+                            </div>
+                        </div><!-- /.navbar-collapse -->
+                    </li>
+
+                        <!-- Dropdown-->
+                    <li class="panel panel-default" id="dropdown">
+                        <a data-toggle="collapse" href="#dropdown-trucking">
+                            Trucking <span class="caret"></span> <span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-road"></span>
+                        </a>
+
+                        <div id="dropdown-trucking" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="/trucking">View All<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-list"></span></a></li>
+                                    <li><a href="/trucking/open">Open/Pending<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-pushpin"></span></a></li>
+                                    <li><a href="/trucking/trash">Trash<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-trash"></span></a></li>
+                                    {{--<li><a href="/trucking/history"> History<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-time"></span></a></li>--}}
+                                </ul>
+                            </div>
+
+                        </div><!-- /.navbar-collapse -->
+                    </li>
+
+                    <li class="panel panel-default"><a href="history"> History<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-time"></span></a></li>
+
                 </ul>
             </div>
         </div>
     </nav>
 
+</section>
 
-    <div class="row" id="search-bar">
+
+
+
+<!-- Main Content -->
+<div class="container-fluid">
+    <div class="side-body">
+        @yield('content')
+
+    </div>
+</div>
+{{--</div>--}}
+
+    {{--<div class="push"></div>--}}
+
+<footer>
+    <div class="row-fluid" id="footer">
         <div class="container">
-               <div class="form-group col-sm-4" id="search-input">
-                   <div class="icon-addon addon-sm">
-                       <input type="text" placeholder="Search by MAWB or Reference No." class="form-control" id="search">
-                       <label for="search" class="glyphicon glyphicon-search" rel="tooltip" title="search"></label>
-                   </div>
-               </div>
-        </div>
-    </div>
+            <div class="col-xs-12 col-sm-5">
+                <h4>Vision</h4> <p>To create an enduring, people-centered partnership, founded on basis of trust and respect, which has been earned through cultivating a consistent delivery of superior services, to a worldwide base of customers, creating a Global reach, with a Local Touch.</p>
+                <p class="copy"><a href="home"><img src="images/logo.png" id="footer-logo" class="img-responsive hidden-xs" alt="dsd trucking" width="50"></a>&copy; Copyright 2015 DSD Trucking</p>
+            </div>
 
-    </div>
-
-        </div>
-
-    </div>
-
-    <div class="row">
-        <!-- uncomment code for absolute positioning tweek see top comment in css -->
-        <!-- <div class="absolute-wrapper"> </div> -->
-        <!-- Menu -->
-        <div class="side-menu">
-
-            <nav class="navbar navbar-default" role="navigation">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <div class="brand-wrapper">
-                        <!-- Hamburger -->
-                        <button type="button" class="navbar-toggle">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-
-
-                    </div>
-
+            <div class="col-xs-12 col-sm-4">
+                <div class="row">
+                    <h4>CFS, Intermodal, CCSF, Trucking &amp; Bonded Warehouse</h4>
+                    <address>
+                        <p>2411 Santa Fe Ave.</p>
+                        <p>Redondo Beach, CA 90278</p>
+                        <p><strong>Operating 24/7</strong></p>
+                        <!--<p><i class="fa fa-phone 2x"></i> <a href="tel:+13107251999">310-725-1999</a></p>
+                        <p><i class="fa fa-print"></i> <a href="tel:+13107251996">310-725-1996</a></p>-->
+                    </address>
                 </div>
 
-                <!-- Main Menu -->
-                <div class="side-menu-container">
-                    <ul class="nav navbar-nav">
+                <div class="row">
+                    <h4>Corporate &amp; Distribution Center</h4>
+                    <address>
+                        <p>8820 Bellanca Ave.</p>
+                        <p>Los Angeles, CA 90045</p>
 
-                        <li><a href="#"><span class="glyphicon"><img src="/images/dsd-admin-icons/dash.png"> </span> Dashboard</a></li>
+                        <p><strong>M-F</strong> 8am-10pm</p>
+                        <!--<p><i class="fa fa-phone 2x"></i> <a href="tel:+13103383395">310-338-3395</a></p>
+                        <p><i class="fa fa-print"></i> <a href="tel:+13103384177">310-338-4177</a></p>-->
+                    </address>
+                </div>
+            </div>
 
-                        <!-- Dropdown-->
-                            <li class="panel panel-default" id="dropdown">
-                                <a data-toggle="collapse" href="#dropdown-accounts">
-                                    <span class="glyphicon"><img src="/images/dsd-admin-icons/accounts.png"></span> Accounts <span class="caret"></span>
-                                </a>
-
-                                <div id="dropdown-accounts" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul class="nav navbar-nav">
-                                            <li><a href="#">View All</a></li>
-                                            <li><a href="/new-account">Add New</a></li>
-                                        </ul>
-                                    </div>
-                                </div><!-- /.navbar-collapse -->
-                            </li>
-
-                        <!-- Dropdown-->
-                        <li class="panel panel-default" id="dropdown">
-                            <a data-toggle="collapse" href="#dropdown-cfs">
-                                <span class="glyphicon"><img src="/images/dsd-admin-icons/cfs.png"></span> CFS <span class="caret"></span>
-                            </a>
-
-                            <div id="dropdown-cfs" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <ul class="nav navbar-nav">
-                                        <li><a href="#">View All</a></li>
-                                        <li><a href="#">Add New</a></li>
-                                    </ul>
-                                </div>
-                            </div><!-- /.navbar-collapse -->
-                        </li>
-
-                        <!-- Dropdown-->
-                        <li class="panel panel-default" id="dropdown">
-                            <a data-toggle="collapse" href="#dropdown-trucking">
-                       <span class="glyphicon"> <div  class="image-swap"></div></span>Trucking<span class="caret"></span>
-                                {{--<span class="glyphicon"><img src="/images/dsd-admin-icons/trucking.png"></span> Trucking <span class="caret"></span>--}}
-                            </a>
-
-                            <div id="dropdown-trucking" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <ul class="nav navbar-nav">
-                                        <li><a href="#">View All</a></li>
-                                        <li><a href="#">Add New</a></li>
-                                    </ul>
-                                </div>
-                            </div><!-- /.navbar-collapse -->
-                        </li>
-                    </ul>
-                    </div>
-            </nav>
-
-        </div>
-
-        <!-- Main Content -->
-        <div class="container-fluid">
-            <div class="side-body">
-                @yield('content')
-
+            <div class="col-xs-12 col-sm-3">
+                <div class="row">
+                    <p id="footer-contact">If you have any questions, please visit our <a href="faq.php">FAQ</a> page. You may also send DSD a message by visiting our <a href="contact.php">contact page</a>.</p>
+                    <!--<div class="btn btn-warning"><a href="#footer-contact" data-toggle="modal">Contact DSD</a></div>-->
+                </div>
+                <div class="row">
+                    <h4 class="no-margin-bottom">Social</h4>
+                    <a href="https://www.facebook.com/profile.php?id=100010145826646" target="_blank"><i class="col-xs-3 col-xs-offset-2 col-sm-offset-0 fa fa-facebook-square"></i></a><a href="https://twitter.com/dsdcompanies" target="_blank"><i class="col-xs-3 fa fa-twitter"></i></a>
+                    <a href="https://plus.google.com/+Dsdcompanies2411" target="_blank"><i class="col-xs-3 fa fa-google-plus"></i></a>
+                </div>
             </div>
         </div>
     </div>
+        {{--<div class="push"></div>--}}
+    {{--</div>--}}
 
-    {{--<footer>--}}
-        {{--<div class="row-fluid" id="footer">--}}
-            {{--<div class="container">--}}
-                {{--<div class="col-xs-12 col-sm-5">--}}
-                    {{--<h4>Vision</h4> <p>To create an enduring, people-centered partnership, founded on basis of trust and respect, which has been earned through cultivating a consistent delivery of superior services, to a worldwide base of customers, creating a Global reach, with a Local Touch.</p>--}}
-                    {{--<p class="copy"><a href="index.php"><img src="images/logo.png" id="footer-logo" class="img-responsive hidden-xs" alt="dsd trucking" width="50"></a>&copy; Copyright 2015 DSD Trucking</p>--}}
-                {{--</div>--}}
-
-                {{--<div class="col-xs-12 col-sm-4">--}}
-                    {{--<div class="row">--}}
-                        {{--<h4>CFS, Intermodal, CCSF, Trucking &amp; Bonded Warehouse</h4>--}}
-                        {{--<address>--}}
-                            {{--<p>2411 Santa Fe Ave.</p>--}}
-                            {{--<p>Redondo Beach, CA 90278</p>--}}
-                            {{--<p><strong>Operating 24/7</strong></p>--}}
-                            {{--<!--<p><i class="fa fa-phone 2x"></i> <a href="tel:+13107251999">310-725-1999</a></p>--}}
-                            {{--<p><i class="fa fa-print"></i> <a href="tel:+13107251996">310-725-1996</a></p>-->--}}
-                        {{--</address>--}}
-                    {{--</div>--}}
-
-                    {{--<div class="row">--}}
-                        {{--<h4>Corporate &amp; Distribution Center</h4>--}}
-                        {{--<address>--}}
-                            {{--<p>8820 Bellanca Ave.</p>--}}
-                            {{--<p>Los Angeles, CA 90045</p>--}}
-
-                            {{--<p><strong>M-F</strong> 8am-10pm</p>--}}
-                            {{--<!--<p><i class="fa fa-phone 2x"></i> <a href="tel:+13103383395">310-338-3395</a></p>--}}
-                            {{--<p><i class="fa fa-print"></i> <a href="tel:+13103384177">310-338-4177</a></p>-->--}}
-                        {{--</address>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-
-                {{--<div class="col-xs-12 col-sm-3">--}}
-                    {{--<div class="row">--}}
-                        {{--<p id="footer-contact">If you have any questions, please visit our <a href="faq.php">FAQ</a> page. You may also send DSD a message by visiting our <a href="contact.php">contact page</a>.</p>--}}
-                        {{--<!--<div class="btn btn-warning"><a href="#footer-contact" data-toggle="modal">Contact DSD</a></div>-->--}}
-                    {{--</div>--}}
-                    {{--<div class="row">--}}
-                        {{--<h4 class="no-margin-bottom">Social</h4>--}}
-                        {{--<a href="https://www.facebook.com/profile.php?id=100010145826646" target="_blank"><i class="col-xs-3 col-xs-offset-2 col-sm-offset-0 fa fa-facebook-square"></i></a><a href="https://twitter.com/dsdcompanies" target="_blank"><i class="col-xs-3 fa fa-twitter"></i></a>--}}
-                        {{--<a href="https://plus.google.com/+Dsdcompanies2411" target="_blank"><i class="col-xs-3 fa fa-google-plus"></i></a>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</footer>--}}
+{{--</div>--}}
 
 
-    <!-- JavaScripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
+</footer>
 
-<script type="application/javascript">
-    $(function () {
-        $('.navbar-toggle').click(function () {
-            $('.navbar-nav').toggleClass('slide-in');
-            $('.side-body').toggleClass('body-slide-in');
-            $('#search').removeClass('in').addClass('collapse').slideUp(200);
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+{{-- <script src="{{ elixir('js/app.js') }}"></script>--}}
 
-            /// uncomment code for absolute positioning tweek see top comment in css
-            //$('.absolute-wrapper').toggleClass('slide-in');
+<script src="http://code.jquery.com/jquery.min.js"></script>
 
-        });
+<script src="https://raw.githubusercontent.com/moment/moment/develop/min/moment-with-locales.min.js"></script>
 
-        // Remove menu for searching
-        $('#search-trigger').click(function () {
-            $('.navbar-nav').removeClass('slide-in');
-            $('.side-body').removeClass('body-slide-in');
+<script src="https://raw.githubusercontent.com/Eonasdan/bootstrap-datetimepicker/master/build/js/bootstrap-datetimepicker.min.js"></script>
 
-            /// uncomment code for absolute positioning tweek see top comment in css
-            //$('.absolute-wrapper').removeClass('slide-in');
 
-        });
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
+
+
+<script type="text/javascript">
+    $('.date').datepicker({
+        format: 'mm-dd-yyyy'
     });
 </script>
+
+
+{{--<script type="application/javascript">--}}
+    {{--$(function () {--}}
+        {{--$('.navbar-toggle').click(function () {--}}
+            {{--$('.navbar-nav').toggleClass('slide-in');--}}
+            {{--$('.side-body').toggleClass('body-slide-in');--}}
+            {{--$('#search').removeClass('in').addClass('collapse').slideUp(200);--}}
+
+            {{--/// uncomment code for absolute positioning tweek see top comment in css--}}
+            {{--//$('.absolute-wrapper').toggleClass('slide-in');--}}
+
+        {{--});--}}
+
+
+
+        {{--// Remove menu for searching--}}
+        {{--$('#search-trigger').click(function () {--}}
+            {{--$('.navbar-nav').removeClass('slide-in');--}}
+            {{--$('.side-body').removeClass('body-slide-in');--}}
+
+            {{--/// uncomment code for absolute positioning tweek see top comment in css--}}
+            {{--//$('.absolute-wrapper').removeClass('slide-in');--}}
+
+        {{--});--}}
+    {{--});--}}
+
+
+{{--</script>--}}
+<script src="/js/lightbox.min.js"></script>
 </body>
+
 </html>
+

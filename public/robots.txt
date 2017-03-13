@@ -1,2 +1,5 @@
-User-agent: *
-Disallow:
+User-agent: Googlebot
+
+Disallow: 404.php
+
+Allow: [the URL path in of a subdirectory, within a blocked parent directory, that you want to unblock]
