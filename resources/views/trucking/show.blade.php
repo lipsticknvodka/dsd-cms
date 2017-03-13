@@ -49,6 +49,7 @@
                                 </div>
 
                                     <div class="col-xs-6">
+
                                     @if($truckingDelivery->availability == "Closed")
                                         <h4>Transaction <strong><span class="closed">{{$truckingDelivery->availability}}</span></strong></h4>
 
@@ -198,23 +199,40 @@
 
                             <div class="col-sm-3">
                                 <h3>Exception</h3>
-                            @if($truckingDelivery->exception)
 
-                                    <form class="col-xs-2" method="POST" action="/exception/{{$truckingDelivery->exception->id}}">
+                                @if($truckingDelivery->exception)
+                                    <div class="row">
+                                        <form class="col-xs-2" method="POST" action="/exception/{{$truckingDelivery->exception->id}}">
 
-                                        {!! csrf_field() !!}
+                                            {!! csrf_field() !!}
 
-                                        <input type="hidden" name="_method" value="DELETE">
+                                            <input type="hidden" name="_method" value="DELETE">
 
-                                        <button type="submit" class="fa fa-times pull-left" id="deleteFileButton"></button>
-                                    </form>
+                                            <button type="submit" class="fa fa-times pull-left" id="deleteFileButton"></button>
+                                        </form>
 
-                                    <a class="col-xs-10" href="{{$truckingDelivery->exception->path}}" target="_blank">View Exception</a>
+                                        <a class="col-xs-10" href="{{$truckingDelivery->exception->path}}" target="_blank">View Exception</a>
+                                    </div>
+                                @endif
 
 
-                                @else
-                                <p>No exception uploaded.</p>
-                            @endif
+                            {{--@if($truckingDelivery->exception)--}}
+
+                                    {{--<form class="col-xs-2" method="POST" action="/exception/{{$truckingDelivery->exception->id}}">--}}
+
+                                        {{--{!! csrf_field() !!}--}}
+
+                                        {{--<input type="hidden" name="_method" value="DELETE">--}}
+
+                                        {{--<button type="submit" class="fa fa-times pull-left" id="deleteFileButton"></button>--}}
+                                    {{--</form>--}}
+
+                                    {{--<a class="col-xs-10" href="{{$truckingDelivery->exception->path}}" target="_blank">View Exception</a>--}}
+
+
+                                {{--@else--}}
+                                {{--<p>No exception uploaded.</p>--}}
+                            {{--@endif--}}
                             </div>
                             {{--@foreach($truckingDelivery->exception() as $exception)--}}
                             {{--<div class="col-sm-3">--}}

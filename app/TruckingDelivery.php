@@ -112,7 +112,7 @@ class TruckingDelivery extends Model
     public function exception()
     {
 
-        return $this->hasOne('App\Exception',  'trucking_delivery_id');
+        return $this->hasOne('App\Exception');
     }
 
     public function addException(Exception $exception)

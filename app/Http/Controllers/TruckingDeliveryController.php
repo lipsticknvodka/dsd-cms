@@ -69,7 +69,7 @@ class TruckingDeliveryController extends Controller
             abort(404);
         }
 
-
+//        $pod = $truckingDelivery->pod();
 
 //        $exception = $truckingDelivery->exception();
 //        dd($exception);
@@ -262,6 +262,7 @@ class TruckingDeliveryController extends Controller
         return Exception::named($file->getClientOriginalName())
             ->move($file);
     }
+
 
     public function deleteException($id){
 

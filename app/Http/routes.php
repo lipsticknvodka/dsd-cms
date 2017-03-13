@@ -261,7 +261,7 @@ Route::delete('photo/{id}', 'TruckingDeliveryController@deletePhoto');
 
 Route::post('/trucking/{id}/exception', 'TruckingDeliveryController@addException');
 
-Route::delete('exception/{id}','ExceptionController@deleteException');
+Route::delete('/exception/{id}','TruckingDeliveryController@deleteException');
 
 Route::post('/trucking/{id}/pod', 'TruckingDeliveryController@addPod');
 
@@ -273,7 +273,7 @@ Route::get('trucking/{id}/edit/step/{step}', 'TruckingDeliveryController@edit');
 
 Route::get('downloadExcel/{type}', 'TruckingDeliveryController@downloadExcel');
 
-Route::get('dateFilterResults','TruckingController@index');
+//Route::get('dateFilterResults','TruckingController@index');
 
 //UNPROTECTED ROUTES
 

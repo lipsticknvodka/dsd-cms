@@ -68,7 +68,7 @@
 
                                 <div class="form-group col-xs-3 hidden_input out_for_delivery">
                                     {!! Form::label('out_for_delivery_date','Date')  !!}
-                                    {!! Form::text('out_for_delivery_date', null, ['class'=>'date form-control']) !!}
+                                    {!! Form::text('ougit lt_for_delivery_date', null, ['class'=>'date form-control']) !!}
                                 </div>
 
 

@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
-//use Image;
+
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class Exception extends Model
@@ -16,68 +16,31 @@ class Exception extends Model
 
     protected $table = 'exception_trucking_deliveries';
 
-//    protected $primaryKey = 'trucking_delivery_id';
+//    protected $primaryKey = 'exception_id';
 
     protected $fillable = ['path', 'name'];
 
-//    protected $file;
 
     protected $baseDir = 'uploads/trucking/exceptions';
 
-//    protected static function boot()
-//    {
-//        static::creating(function($exception) {
-//
-//            return $exception->upload();
-//        });
-//    }
+    protected static function boot()
+    {
+        static::creating(function($exception) {
 
-//    public function truckingDelivery() {
-//
-//        return $this->belongsTo('App\TruckingDelivery', 'trucking_delivery_id');
-//    }
-//
+            return $exception->upload();
+        });
+    }
+
     public function truckingDelivery() {
 
         return $this->belongsTo('App\TruckingDelivery');
     }
 
-//    public function truckingDelivery() {
-//
-//        return $this->belongsTo('App\TruckingDelivery', 'trucking_delivery_id', 'exception_id');
-//    }
-
-//    public static function fromFile(UploadedFile $file){
-//
-//        $exception = new static;
-//
-//        $exception->file = $file;
-//
-//       return $exception->fill([
-//
-//            'name'=> $exception->fileName(),
-//
-//            'path'=> $exception->filePath(),
-//
-////            'thumbnail_path'=> $exception->thumbnailPath(),
-//        ]);
-//    }
 
     public static function named($name)
     {
         return (new static)->saveAs($name);
 
-//        $photo = new static;
-
-//        $name = time(). $file->getClientOriginalName();
-
-//        return $photo->saveAs($file->getClientOriginalName());
-
-//        $photo->path = $photo->baseDir.'/'. $name;
-
-//        $file->move($photo->baseDir, $name);
-
-//        return $photo;
     }
 
     protected function saveAs($name){
@@ -95,15 +58,6 @@ class Exception extends Model
 
         return $this;
     }
-
-//    protected function makeThumbnail(){
-//
-//        Image::make($this->path)
-//            ->fit(200)
-//            ->save($this->thumbnail_path);
-//
-//        return $this;
-//    }
 
     public function delete(){
 
