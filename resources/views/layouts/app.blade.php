@@ -330,7 +330,7 @@
 {{--<div class="wrapper">--}}
 
 
-<header>
+<header id="header">
     <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="row hidden-xs" id="user-links">
@@ -454,7 +454,7 @@
             </div>
                 </form>
         </div>
-    </div>
+        </div></div>
 </header>
 
 

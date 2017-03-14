@@ -277,7 +277,7 @@ Route::get('downloadExcel/{type}', 'TruckingDeliveryController@downloadExcel');
 
 //UNPROTECTED ROUTES
 
-Route::get('/home', 'HomeController@index');
+Route::get('/', 'HomeController@index');
 
 Route::get('/freight-availability', 'HomeController@freightAvailability');
 
