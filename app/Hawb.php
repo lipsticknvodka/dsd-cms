@@ -57,7 +57,7 @@ class Hawb extends Model
         'driver_name',
         'closed_date',
         'closed_time',
-        'status'=>'Open'
+//        'status'=>'Open'
     ];
 
 

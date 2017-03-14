@@ -55,21 +55,25 @@
                             {{--</div>--}}
 
                             {{--<div class="form-group col-xs-3">--}}
-                                {{--{!! Form::label('startDate','From')  !!}--}}
-                                {{--{!! Form::text('startDate', null, ['class'=>'date form-control'],['id'=>'startDate']) !!}--}}
+                                {{--{!! Form::label('From','From')  !!}--}}
+                                {{--{!! Form::text('From', null, ['class'=>'date form-control'],['id'=>'From']) !!}--}}
                             {{--</div>--}}
 
                             {{--<div class="form-group col-xs-3">--}}
-                                {{--{!! Form::label('endDate','To')  !!}--}}
-                                {{--{!! Form::text('endDate', null, ['class'=>'date form-control'],['id'=>'endDate']) !!}--}}
+                                {{--{!! Form::label('to','To')  !!}--}}
+                                {{--{!! Form::text('to', null, ['class'=>'date form-control'],['id'=>'to']) !!}--}}
                             {{--</div>--}}
 
-                            {{--<button class="btn btn-warning col-xs-2">Filter</button>--}}
+                            {{--<input type="button" name="range" id="range"  value="Filter" class="btn btn-warning col-xs-2">--}}
                         {{--</div>--}}
+
+
+
+
 
                         <div class="table-responsive">
 
-                            <table class="table table-striped">
+                            <table class="table table-striped" id="purchase_order">
                                 <thead>
                                 <tr>
                                     <th>Ref/Load No.</th>
@@ -131,51 +135,81 @@
         </div>
     </div>
 
-    <script type="text/javascript">
-        $("#startDate").datepicker({
-            changeMonth:true,
-//            changeMonth:true,
-            changeYear:true,
-            yearRange:"1970:+0",
-            dateFormat: 'yy/mm/dd',
-            onSelect:function(dateText){
-                var DateRegistered = $('#startDate').val();
-                var endDate = $('#endDate').val();
-//                var AcademicID = $('#AcademicID').val();
-//                listStudent(DateRegistered, endDate, AcademicID);
-                listStudent(DateRegistered, endDate);
-            }
+    {{--<script type="text/javascript">--}}
+        {{--$(document).ready(function () {--}}
+            {{--$.datepicker.setDefaults({--}}
+                {{--dateFormat: 'yy-mm-dd'--}}
+            {{--});--}}
+            {{--$function(){--}}
+                {{--$("#From").datepicker();--}}
+                {{--$("#to").datepicker;--}}
 
-        });
+        {{--});--}}
+        {{--$('#range').click(function(){--}}
+            {{--var From = $('#From').val();--}}
+            {{--var to = $('#tc').val();--}}
+            {{--if(From != '' && to != '')--}}
+            {{--{--}}
+                {{--$.ajax({--}}
+                    {{--url:"range.php",--}}
+                    {{--method:"POST",--}}
+                    {{--data:{From:From, to:to},--}}
+                    {{--success:function(data)--}}
+                    {{--{--}}
+                        {{--$('purchase_order').html(data);--}}
+                    {{--}--}}
 
-        $("#endDate").datepicker({
-            changeMonth:true,
-//            changeMonth:true,
-            changeYear:true,
-            yearRange:"1970:+0",
-            dateFormat: 'yy/mm/dd',
-            onSelect:function(dateText){
-                var DateRegistered = $('#startDate').val();
-                var endDate = $('#endDate').val();
-//                var AcademicID = $('#AcademicID').val();
-//                listStudent(DateRegistered, endDate, AcademicID);
-                listStudent(DateRegistered, endDate);
-            }
-        });
+                {{--});--}}
+            {{--}else{--}}
+                {{--alert("Please select date");--}}
+            {{--}--}}
 
-        function listStudent(criteria1, criteria2, criteria3){
-            $.ajax({
-                type:'get',
-                url: "{!! url('trucking.index') !!}",
-data: {DateRegistered:criteria1,startDate:criteria2,endDate:criteria3},
-//                data: {DateRegistered:criteria1,endDate:criteria2,AcademicID:criteria3},
-                success:function(data){
+        {{--})--}}
 
-                    $('trucking.index').empty().html(data);
-                }
+        {{--$("#startDate").datepicker({--}}
+            {{--changeMonth:true,--}}
+{{--//            changeMonth:true,--}}
+            {{--changeYear:true,--}}
+            {{--yearRange:"1970:+0",--}}
+            {{--dateFormat: 'yy/mm/dd',--}}
+            {{--onSelect:function(dateText){--}}
+                {{--var DateRegistered = $('#startDate').val();--}}
+                {{--var endDate = $('#endDate').val();--}}
+{{--//                var AcademicID = $('#AcademicID').val();--}}
+{{--//                listStudent(DateRegistered, endDate, AcademicID);--}}
+                {{--listStudent(DateRegistered, endDate);--}}
+            {{--}--}}
 
-            })
+        {{--});--}}
 
-        }
-    </script>
+        {{--$("#endDate").datepicker({--}}
+            {{--changeMonth:true,--}}
+{{--//            changeMonth:true,--}}
+            {{--changeYear:true,--}}
+            {{--yearRange:"1970:+0",--}}
+            {{--dateFormat: 'yy/mm/dd',--}}
+            {{--onSelect:function(dateText){--}}
+                {{--var DateRegistered = $('#startDate').val();--}}
+                {{--var endDate = $('#endDate').val();--}}
+{{--//                var AcademicID = $('#AcademicID').val();--}}
+{{--//                listStudent(DateRegistered, endDate, AcademicID);--}}
+                {{--listStudent(DateRegistered, endDate);--}}
+            {{--}--}}
+        {{--});--}}
+
+        {{--function listStudent(criteria1, criteria2, criteria3){--}}
+            {{--$.ajax({--}}
+                {{--type:'get',--}}
+                {{--url: "{!! url('trucking.index') !!}",--}}
+{{--data: {DateRegistered:criteria1,startDate:criteria2,endDate:criteria3},--}}
+{{--//                data: {DateRegistered:criteria1,endDate:criteria2,AcademicID:criteria3},--}}
+                {{--success:function(data){--}}
+
+                    {{--$('trucking.index').empty().html(data);--}}
+                {{--}--}}
+
+            {{--})--}}
+
+        {{--}--}}
+{{--//    </script>--}}
 @endsection

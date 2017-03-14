@@ -5,16 +5,16 @@
 @section('content')
     <div class="container-fluid">
         <div class="row-fluid">
-            <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2">
                 {{--<div class="panel panel-default" id="content">--}}
                     {{--<div class="panel-heading">Create New Account</div>--}}
 
                     <div class="content-body">
 
                         <div class="arrow-steps clearfix">
-                            <div class="step current"><div class="glyphicon glyphicon-list-alt"></div><span>Master Details</span> </div>
-                            <div class="step current"> <div class="glyphicon glyphicon-list-alt"></div><span>Breakdown</span> </div>
-                            <div class="step current"> <div class="glyphicon glyphicon-home"></div><span>House Details</span> </div>
+                            <div class="step current"><div class="glyphicon glyphicon-folder-open"></div><span>General</span> </div>
+                            <div class="step current"> <div class="glyphicon glyphicon-list"></div><span>Master</span> </div>
+                            <div class="step current"> <div class="glyphicon glyphicon-home"></div><span>House</span> </div>
                             {{--<div class="step"> <span>Step 4</span> </div>--}}
                         </div>
 
@@ -25,34 +25,56 @@
 
 
                         <div class="row-fluid">
-                            <div class="col-sm-6">
-                                <div class="form-group col-xs-12">
-                                    {!! Form::label('us_customs_code','US Customs Code')  !!}
-                                    {!! Form::select('us_customs_code', ['Cleared' => '1C / 1D - CLEARED', 'hold' => 'HOLD / NO 1C'], null, ['class'=>'form-control']) !!}
-                                </div>
 
-                                <div class="form-group col-xs-12">
-                                    {!! Form::label('availability','Availability')  !!}
-                                    {!! Form::select('availability', ['Ready for pick up' => 'Ready for pick up', 'Not Ready for pick up' => 'Not Ready for pick up'], null, ['class'=>'form-control']) !!}
+
+
+                            <div class="table-responsive">
+                                <h4 class="col-xs-12">Houses</h4>
+                                <table class="table table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>HAWB</th>
+                                        <th>Pallet Count</th>
+                                        <th>Piece Count</th>
+                                        <th>Weight</th>
+                                        <th>Status</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    @foreach($cfs->hawbs as $hawb)
+                                        <tr>
+                                            <td><a data-toggle="collapse" data-target="#{{$hawb->hawb}}">{{$hawb->hawb}}</a></td>
+
+                                            <td>{{$hawb->pallet_ct}}</td>
+                                            <td>{{$hawb->piece_ct}}</td>
+                                            <td>{{$hawb->weight_no}} {{$hawb->weight_type}}</td>
+                                            <td></td>
+                                            <div id="{{$hawb->hawb}}" class="collapse">
+                                                Insert more info here
+                                            </div>
+
+                                        </tr>
+
+
+                                    @endforeach
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <a href="#addHawb" role="button" class="btn btn-large btn-primary" data-toggle="modal">Add HAWB</a>
                                 </div>
+                            </div>
+
                             </div>
                         </div>
 
 
-                        <div class="row-fluid">
-                            <div class="col-sm-6">
-                                <div class="form-group col-xs-6">
-                                    {!! Form::label('last_free_day','LFD')  !!}
-                                    {!! Form::text('last_free_day', null, ['class'=>'date form-control']) !!}
-                                </div>
 
-                                <div class="form-group col-xs-6">
-                                    {!! Form::label('general_order','GO')  !!}
-                                    {!! Form::text('general_order', null, ['class'=>'date form-control']) !!}
-                                </div>
-                            </div>
-
-                        </div>
 
                         <div class="input-group-md pull-right">
                             <a id="back-btn" class="btn btn-warning" href="{{ URL::previous() }}">Back</a>
@@ -84,11 +106,21 @@
                         {{--{!! Form::label('name', 'What is your name?') !!}<br>--}}
                         {{--{!! Form::text('name') !!}<br>--}}
 
+
                     </div>
+
+
                 </div>
+
             </div>
+
         {{--</div>--}}
     </div>
+
+
+
+
+
 @endsection
 
 

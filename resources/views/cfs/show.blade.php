@@ -24,7 +24,7 @@
                                 <h4>Transaction <strong><span class="Open">{{$hawb->status}}</span></strong></h4>
                             @endif
                                 <p><strong>Availability</strong> {{$cfsDelivery->availability}}</p>
-                                <p><strong>Estimated Availability </strong> {{$cfsDelivery->est_avail_time}}</p>
+                                <p><strong>Estimated Availability </strong> {{$cfsDelivery->est_avail_date}} @ {{$cfsDelivery->est_avail_time}}</p>
                            <hr/>
                             </div>
 

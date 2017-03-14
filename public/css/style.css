@@ -317,6 +317,9 @@ span.icon-bar {
 	/*margin-left: 310px;*/
 	/*margin-left: 287px;*/
 	margin-left: 190px;
+    margin-bottom: 50px !important;
+    margin-top: 25px !important;
+    min-height: 600px !important;
 }
 
 
@@ -474,7 +477,8 @@ a:hover {
     color: #999;
 }
 
-/* Breadcrups CSS */
+
+
 
 .arrow-steps{
     margin-left: auto;
@@ -1558,6 +1562,13 @@ section#services-warehousing {
 
 	}
 
+    /*#trucking.arrow-steps {*/
+        /*width: 625px;*/
+    /*}*/
+
+    /*.arrow-steps .step {*/
+        /*width: 130px !important;*/
+    /*}*/
 
 
 	/*CHANGE BOOSTRAP NAV COLLAPSE BREAKPOINT*/

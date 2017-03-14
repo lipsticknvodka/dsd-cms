@@ -210,6 +210,7 @@ class CfsDeliveryController extends Controller
                 break;
             case 2:
                 $rules = [
+                    'us_customs_code' => 'required|min:1|max:50',
 //                    'pallet_ct' => 'required|min:1|max:3',
 //                    'address_1' => 'required|min:2|max:50',
 //                    'city' => 'required|min:2|max:50',
@@ -220,7 +221,7 @@ class CfsDeliveryController extends Controller
                 break;
             case 3:
                 $rules = [
-                    'us_customs_code' => 'required|min:1|max:50',
+
 //                    'primary_contact' => 'required|min:2|max:50',
 //                    'email' => 'required|min:2|max:50',
                 ];

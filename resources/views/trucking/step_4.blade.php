@@ -166,13 +166,14 @@
 
                             </div>
 
+            </div>
 
-
-<div class="row">
+{{--<div class="row">--}}
     <div class="input-group-md col-xs-4 pull-right">
         <a id="back-btn" class="btn btn-warning" href="{{ URL::previous() }}">Back</a>
         <button type="submit" class="btn btn-warning">Submit</button>
-    </div></div>
+    </div>
+            {{--</div>--}}
 
 
 

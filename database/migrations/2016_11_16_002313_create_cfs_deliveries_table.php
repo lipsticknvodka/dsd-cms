@@ -20,6 +20,7 @@ class CreateCfsDeliveriesTable extends Migration
             $table->string('arrival_date');
             $table->string('pick_up_date');
             $table->string('pick_up_time');
+            $table->string('est_avail_date');
             $table->string('est_avail_time');
             $table->integer('pallet_ct');
 //            $table->integer('piece_ct');

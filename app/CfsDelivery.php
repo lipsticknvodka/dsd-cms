@@ -58,6 +58,7 @@ class CfsDelivery extends Model
         'arrival_date',
         'pick_up_time',
         'pick_up_date',
+        'est_avail_date',
         'est_avail_time',
         'last_free_day',
         'general_order',
@@ -77,21 +78,11 @@ class CfsDelivery extends Model
 
     public function getStatusAttribute()
     {
-//        $this->attributes['availability'] = strtolower($request);
 
         if (!empty($this->pick_up_date && $this->pick_up_time)) return 'Closed';
-//        if (!empty($this->received_by && $this->trans_closed_date  )) return 'Closed';
 
         return 'Open';
     }
-
-//    public function getHawbs(){
-////
-//
-//        return CfsDelivery::where('id', $this->cfs_delivery_id)->first()->hawb;
-////       $cfsDeliveries = cfsDelivery::all();
-////
-////        return view('cfs.show')->with('cfs_deliveries', $cfsDeliveries);
-//    }
+    
 
 }

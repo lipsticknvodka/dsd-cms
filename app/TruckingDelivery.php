@@ -112,7 +112,7 @@ class TruckingDelivery extends Model
     public function exception()
     {
 
-        return $this->hasOne('App\Exception');
+        return $this->hasOne('App\Exception', 'trucking_delivery_id');
     }
 
     public function addException(Exception $exception)
@@ -183,7 +183,7 @@ class TruckingDelivery extends Model
 
 //        $this->attributes['availability'] = strtolower($request);
 
-        if (!empty($this->received_by && $this->trans_closed_date && $this->trans_closed_time && $this->pod())) return 'Closed';
+        if (!empty($this->received_by && $this->trans_closed_date && $this->trans_closed_time && $this->pod)) return 'Closed';
 //        if (!empty($this->received_by && $this->trans_closed_date  )) return 'Closed';
 
         return 'Open';

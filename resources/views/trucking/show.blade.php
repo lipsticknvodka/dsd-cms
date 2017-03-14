@@ -192,12 +192,12 @@
 
                             </div>
 
-                            <div class="col-sm-5">
-                                <h3>Overs/Shorts/Damages</h3>
+                            <div class="col-sm-4">
+                                <h3>O/S/D</h3>
                                 <p>{{$truckingDelivery->overs_shorts_damages}}</p>
                             </div>
 
-                            <div class="col-sm-3">
+                            <div class="col-sm-4">
                                 <h3>Exception</h3>
 
                                 @if($truckingDelivery->exception)
@@ -213,37 +213,12 @@
 
                                         <a class="col-xs-10" href="{{$truckingDelivery->exception->path}}" target="_blank">View Exception</a>
                                     </div>
+                               @else
+                                <p>No exception uploaded.</p>
                                 @endif
 
 
-                            {{--@if($truckingDelivery->exception)--}}
-
-                                    {{--<form class="col-xs-2" method="POST" action="/exception/{{$truckingDelivery->exception->id}}">--}}
-
-                                        {{--{!! csrf_field() !!}--}}
-
-                                        {{--<input type="hidden" name="_method" value="DELETE">--}}
-
-                                        {{--<button type="submit" class="fa fa-times pull-left" id="deleteFileButton"></button>--}}
-                                    {{--</form>--}}
-
-                                    {{--<a class="col-xs-10" href="{{$truckingDelivery->exception->path}}" target="_blank">View Exception</a>--}}
-
-
-                                {{--@else--}}
-                                {{--<p>No exception uploaded.</p>--}}
-                            {{--@endif--}}
                             </div>
-                            {{--@foreach($truckingDelivery->exception() as $exception)--}}
-                            {{--<div class="col-sm-3">--}}
-                                {{--<h3>Exception</h3>--}}
-{{--                              @if(!is_null($truckingDelivery->exception))--}}
-                                {{--<p>{{$exception->name}}</p>--}}
-                            {{--</div>--}}
-                            {{--@else--}}
-                                {{--<p>No exception uploaded.</p>--}}
-                            {{--@endif--}}
-                        {{--</div>--}}
                     </div>
                         <hr/>
 
@@ -257,7 +232,7 @@
                             @if (count($truckingDelivery->photos))
 
                                 <ul>
-                                    @foreach($truckingDelivery->photos->chunk(4) as $set)
+                                    @foreach($truckingDelivery->photos->chunk(5) as $set)
                                             <div class="row">
                                                 @foreach($set as $photo)
                                                     <div class="col-xs-6 col-md-3">

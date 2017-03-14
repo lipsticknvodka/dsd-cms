@@ -306,11 +306,12 @@
                                     </div>
 
                                 </div>
-                                </div>
+                            </div></div>
 
                         </div>
 
-                        </div>
+                        {{--</div>--}}
+
                         <div class="input-group-md pull-right">
                             <a id="back-btn" class="btn btn-warning" href="{{ URL::previous() }}">Back</a>
                             <button type="submit" class="btn btn-warning">Submit</button>
@@ -320,7 +321,7 @@
 
                     </div>
                 </div>
-            </div>
+            {{--</div>--}}
 
 @endsection
 

@@ -75,12 +75,18 @@
             /*color: #999;*/
         /*}*/
 
-        /* Breadcrups CSS */
+
+        #trucking.arrow-steps {
+            width: 625px;
+        }
+
+
+
 
         .arrow-steps{
             margin-left: auto;
             margin-right: auto;
-            width:90%;
+            width:475px;
             margin-top:150px;
             margin-bottom:50px;
         }
@@ -268,8 +274,34 @@
                 width: 100%;
             }
 
+        .side-body {
+            /*margin-left: 310px;*/
+            /*margin-left: 287px;*/
+            margin-left: 190px;
+            margin-bottom: 50px !important;
+            margin-top: 25px !important;
+            min-height: 600px !important;
+        }
 
 
+        @media screen and (max-width:992px) {
+
+            #trucking.arrow-steps {
+                width: 545px;
+            }
+
+            .arrow-steps {
+                width: 420px;
+            }
+
+            .arrow-steps .step {
+                width: 130px !important;
+            }
+
+            .side-body{
+                margin-left:40px;
+            }
+        }
             .forAnimate{
                 opacity: 0;
             }
