@@ -387,7 +387,7 @@
 
                 <ul class="nav navbar-nav navbar-right">
 
-                    <li class=""><a href="/">/</a></li>
+                    <li class=""><a href="/">Home</a></li>
                     <li class="dropdown">
                         <a href="about" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
                         <ul class="dropdown-menu">
