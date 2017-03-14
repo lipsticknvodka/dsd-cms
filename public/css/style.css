@@ -82,7 +82,7 @@ a:hover {
 }
 
 .dropdown-menu > li > a {
-	padding:15px;
+	/*padding:15px;*/
     border-bottom:#ccc solid 5px;
 }
 
