@@ -350,7 +350,7 @@
                 </div>
             </div>
 
-            <a href="home" class="navbar-brand"><img src="images/logo.png" id="header-logo" alt="dsd trucking">DSD Companies</a>
+            <a href="/" class="navbar-brand"><img src="images/logo.png" id="header-logo" alt="dsd trucking">DSD Companies</a>
 
 
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navHeaderCollapse" aria-expanded="false" aria-controls="navbar">
@@ -387,7 +387,7 @@
 
                 <ul class="nav navbar-nav navbar-right">
 
-                    <li class=""><a href="home">Home</a></li>
+                    <li class=""><a href="/">/</a></li>
                     <li class="dropdown">
                         <a href="about" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -557,7 +557,7 @@
         <div class="container">
             <div class="col-xs-12 col-sm-5">
                 <h4>Vision</h4> <p>To create an enduring, people-centered partnership, founded on basis of trust and respect, which has been earned through cultivating a consistent delivery of superior services, to a worldwide base of customers, creating a Global reach, with a Local Touch.</p>
-                <p class="copy"><a href="home"><img src="images/logo.png" id="footer-logo" class="img-responsive hidden-xs" alt="dsd trucking" width="50"></a>&copy; Copyright 2015 DSD Trucking</p>
+                <p class="copy"><a href="/"><img src="images/logo.png" id="footer-logo" class="img-responsive hidden-xs" alt="dsd trucking" width="50"></a>&copy; Copyright 2015 DSD Trucking</p>
             </div>
 
             <div class="col-xs-12 col-sm-4">
