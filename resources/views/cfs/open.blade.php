@@ -65,8 +65,8 @@
                                         </tr>
                                 </tbody>
 
-                                        @else
-                                            <p>No open CFS deliveries.</p>
+                                        {{--@else--}}
+                                            {{--<p>No open CFS deliveries.</p>--}}
                                         @endif
 
                                         @endforeach

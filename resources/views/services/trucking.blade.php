@@ -22,8 +22,8 @@
 
             <p class="col-xs-12"><strong>Pick Ups –  Victor Sanchez</strong> <!--<i class="fa fa-phone 2x"></i>--><a href="tel:13107251999"> 310-725–1999</a>  <!--<i class="fa fa-envelope 2x"></i>--> <!--<a href="mailto: roberto@dsdcompanies.com"> roberto@dsdcompanies.com</a>-->
             </p>
-            <p class="col-xs-12"><strong>Deliveries – Pedro Torres</strong> <!--<i class="fa fa-phone 2x"></i>--><a href="tel:13107251999"> 310-725–1999</a> | <!--<i class="fa fa-envelope 2x"></i>--> <a href="mailto: pedro@dsdcompanies.com"> pedro@dsdcompanies.com</a>
-            </p>
+            {{--<p class="col-xs-12"><strong>Deliveries – Pedro Torres</strong> <!--<i class="fa fa-phone 2x"></i>--><a href="tel:13107251999"> 310-725–1999</a> | <!--<i class="fa fa-envelope 2x"></i>--> <a href="mailto: pedro@dsdcompanies.com"> pedro@dsdcompanies.com</a>--}}
+            {{--</p>--}}
 
             <!-- GALLERY --->
             <div class="container">

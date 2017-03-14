@@ -82,8 +82,8 @@ a:hover {
 }
 
 .dropdown-menu > li > a {
-	padding-top:15px;
-	padding-bottom:15px;
+	padding:15px;
+    border-bottom:#ccc solid 5px;
 }
 
 .dropdown-menu > li > a:hover {
@@ -139,6 +139,10 @@ span.icon-bar {
 
 #header-buttons, #user-links {
 	margin-top:15px;	
+}
+
+#user-links.row.hidden-xs {
+    margin-top:0px;
 }
 
 #header-buttons a{

@@ -281,17 +281,17 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/freight-availability', 'HomeController@freightAvailability');
 
-Route::get('/air-freight','HomeController@airFreight');
+Route::get('/services/air-freight','HomeController@airFreight');
 
-Route::get('/ocean-freight','HomeController@oceanFreight');
+Route::get('/services/ocean-freight','HomeController@oceanFreight');
 
-Route::get('/cargo-screening','HomeController@cargoScreening');
+Route::get('/services/cargo-screening','HomeController@cargoScreening');
 
-Route::get('/warehousing','HomeController@warehousing');
+Route::get('/services/warehousing','HomeController@warehousing');
 
 Route::get('/services/trucking','HomeController@trucking');
 
-Route::get('/hot-shot','HomeController@hotShot');
+Route::get('/services/hot-shot','HomeController@hotShot');
 
 Route::get('/services','HomeController@services');
 

@@ -22,6 +22,8 @@
                 <h5 class="no-margin-bottom"><strong>General Manager</h5><p class="no-margin-bottom">Carlos Guerra</strong></p><!--<i class="fa fa-envelope 2x"></i>--> <a href="mailto:carlos@dsdcompanies.com"> carlos@dsdcompanies.com</a><br/><br/>
             <!-- <h5 class="no-margin-bottom"><strong>Operations &amp; Safety Manager</h5><p class="no-margin-bottom"> Pedro Torres II</strong></p><!--<i class="fa fa-envelope 2x"></i> <a href="mailto:pedro@dsdcompanies.com"> pedro@dsdcompanies.com</a>-->
 
+                <hr/>
+
                 <h4 class="col-xs-12 no-margin-left">Corporate &amp; Distribution Center</h4>
                 <address class="col-xs-12 no-margin-bottom no-margin-left" class="facility-address"><strong>8820 Bellanca Ave. <br/>Los Angeles, CA 90045</strong></address>
                 <p class="no-margin-bottom"><!--<i class="fa fa-phone 2x"></i>-->Phone: <a href="tel:+13103383395">310-338-3395</a></p>
@@ -32,9 +34,12 @@
             </div>
 
             <div class="col-sm-8">
-                <legend>
+
                     <h3 class="no-margin-bottom">Have a Question?</h3>
-                    <p>Can’t find your answer online from our <a href="faq">FAQ</a> page? Fill out the contact form and a representative will respond shortly. </p></legend>
+                    <p>Can’t find your answer online from our <a href="faq">FAQ</a> page? Fill out the contact form and a representative will respond shortly. </p>
+
+                    <hr/>
+
                 <?php if(isset($_GET['CaptchaPass'])){ ?>
                 <div class="FormElement" id="captcha-success">Your message has been sent. A representative will be in contact with you shortly.</div>
                 <?php } ?>
@@ -129,10 +134,10 @@
                         <p class="no-margin-bottom"><!--<i class="fa fa-phone 2x"></i>--> <a href="tel:+13103383395">310-338-3395</a> x 108</p>
                     </div></div></div>
 
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-centered"><div class="item"><div class="content">
-                        <h4 class="no-margin-bottom"><strong>Operations Manager</h4><p class="no-margin-bottom">Pedro Torres Jr</strong></p> <!--<i class="fa fa-envelope 2x"></i>--> <a href="mailto:pedro@dsdcompanies.com">pedro@dsdcompanies.com</a>
-                        <p class="no-margin-bottom"><!--<i class="fa fa-phone 2x"></i>--> <a href="tel:+15626666630">562-666-6630</a></p>
-                    </div></div></div>
+            {{--<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-centered"><div class="item"><div class="content">--}}
+                        {{--<h4 class="no-margin-bottom"><strong>Operations Manager</h4><p class="no-margin-bottom">Pedro Torres Jr</strong></p> <!--<i class="fa fa-envelope 2x"></i>--> <a href="mailto:pedro@dsdcompanies.com">pedro@dsdcompanies.com</a>--}}
+                        {{--<p class="no-margin-bottom"><!--<i class="fa fa-phone 2x"></i>--> <a href="tel:+15626666630">562-666-6630</a></p>--}}
+                    {{--</div></div></div>--}}
 
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-centered"><div class="item"><div class="content">
                         <h4 class="no-margin-bottom"><strong>Human Resources</h4><p class="no-margin-bottom">Kennya Martinez</strong></p> <!--<i class="fa fa-envelope 2x"></i>--> <a href="mailto:kennya@dsdcompanies.com">kennya@dsdcompanies.com</a>

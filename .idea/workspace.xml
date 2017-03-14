@@ -2,29 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="635dbcc3-90c9-47b7-900f-255a9309811b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/trucking/photos/1489431850-Screen Shot 2017-03-13 at 10.55.35 AM.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/trucking/photos/tn-1489431850-Screen Shot 2017-03-13 at 10.55.35 AM.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/trucking/exceptions/1489452678-rapidScan-website-proposal.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/trucking/photos/1489431850-Screen Shot 2017-03-13 at 6.52.56 AM.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/trucking/photos/tn-1489431850-Screen Shot 2017-03-13 at 6.52.56 AM.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/CfsDelivery.php" afterPath="$PROJECT_DIR$/app/CfsDelivery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Exception.php" afterPath="$PROJECT_DIR$/app/Exception.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Hawb.php" afterPath="$PROJECT_DIR$/app/Hawb.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/CfsDeliveryController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/CfsDeliveryController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/TruckingDelivery.php" afterPath="$PROJECT_DIR$/app/TruckingDelivery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_11_16_002313_create_cfs_deliveries_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_11_16_002313_create_cfs_deliveries_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/account/step_1.blade.php" afterPath="$PROJECT_DIR$/resources/views/account/step_1.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/account/step_2.blade.php" afterPath="$PROJECT_DIR$/resources/views/account/step_2.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/account/step_3.blade.php" afterPath="$PROJECT_DIR$/resources/views/account/step_3.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/cfs/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/cfs/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/cfs/step_1.blade.php" afterPath="$PROJECT_DIR$/resources/views/cfs/step_1.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/cfs/step_2.blade.php" afterPath="$PROJECT_DIR$/resources/views/cfs/step_2.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/cfs/open.blade.php" afterPath="$PROJECT_DIR$/resources/views/cfs/open.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/cfs/step_3.blade.php" afterPath="$PROJECT_DIR$/resources/views/cfs/step_3.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/contact.blade.php" afterPath="$PROJECT_DIR$/resources/views/contact.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/search-results-cfs.blade.php" afterPath="$PROJECT_DIR$/resources/views/search-results-cfs.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/trucking/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/trucking/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/trucking/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/trucking/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/services/trucking.blade.php" afterPath="$PROJECT_DIR$/resources/views/services/trucking.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/trucking/step_2.blade.php" afterPath="$PROJECT_DIR$/resources/views/trucking/step_2.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/trucking/step_4.blade.php" afterPath="$PROJECT_DIR$/resources/views/trucking/step_4.blade.php" />
     </list>
     <ignored path="dsd-cms.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,61 +45,19 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="315" column="0" lean-forward="false" selection-start-line="315" selection-start-column="0" selection-end-line="322" selection-end-column="1" />
+            <state relative-caret-position="380">
+              <caret line="85" column="33" lean-forward="false" selection-start-line="85" selection-start-column="33" selection-end-line="85" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="285" column="0" lean-forward="true" selection-start-line="285" selection-start-column="0" selection-end-line="285" selection-end-column="0" />
+            <state relative-caret-position="585">
+              <caret line="194" column="25" lean-forward="false" selection-start-line="194" selection-start-column="25" selection-end-line="194" selection-end-column="25" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/trucking/show.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="213" column="105" lean-forward="true" selection-start-line="213" selection-start-column="105" selection-end-line="213" selection-end-column="105" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Exception.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Exception.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="45" column="37" lean-forward="true" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TruckingDelivery.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/TruckingDelivery.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1650">
-              <caret line="114" column="68" lean-forward="false" selection-start-line="114" selection-start-column="68" selection-end-line="114" selection-end-column="68" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TruckingDeliveryController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TruckingDeliveryController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-              <folding>
-                <element signature="e#40#56#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -118,31 +65,9 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="261" column="60" lean-forward="true" selection-start-line="261" selection-start-column="60" selection-end-line="261" selection-end-column="60" />
+            <state relative-caret-position="569">
+              <caret line="297" column="12" lean-forward="true" selection-start-line="297" selection-start-column="12" selection-end-line="297" selection-end-column="12" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExceptionController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ExceptionController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Pod.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Pod.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="57" column="10" lean-forward="true" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
-              <folding>
-                <element signature="e#23#62#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -186,6 +111,8 @@
       <find>.navbar-nav</find>
       <find>.input-group</find>
       <find>.arrow</find>
+      <find>user-l</find>
+      <find>.dropdown-menu</find>
     </findStrings>
     <replaceStrings>
       <replace>home</replace>
@@ -200,8 +127,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AccountsController.php" />
-        <option value="$PROJECT_DIR$/resources/views/account/trash.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_11_16_031355_create_trucking_deliveries_table.php" />
         <option value="$PROJECT_DIR$/resources/views/search-results.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/search-results-cfs-list.php" />
@@ -213,7 +138,6 @@
         <option value="$PROJECT_DIR$/resources/views/account/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/search-results-admin.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
-        <option value="$PROJECT_DIR$/resources/views/search-results-admin-list.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/search-results-account-list.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/freight-availability.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/account/index.blade.php" />
@@ -230,27 +154,30 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/ExceptionController.php" />
         <option value="$PROJECT_DIR$/resources/views/trucking/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Hawb.php" />
-        <option value="$PROJECT_DIR$/resources/views/cfs/open.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/trucking/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/trucking/step_4.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/trucking/step_2.blade.php" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/resources/views/cfs/step_1.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/account/step_1.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/account/step_3.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/account/step_2.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/cfs/step_3.blade.php" />
         <option value="$PROJECT_DIR$/app/CfsDelivery.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_11_16_002313_create_cfs_deliveries_table.php" />
-        <option value="$PROJECT_DIR$/resources/views/cfs/step_2.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CfsDeliveryController.php" />
         <option value="$PROJECT_DIR$/resources/views/search-results-cfs.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/cfs/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/TruckingDeliveryController.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/TruckingDelivery.php" />
         <option value="$PROJECT_DIR$/app/Exception.php" />
+        <option value="$PROJECT_DIR$/resources/views/cfs/step_2.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/search-results-admin-list.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/services/trucking.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/contact.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/cfs/open.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/cfs/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/cfs/step_3.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/trucking/step_2.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
       </list>
     </option>
   </component>
@@ -270,7 +197,6 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="699" />
     <option name="y" value="23" />
     <option name="width" value="981" />
     <option name="height" value="953" />
@@ -381,14 +307,6 @@
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="account" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -400,7 +318,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -415,6 +333,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -610,12 +532,12 @@
       <workItem from="1488594375006" duration="33701000" />
       <workItem from="1488768651469" duration="11756000" />
       <workItem from="1488814879830" duration="13943000" />
-      <workItem from="1489365564152" duration="28617000" />
+      <workItem from="1489365564152" duration="33475000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="931305000" />
+    <option name="totallyTimeSpent" value="936163000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -627,7 +549,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="699" y="23" width="981" height="953" extended-state="0" />
+    <frame x="0" y="23" width="981" height="953" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29229662" sideWeight="0.36933798" order="2" side_tool="true" content_ui="tabs" />
@@ -693,15 +615,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/QueryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/search-results-cfs-list.php" />
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/RevisionController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -741,20 +654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/search-results-admin.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/search-results-admin-list.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="42" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="6" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/search-results-trucking.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1395">
@@ -773,16 +672,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
           <caret line="41" column="53" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="120" column="52" lean-forward="false" selection-start-line="120" selection-start-column="52" selection-end-line="120" selection-end-column="52" />
-          <folding>
-            <element signature="e#40#56#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -814,14 +703,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1590">
           <caret line="106" column="44" lean-forward="false" selection-start-line="106" selection-start-column="44" selection-end-line="106" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/trucking/open.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="53" lean-forward="false" selection-start-line="43" selection-start-column="53" selection-end-line="43" selection-end-column="53" />
           <folding />
         </state>
       </provider>
@@ -868,14 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/cfs/open.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Hawb.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="614">
@@ -901,40 +774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="137" column="30" lean-forward="true" selection-start-line="137" selection-start-column="30" selection-end-line="137" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/trucking/step_2.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1319">
-          <caret line="318" column="0" lean-forward="true" selection-start-line="318" selection-start-column="0" selection-end-line="318" selection-end-column="0" />
-          <folding>
-            <marker date="1489441398000" expanded="true" signature="2988:6080" ph="..." />
-            <marker date="1489441398000" expanded="true" signature="3002:6038" ph="..." />
-            <marker date="1489441398000" expanded="true" signature="3024:6005" ph="..." />
-            <marker date="1489441398000" expanded="true" signature="8695:11791" ph="..." />
-            <marker date="1489441398000" expanded="true" signature="8709:11749" ph="..." />
-            <marker date="1489441398000" expanded="true" signature="8735:11716" ph="..." />
-            <marker date="1489441398000" expanded="true" signature="13865:17391" ph="..." />
-            <marker date="1489441398000" expanded="true" signature="13879:17341" ph="..." />
-            <marker date="1489441398000" expanded="true" signature="13902:17299" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/trucking/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1604">
-          <caret line="202" column="54" lean-forward="false" selection-start-line="202" selection-start-column="54" selection-end-line="202" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="315" column="0" lean-forward="false" selection-start-line="315" selection-start-column="0" selection-end-line="322" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -1007,32 +846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/cfs/step_3.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="72" column="28" lean-forward="true" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/cfs/step_2.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="138" column="52" lean-forward="false" selection-start-line="138" selection-start-column="52" selection-end-line="138" selection-end-column="52" />
-          <folding>
-            <marker date="1489447213000" expanded="true" signature="2235:5526" ph="..." />
-            <marker date="1489447213000" expanded="true" signature="2249:5491" ph="..." />
-            <marker date="1489447213000" expanded="true" signature="2270:5449" ph="..." />
-            <marker date="1489447213000" expanded="true" signature="7094:9987" ph="..." />
-            <marker date="1489447213000" expanded="true" signature="7108:9960" ph="..." />
-            <marker date="1489447213000" expanded="true" signature="7131:9918" ph="..." />
-            <marker date="1489447213000" expanded="true" signature="11977:15318" ph="..." />
-            <marker date="1489447213000" expanded="true" signature="11991:15282" ph="..." />
-            <marker date="1489447213000" expanded="true" signature="12012:15240" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CfsDeliveryController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="509">
@@ -1053,22 +866,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="35" column="107" lean-forward="true" selection-start-line="35" selection-start-column="107" selection-end-line="35" selection-end-column="107" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/cfs/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="42" column="134" lean-forward="true" selection-start-line="42" selection-start-column="134" selection-end-line="42" selection-end-column="134" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="285" column="0" lean-forward="true" selection-start-line="285" selection-start-column="0" selection-end-line="285" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1099,14 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="261" column="60" lean-forward="true" selection-start-line="261" selection-start-column="60" selection-end-line="261" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TruckingDeliveryController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1114,6 +903,14 @@
           <folding>
             <element signature="e#40#56#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Exception.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="599">
+          <caret line="58" column="21" lean-forward="true" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1125,10 +922,150 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Exception.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/trucking/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="45" column="37" lean-forward="true" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
+        <state relative-caret-position="383">
+          <caret line="93" column="90" lean-forward="true" selection-start-line="93" selection-start-column="43" selection-end-line="93" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/cfs/step_2.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="274" column="0" lean-forward="true" selection-start-line="274" selection-start-column="0" selection-end-line="274" selection-end-column="0" />
+          <folding>
+            <marker date="1489447213000" expanded="true" signature="2235:5526" ph="..." />
+            <marker date="1489447213000" expanded="true" signature="2249:5491" ph="..." />
+            <marker date="1489447213000" expanded="true" signature="2270:5449" ph="..." />
+            <marker date="1489447213000" expanded="true" signature="7094:9987" ph="..." />
+            <marker date="1489447213000" expanded="true" signature="7108:9960" ph="..." />
+            <marker date="1489447213000" expanded="true" signature="7131:9918" ph="..." />
+            <marker date="1489447213000" expanded="true" signature="11977:15318" ph="..." />
+            <marker date="1489447213000" expanded="true" signature="11991:15282" ph="..." />
+            <marker date="1489447213000" expanded="true" signature="12012:15240" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/services/trucking.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/contact.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="33" column="18" lean-forward="true" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+          <folding>
+            <marker date="1489462762000" expanded="true" signature="13054:13059" ph="&amp;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/trucking/open.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="43" column="53" lean-forward="false" selection-start-line="43" selection-start-column="53" selection-end-line="43" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/cfs/open.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="794">
+          <caret line="68" column="60" lean-forward="false" selection-start-line="67" selection-start-column="39" selection-end-line="68" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/cfs/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/cfs/step_3.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding>
+            <element signature="e#2686#2850#0#HTML" expanded="false" />
+            <element signature="e#3847#3854#0#HTML" expanded="true" />
+            <marker date="1489465002000" expanded="true" signature="8305:11758" ph="..." />
+            <marker date="1489465002000" expanded="true" signature="8319:11735" ph="..." />
+            <marker date="1489465002000" expanded="true" signature="8334:11693" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/trucking/step_2.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="674">
+          <caret line="324" column="10" lean-forward="false" selection-start-line="324" selection-start-column="10" selection-end-line="324" selection-end-column="10" />
+          <folding>
+            <marker date="1489465268000" expanded="true" signature="2988:6080" ph="..." />
+            <marker date="1489465268000" expanded="true" signature="3002:6038" ph="..." />
+            <marker date="1489465268000" expanded="true" signature="3024:6005" ph="..." />
+            <marker date="1489465268000" expanded="true" signature="8695:11791" ph="..." />
+            <marker date="1489465268000" expanded="true" signature="8709:11749" ph="..." />
+            <marker date="1489465268000" expanded="true" signature="8735:11716" ph="..." />
+            <marker date="1489465268000" expanded="true" signature="13865:17391" ph="..." />
+            <marker date="1489465268000" expanded="true" signature="13879:17341" ph="..." />
+            <marker date="1489465268000" expanded="true" signature="13902:17299" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/search-results-admin-list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="30" column="63" lean-forward="true" selection-start-line="30" selection-start-column="63" selection-end-line="30" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/search-results-admin.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="69" column="33" lean-forward="false" selection-start-line="69" selection-start-column="33" selection-end-line="69" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="569">
+          <caret line="297" column="12" lean-forward="true" selection-start-line="297" selection-start-column="12" selection-end-line="297" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="85" column="33" lean-forward="false" selection-start-line="85" selection-start-column="33" selection-end-line="85" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="194" column="25" lean-forward="false" selection-start-line="194" selection-start-column="25" selection-end-line="194" selection-end-column="25" />
           <folding />
         </state>
       </provider>
