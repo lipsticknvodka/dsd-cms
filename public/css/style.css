@@ -647,7 +647,7 @@ button#search.btn-warning {
 	}
 
 #search-bar {
-	background-color: #960a0a;
+	background-color: #960a0a !important;
 	padding: 0px 10px;
 	top: 81px;
 	height: 55px;
@@ -1678,7 +1678,7 @@ section#services-warehousing {
 	}
 	
 	.navbar-nav > li > a {
-		line-height:auto;
+		/*line-height:auto;*/
 		padding-top:15px;
 		padding-bottom:15px;	
 		text-align:center;

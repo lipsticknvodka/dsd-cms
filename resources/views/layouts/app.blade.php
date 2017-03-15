@@ -57,7 +57,15 @@
         /*height: 400px;*/
         /*vertical-align: middle;*/
         /*}*/
+        #search-bar {
+            background-color: #960a0a !important;
+            padding: 0px 10px;
+            top: 81px;
+            height: 55px;
+            position: fixed;
+            width: 100%;
 
+        }
         .nav {
             margin-top: 40px;
         }
