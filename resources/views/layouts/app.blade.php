@@ -66,9 +66,9 @@
             width: 100%;
 
         }
-        .nav {
-            margin-top: 40px;
-        }
+        /*.nav {*/
+            /*margin-top: 40px;*/
+        /*}*/
 
         .pull-right {
             float: right;

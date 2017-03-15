@@ -704,7 +704,7 @@ button#deleteFileButton.fa.fa-times{
     float: left;
 }
 
-.container-fluid #content {
+.panel .panel-default #content {
 	margin-top: 175px !important;
 	min-height: 400px;
 	margin-bottom: 75px;
