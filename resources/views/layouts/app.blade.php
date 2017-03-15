@@ -336,7 +336,7 @@
             <div class="row hidden-xs" id="user-links">
                 <div class="pull-right col-xs-4" role="group" aria-label="">
                     <img src="/images/dsd-admin-icons/user-loggedin.png">
-                    <p>Welcome, {‌{ Auth::user()->name }}
+
                     <div class="user-loggedIn" style="display:flex;">
                         @if(Auth::check())
                             <img src="/images/dsd-admin-icons/user-loggedin.png" height="22px" style="padding-right:5px;"><p>Welcome, {{Auth::user()->name}} | {{link_to_route('logout', 'Logout')}}</p>
@@ -418,21 +418,6 @@
 
         <div class="row-fluid" id="search-bar">
             <div class="container">
-                <form action="/search-results-admin" method="POST" role="search">
-                    {{ csrf_field() }}
-                    <div class="input-group col-xs-12">
-                        {{Form::open(['method'=>'GET','url'=>'search-results', 'role'=>'search'])}}
-
-
-                        <input type="text" class="form-control" name="adminQuery"
-                               placeholder="xxx-xxxx xxxx, xxxxxxxxxxx, or xxxxxxxxxx"> <span class="input-group-btn">
-                                    <button type="submit" id='search' class="btn btn-warning">
-                                    <span class="glyphicon glyphicon-search"></span>
-                                    </button>
-                                    </span>
-                        {{Form::close()}}
-                    </div>
-                </form>
 
                 <div class="form-group col-xs-12 col-sm-4" id="search-input">
                     <form action="/search-results-admin" method="POST" role="search">
