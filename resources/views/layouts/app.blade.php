@@ -58,6 +58,11 @@
         /*vertical-align: middle;*/
         /*}*/
 
+        #content.panel.panel-default {
+            margin-top: 180px;
+        }
+
+
         #search-bar {
             background-color: #960a0a !important;
             padding: 0px 10px;
@@ -75,14 +80,14 @@
             float: right;
         }
 
-        a, a:active {
-            color: #333;
-            text-decoration: none;
-        }
+        /*a, a:active {*/
+            /*color: #333;*/
+            /*text-decoration: none;*/
+        /*}*/
 
-        a:hover {
-            color: #999;
-        }
+        /*a:hover {*/
+            /*color: #999;*/
+        /*}*/
 
         /* Breadcrups CSS */
 
