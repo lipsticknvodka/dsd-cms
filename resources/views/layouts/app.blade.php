@@ -329,24 +329,20 @@
 <body id="app-layout">
 {{--<div class="wrapper">--}}
 
-
-<header id="header">
+<header>
     <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-            <div class="row hidden-xs" id="user-links">
-                <div class="pull-right col-xs-3" role="group" aria-label="">
-                    {{--<img src="/images/dsd-admin-icons/user-loggedin.png">--}}
-                    {{--<p>Welcome, {‌{ Auth::user()->name }} --}}
+            <div class="row hidden-xs" id="header-buttons">
+                <div class="btn-group pull-right" role="group" aria-label="">
                     <div class="user-loggedIn" style="display:flex;">
                         @if(Auth::check())
                             <img src="/images/dsd-admin-icons/user-loggedin.png" height="22px" style="padding-right:5px;"><p>Welcome, {{Auth::user()->name}} | {{link_to_route('logout', 'Logout')}}</p>
 
-                            @else
-{{--                                                          {{link_to_route('login', 'Login')}}--}}
+                        @else
+                            {{--                                                          {{link_to_route('login', 'Login')}}--}}
                             {{--<a href="/login">Login</a>--}}
 
                         @endif
-                    </div>
                 </div>
             </div>
 
@@ -362,31 +358,20 @@
 
 
             <div class="collapse navbar-collapse navHeaderCollapse">
-                {{--<!-- <div class="collapse navbar-collapse cbp-spmenu cbp-spmenu-horizonal cbp-spmenu-top navHeaderCollapse">-->--}}
-                {{--<div class="visible-xs row" id="header-buttons">--}}
-                    {{--<div class="btn-group" role="group" aria-label="">--}}
-                        {{--<a href="/request-quote"><button type="button" class="btn btn-warning">Request Quote</button></a>--}}
-                        {{--<a href="/request-account"><button type="button" class="btn btn-warning" href="request-account.php">Request Account</button></a>--}}
-                    {{--</div>--}}
+                <!-- <div class="collapse navbar-collapse cbp-spmenu cbp-spmenu-horizonal cbp-spmenu-top navHeaderCollapse">-->
+                <div class="visible-xs row" id="header-buttons">
+                    <div class="col-xs-12 user-loggedIn" style="display:flex;">
+                        @if(Auth::check())
+                            <img src="/images/dsd-admin-icons/user-loggedin.png" height="22px" style="padding-right:5px;"><p>Welcome, {{Auth::user()->name}} | {{link_to_route('logout', 'Logout')}}</p>
 
-                <div class="row visible-xs" id="user-links">
-                    <div class="pull-left" role="group" aria-label="">
-                        {{--<img src="/images/dsd-admin-icons/user-loggedin.png">--}}
-                        {{--<p>Welcome, {‌{ Auth::user()->name }} --}}
-                        <div class="col-xs-12 user-loggedIn" style="display:flex;">
-                            @if(Auth::check())
-                                <img src="/images/dsd-admin-icons/user-loggedin.png" height="22px" style="padding-right:5px;"><p>Welcome, {{Auth::user()->name}} | {{link_to_route('logout', 'Logout')}}</p>
+                        @else
+                            {{--<li>{{link_to_route('login', 'Login')}}</li>--}}
 
-                            @else
-                                {{--<li>{{link_to_route('login', 'Login')}}</li>--}}
-
-                            @endif
-                        </div>
+                        @endif
                     </div>
                 </div>
 
                 <ul class="nav navbar-nav navbar-right">
-
                     <li class=""><a href="/">Home</a></li>
                     <li class="dropdown">
                         <a href="about" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
@@ -412,14 +397,141 @@
                     <li class="last-item"><a href="contact">Contact</a></li>
 
                 </ul>
-            </div>
-        </div>
 
 
-        <div class="row-fluid" id="search-bar">
-            <div class="container">
-                <form action="/search-results-admin" method="POST" role="search">
-                    {{ csrf_field() }}
+                <div class="row-fluid" id="search-bar">
+                    <div class="container">
+                        <form action="/search-results-admin" method="POST" role="search">
+                            {{ csrf_field() }}
+                            {{--<div class="input-group col-xs-12">--}}
+                            {{--{{Form::open(['method'=>'GET','url'=>'search-results', 'role'=>'search'])}}--}}
+
+
+                            {{--<input type="text" class="form-control" name="adminQuery"--}}
+                            {{--placeholder="xxx-xxxx xxxx, xxxxxxxxxxx, or xxxxxxxxxx"> <span class="input-group-btn">--}}
+                            {{--<button type="submit" id='search' class="btn btn-warning">--}}
+                            {{--<span class="glyphicon glyphicon-search"></span>--}}
+                            {{--</button>--}}
+                            {{--</span>--}}
+                            {{--{{Form::close()}}--}}
+                            {{--</div>--}}
+                            {{--</form>--}}
+
+                            <div class="form-group col-xs-12 col-sm-4" id="search-input">
+                                {{--<form action="/search-results-admin" method="POST" role="search">--}}
+                                {{--<div class="input-group">--}}
+                                <div class="icon-addon addon-sm">
+
+                                    <input type="text" class="form-control" name="adminQuery"
+                                           placeholder="Search accounts, cfs and trucking" id="search">
+                                    <label for="search" class="glyphicon glyphicon-search" rel="tooltip" title="search"></label>
+                                    <span class="input-group-btn">
+                        <button type="submit" id='search' class="btn btn-warning hidden-xs hidden-sm hidden-md hidden-lg hidden-xl" >Submit</button>
+
+                        </span>
+                                    {{--<span class="glyphicon glyphicon-search"></span>--}}
+                                </div>
+                            </div>
+                            {{--</div>--}}
+                             </form>
+                          </div>
+                      </div>
+                   </div>
+             </div>
+         </div>
+    </div>
+</header>
+
+{{--<header id="header">--}}
+    {{--<div class="navbar navbar-default navbar-fixed-top">--}}
+        {{--<div class="container">--}}
+            {{--<div class="row hidden-xs" id="user-links">--}}
+                {{--<div class="pull-right col-xs-4" role="group" aria-label="">--}}
+                    {{--<img src="/images/dsd-admin-icons/user-loggedin.png">--}}
+                    {{--<p>Welcome, {‌{ Auth::user()->name }} --}}
+                    {{--<div class="user-loggedIn" style="display:flex;">--}}
+                        {{--@if(Auth::check())--}}
+                            {{--<img src="/images/dsd-admin-icons/user-loggedin.png" height="22px" style="padding-right:5px;"><p>Welcome, {{Auth::user()->name}} | {{link_to_route('logout', 'Logout')}}</p>--}}
+
+                            {{--@else--}}
+{{--                                                          {{link_to_route('login', 'Login')}}--}}
+                            {{--<a href="/login">Login</a>--}}
+
+                        {{--@endif--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+
+            {{--<a href="/" class="navbar-brand"><img src="images/logo.png" id="header-logo" alt="dsd trucking">DSD Companies</a>--}}
+
+
+            {{--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navHeaderCollapse" aria-expanded="false" aria-controls="navbar">--}}
+                {{--<!--<button type="button" class="navbar-toggle menu-top push-body" data-toggle="collapse" data-target=".navHeaderCollapse">-->--}}
+                {{--<span class="icon-bar"></span>--}}
+                {{--<span class="icon-bar"></span>--}}
+                {{--<span class="icon-bar"></span>--}}
+            {{--</button>--}}
+
+
+            {{--<div class="collapse navbar-collapse navHeaderCollapse">--}}
+                {{--<!-- <div class="collapse navbar-collapse cbp-spmenu cbp-spmenu-horizonal cbp-spmenu-top navHeaderCollapse">-->--}}
+                {{--<div class="visible-xs row" id="header-buttons">--}}
+                    {{--<div class="btn-group" role="group" aria-label="">--}}
+                        {{--<a href="/request-quote"><button type="button" class="btn btn-warning">Request Quote</button></a>--}}
+                        {{--<a href="/request-account"><button type="button" class="btn btn-warning" href="request-account.php">Request Account</button></a>--}}
+                    {{--</div>--}}
+
+                {{--<div class="row visible-xs" id="user-links">--}}
+                    {{--<div class="pull-left" role="group" aria-label="">--}}
+                        {{--<img src="/images/dsd-admin-icons/user-loggedin.png">--}}
+                        {{--<p>Welcome, {‌{ Auth::user()->name }} --}}
+                        {{--<div class="col-xs-12 user-loggedIn" style="display:flex;">--}}
+                            {{--@if(Auth::check())--}}
+                                {{--<img src="/images/dsd-admin-icons/user-loggedin.png" height="22px" style="padding-right:5px;"><p>Welcome, {{Auth::user()->name}} | {{link_to_route('logout', 'Logout')}}</p>--}}
+
+                            {{--@else--}}
+                                {{--<li>{{link_to_route('login', 'Login')}}</li>--}}
+
+                            {{--@endif--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+
+                {{--<ul class="nav navbar-nav navbar-right">--}}
+
+                    {{--<li class=""><a href="/">Home</a></li>--}}
+                    {{--<li class="dropdown">--}}
+                        {{--<a href="about" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>--}}
+                        {{--<ul class="dropdown-menu">--}}
+                            {{--<li><a href="about">About DSD</a></li>--}}
+                            {{--<li><a href="facilities">Facilities</a></li>--}}
+                            {{--<!--<li><a href="sustainability.php">Sustainability</a></li>-->--}}
+                            {{--<li><a href="faq">FAQ</a></li>--}}
+                        {{--</ul>--}}
+                    {{--</li>--}}
+                    {{--<li class="dropdown">--}}
+                        {{--<a href="services" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>--}}
+                        {{--<ul class="dropdown-menu">--}}
+                            {{--<li><a href="/services/air-freight">Air Freight</a></li>--}}
+                            {{--<li><a href="/services/ocean-freight">Ocean Freight</a></li>--}}
+                            {{--<li><a href="/services/trucking">Trucking</a></li>--}}
+                            {{--<li><a href="/services/hot-shot">Hot Shot Service</a></li>--}}
+                            {{--<li><a href="/services/warehousing">Warehousing</a></li>--}}
+                            {{--<li><a href="/services/cargo-screening">Cargo Screening</a></li>--}}
+                        {{--</ul>--}}
+                    {{--</li>--}}
+                    {{--<li><a href="freight-availability">Freight Availability</a></li>--}}
+                    {{--<li class="last-item"><a href="contact">Contact</a></li>--}}
+
+                {{--</ul>--}}
+            {{--</div>--}}
+
+
+
+        {{--<div class="row-fluid" id="search-bar">--}}
+            {{--<div class="container">--}}
+                {{--<form action="/search-results-admin" method="POST" role="search">--}}
+                    {{--{{ csrf_field() }}--}}
                     {{--<div class="input-group col-xs-12">--}}
                         {{--{{Form::open(['method'=>'GET','url'=>'search-results', 'role'=>'search'])}}--}}
 
@@ -434,28 +546,27 @@
                     {{--</div>--}}
                 {{--</form>--}}
 
-                <div class="form-group col-xs-12 col-sm-4" id="search-input">
+                {{--<div class="form-group col-xs-12 col-sm-4" id="search-input">--}}
                     {{--<form action="/search-results-admin" method="POST" role="search">--}}
                    {{--<div class="input-group">--}}
-                    <div class="icon-addon addon-sm">
+                    {{--<div class="icon-addon addon-sm">--}}
 
-                        <input type="text" class="form-control" name="adminQuery"
-                               placeholder="Search accounts, cfs and trucking" id="search">
-                        <label for="search" class="glyphicon glyphicon-search" rel="tooltip" title="search"></label>
-                        <span class="input-group-btn">
-                        <button type="submit" id='search' class="btn btn-warning hidden-xs hidden-sm hidden-md hidden-lg hidden-xl" >Submit</button>
+                        {{--<input type="text" class="form-control" name="adminQuery"--}}
+                               {{--placeholder="Search accounts, cfs and trucking" id="search">--}}
+                        {{--<label for="search" class="glyphicon glyphicon-search" rel="tooltip" title="search"></label>--}}
+                        {{--<span class="input-group-btn">--}}
+                        {{--<button type="submit" id='search' class="btn btn-warning hidden-xs hidden-sm hidden-md hidden-lg hidden-xl" >Submit</button>--}}
 
-                        </span>
+                        {{--</span>--}}
                                     {{--<span class="glyphicon glyphicon-search"></span>--}}
-                    </div>
-
+                    {{--</div>--}}
                 {{--</div>--}}
-
-            </div>
-                </form>
-        </div>
-        </div></div>
-</header>
+                {{--</div>--}}
+                {{--</form>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+        {{--</div></div>--}}
+{{--</header>--}}
 
 
 <section class="row-fluid">

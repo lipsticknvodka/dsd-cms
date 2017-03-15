@@ -95,12 +95,12 @@
                     <li class="dropdown">
                         <a href="services" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="air-freight">Air Freight</a></li>
-                            <li><a href="ocean-freight">Ocean Freight</a></li>
-                            <li><a href="trucking">Trucking</a></li>
-                            <li><a href="hot-shot">Hot Shot Service</a></li>
-                            <li><a href="warehousing">Warehousing</a></li>
-                            <li><a href="cargo-screening">Cargo Screening</a></li>
+                            <li><a href="/services/air-freight">Air Freight</a></li>
+                            <li><a href="/services/ocean-freight">Ocean Freight</a></li>
+                            <li><a href="/services/trucking">Trucking</a></li>
+                            <li><a href="/services/hot-shot">Hot Shot Service</a></li>
+                            <li><a href="/services/warehousing">Warehousing</a></li>
+                            <li><a href="/services/cargo-screening">Cargo Screening</a></li>
                         </ul>
                     </li>
                     <li><a href="freight-availability">Freight Availability</a></li>
