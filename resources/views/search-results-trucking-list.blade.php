@@ -5,7 +5,7 @@
         <div class="container" id="page-header">
             <h4>Freight Availability</h4>
             <ol class="breadcrumb">
-                <li><a href="home">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="freight-availability">Freight Availability </a></li>
                 <li class="active">Trucking </li>
                 {{--<li class="active">{{$truckingDelivery->ref_no}}</li>--}}

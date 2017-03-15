@@ -6,7 +6,7 @@
         <div class="container" id="page-header">
             <h4>Frequently Asked Questions</h4>
             <ol class="breadcrumb">
-                <li><a href="home">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="about">About Us</a></li>
                 <li class="active">FAQ</li>
             </ol>

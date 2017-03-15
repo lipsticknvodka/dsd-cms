@@ -6,7 +6,7 @@
         <div class="container" id="page-header">
             <h4>About Us</h4>
             <ol class="breadcrumb">
-                <li><a href="home">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li class="active">About Us</li>
             </ol>
         </div>

@@ -5,11 +5,11 @@
         <div class="container" id="page-header">
             <h4>Warehousing</h4>
             <ol class="breadcrumb pull-left">
-                <li><a href="home">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="services">Services</a></li>
                 <li class="active">Warehousing</li>
             </ol>
-            <p class="pull-right service-nav"><a href="hot-shot">Hot Shot Service</a> | <a href="cargo-screening">Cargo Screening</a></p>
+            <p class="pull-right service-nav"><a href="/services/hot-shot">Hot Shot Service</a> | <a href="/services/cargo-screening">Cargo Screening</a></p>
         </div>
         <div class="container">
             <img src="images/warehousing/hero-image.jpg" class="col-xs-12 img-responsive hidden-xs" alt="trucking company">

@@ -7,10 +7,10 @@
         <div id="wrapper">
             <div class="slider-wrapper theme-default">
                 <div id="slider" class="nivoSlider">
-                    <a href="air-freight"><img src="/images/slides/air-freight-min.jpg" alt="air freight lax"/></a>
-                    <a href="ocean-freight"><img src="/images/slides/ocean-freight.jpg" alt="air freight los angeles" /></a>
-                    <a href="trucking"><img src="/images/slides/trucking-min.jpg" alt="Trucking Los Angeles" class="col-xs-12"/></a>
-                    <a href="warehousing"><img src="/images/slides/warehousing-min.jpg" alt="freight forwarding company los angeles" /></a>
+                    <a href="/services/air-freight"><img src="/images/slides/air-freight-min.jpg" alt="air freight lax"/></a>
+                    <a href="/services/ocean-freight"><img src="/images/slides/ocean-freight.jpg" alt="air freight los angeles" /></a>
+                    <a href="/services/trucking"><img src="/images/slides/trucking-min.jpg" alt="Trucking Los Angeles" class="col-xs-12"/></a>
+                    <a href="services/warehousing"><img src="/images/slides/warehousing-min.jpg" alt="freight forwarding company los angeles" /></a>
                     <!-- <a href="container-freight-station"><img src="images/slides/cfs.jpg" alt="" /></a>-->
                 </div>
             </div>

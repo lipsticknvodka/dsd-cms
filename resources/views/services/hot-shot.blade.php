@@ -5,11 +5,11 @@
         <div class="container" id="page-header">
             <h4>Hot Shot Service</h4>
             <ol class="breadcrumb pull-left">
-                <li><a href="home">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="services">Services</a></li>
                 <li class="active">Hot Shot Service</li>
             </ol>
-            <p class="pull-right service-nav"><a href="trucking">Trucking</a> | <a href="warehousing">Warehousing</a></p>
+            <p class="pull-right service-nav"><a href="/services/trucking">Trucking</a> | <a href="/services/warehousing">Warehousing</a></p>
         </div>
         <div class="container">
             <img src="images/hot-shot/hero-image.jpg" class="col-xs-12 img-responsive hidden-xs" alt="hot shot service los angeles">

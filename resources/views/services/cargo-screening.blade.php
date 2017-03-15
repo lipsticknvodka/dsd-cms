@@ -6,11 +6,11 @@
         <div class="container" id="page-header">
             <h4>Cargo Screening</h4>
             <ol class="breadcrumb pull-left">
-                <li><a href="home">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="services">Services</a></li>
                 <li class="active">Cargo Screening</li>
             </ol>
-            <p class="pull-right service-nav"><a href="warehousing">Warehousing</a> <!--| <a href="hot-shot">Next</a></p>--></p>
+            <p class="pull-right service-nav"><a href="/services/warehousing">Warehousing</a> <!--| <a href="hot-shot">Next</a></p>--></p>
         </div>
         <div class="container">
             <img src="images/cargo-screening/hero-image.jpg" class="col-xs-12 img-responsive hidden-xs" alt="cargo screening facility LAX">

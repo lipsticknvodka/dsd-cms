@@ -5,7 +5,7 @@
         <div class="container" id="page-header">
             <h4>CFS Search Results</h4>
             <ol class="breadcrumb">
-                <li><a href="home">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="freight-availability">Freight Availability </a></li>
                 <li><a href="freight-availability/cfs">CFS </a></li>
                 <li class="active">{{$cfsDelivery->mawb}}</li>
