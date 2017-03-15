@@ -8,8 +8,8 @@
                     <div class="panel-heading">Dashboard</div>
 
                     <div class="panel-body">
-        <div class="row">
-                        <div class="col-xs-12">
+                     <div class="row">
+                        <div class="col-xs-12 col-sm-10">
                             <div class="row title-button-row">
                                 <h3 class="col-sm-9">CFS Deliveries</h3>
                                 {{--<a class="btn btn-warning pull-right" href="cfs/step/1">Add New</a>--}}
