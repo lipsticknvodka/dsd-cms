@@ -45,7 +45,7 @@ class CfsDelivery extends Model
 
     protected $dates = ['deleted_at'];
 
-//    protected $table = ['account_cfs_deliveries'];
+    protected $table = ['account_cfs_deliveries'];
 //    protected $with = 'account';
     protected $fillable = [
         'account_id',
