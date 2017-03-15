@@ -335,8 +335,6 @@
         <div class="container">
             <div class="row hidden-xs" id="user-links">
                 <div class="pull-right col-xs-4" role="group" aria-label="">
-                    <img src="/images/dsd-admin-icons/user-loggedin.png">
-
                     <div class="user-loggedIn" style="display:flex;">
                         @if(Auth::check())
                             <img src="/images/dsd-admin-icons/user-loggedin.png" height="22px" style="padding-right:5px;"><p>Welcome, {{Auth::user()->name}} | {{link_to_route('logout', 'Logout')}}</p>
@@ -431,7 +429,7 @@
                         <button type="submit" id='search' class="btn btn-warning hidden-xs hidden-sm hidden-md hidden-lg hidden-xl" >Submit</button>
 
                         </span>
-                                    <span class="glyphicon glyphicon-search"></span>
+
                     </div>
                 </div>
                 </form>
