@@ -462,6 +462,11 @@ nav.sidebar{
 	padding: 50px  !important;
 }
 
+#content.panel.panel-default {
+	margin-top: 180px;
+}
+
+
 .dropdown.open {
 	z-index: 10;
 	/*position: absolute;*/
