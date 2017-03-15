@@ -58,11 +58,6 @@
         /*vertical-align: middle;*/
         /*}*/
 
-        #content.panel.panel-default {
-            margin-top: 180px;
-        }
-
-
         #search-bar {
             background-color: #960a0a !important;
             padding: 0px 10px;

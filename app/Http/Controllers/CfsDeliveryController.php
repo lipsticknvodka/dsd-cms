@@ -30,6 +30,8 @@ class CfsDeliveryController extends Controller
         //
         $cfsDeliveries = CfsDelivery::orderBy('created_at', 'desc')->paginate(10);
 
+//        dd($cfsDeliveries);
+
         return view('cfs.index', ['cfsDeliveries' => $cfsDeliveries]);
 //
     }
@@ -136,13 +138,15 @@ class CfsDeliveryController extends Controller
     public function postCfs(Request $request)
     {
 
-        $this->validate($request, [
-//            'hawb' => 'required',
-            'mawb' => 'required',
-        ]);
-//
+//        $this->validate($request, [
+////            'hawb' => 'required',
+//            'mawb' => 'required',
+//        ]);
+////
         //OG SAVE CODE
-        $cfs = CfsDelivery::firstOrCreate(['mawb' => $request->input('mawb')]);
+        $cfs = CfsDelivery::create(['mawb' => $request->input('mawb')]);
+
+
 
         //NEW CODE TO SAVE ACCOUNT ID IN DB
 
@@ -151,11 +155,12 @@ class CfsDeliveryController extends Controller
 //                'mawb' => $request->input('mawb'),
 ////
 //            ]);
-//        $account = Account::lists('id');
+//        $account = Account::find('id')->get();
 
-
-
-
+//        $account = Account::pluck('name', 'id')->all();
+//
+//
+//
 //        $account_id = Account::where(['id', $account->id]);
 //        $cfs->account = Input::get('account_id');;
 //

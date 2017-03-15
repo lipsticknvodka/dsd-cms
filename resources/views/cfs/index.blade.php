@@ -10,11 +10,11 @@
                     <div class="panel-body">
                         @include('errors.list')
 
-                        @if(session()->has('success'))
-                            <div class="alert alert-success">
-                                {{ session()->get('success') }}
-                            </div>
-                        @endif
+                        {{--@if(session()->has('success'))--}}
+                            {{--<div class="alert alert-success">--}}
+                                {{--{{ session()->get('success') }}--}}
+                            {{--</div>--}}
+                        {{--@endif--}}
 
                         <h4>Add New CFS Delivery</h4>
 

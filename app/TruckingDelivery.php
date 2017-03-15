@@ -28,6 +28,8 @@ class TruckingDelivery extends Model
         'deleted_at'
     );
 
+    protected $table = 'trucking_deliveries';
+
     protected $revisionFormattedFieldNames = array(
         'acct_name' => 'Account Name',
         'ref_no' => 'Reference No.',
@@ -198,9 +200,9 @@ class TruckingDelivery extends Model
     public function account()
     {
 
-//        return $this->belongsTo('App\Account', 'account_trucking_deliveries');
+        return $this->belongsTo('App\Account', 'account_trucking_deliveries');
 
-        return $this->belongsTo('App\Account');
+//        return $this->belongsTo('App\Account');
     }
 
 

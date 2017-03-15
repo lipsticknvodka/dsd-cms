@@ -122,13 +122,14 @@ class TruckingDeliveryController extends Controller
             'ref_no' => 'required',
         ]);
 
-//        $account = Account::findOrFail();
+//        AFTER DEPLOY WITH POSTICO, NULL ERROR RETURNED
+//        $trucking = TruckingDelivery::firstOrCreate(['ref_no' => $request->input('ref_no')]);
 
-        $trucking = TruckingDelivery::firstOrCreate(['ref_no' => $request->input('ref_no')]);
+        $trucking = TruckingDelivery::firstOrNew(['ref_no' => $request->input('ref_no')]);
+
 
         $request->session()->put('trucking', $trucking);
 
-//        $trucking->account()->save($account->id);
 
         return redirect()->action('TruckingDeliveryController@getTruckingStep', ['step' => 1]);
 
@@ -139,18 +140,12 @@ class TruckingDeliveryController extends Controller
     public function getTruckingStep(Request $request, $step)
     {
         $trucking = DB::table('trucking_deliveries');
-//        $countries = Countries::lists('name', 'id');
-        $account = Account::lists('name', 'id')->all();
+
+        $account = Account::pluck('name', 'id')->all();
 //            $account = Account::lists('name', 'id')->where('acct_type','=','Trucking');
-//        $cfs = CFS::get('cfs');
 
-//        $countries = \DB::table('countries')->lists('name', 'id');
-//        $account = \DB::table('accounts')->lists('name', 'id');
-
-//        return view('dashboard.create')->with('countries', $countries);
-//        return view('trucking.step_'.$step, ['account' => $request->session()->get('account')])->with(['accounts' => $accounts]);
         return view('trucking.step_'.$step, ['trucking' => $request->session()->get('trucking')], compact('account', $account));
-//        return view('cfs.step_'.$step, ['cfs' => $request->session()->get('cfs')]);
+//        return view('trucking.step_'.$step, ['trucking' => $request->session()->get('trucking')]);
     }
 
     protected $lastStep = 4;
@@ -160,6 +155,7 @@ class TruckingDeliveryController extends Controller
     public function postTruckingStep(Request $request, $step)
     {
 
+//
 //        switch ($step)
 //        {
 //            case 1:
@@ -197,12 +193,15 @@ class TruckingDeliveryController extends Controller
 //        }
 
 //        $this->validate($request, $rules);
-// $accounts = Account::where('acct_type', true)->orderBy('name')->pluck('name', 'id');
+
+//        NOT UPDATING AFTER DEPLOYMENT
+//        $request->session()->get('trucking')->update($request->all());
+//
+        $request->session()->get('trucking')->save($request->all());
 
 
-        $request->session()->get('trucking')
-            ->update($request->all())
-        ;
+
+//        dd('trucking');
 
         if ($step == $this->lastStep) {
 //            return redirect()->action('AccountsController@getAccountDone');

@@ -207,10 +207,10 @@ Route::delete('hawb/{id}', 'CfsDeliveryController@deleteHawb');
 
 Route::get('/cfs/{id}', 'CfsDeliveryController@show');
 
-Route::get('/cfs', [
-    'uses' => 'CfsDeliveryController@index', 'CfsDeliveryController@getCfs','CfsDeliveryController@postCfs',
-    'as'   => 'cfs.index',
-]);
+//Route::get('/cfs', [
+//    'uses' => 'CfsDeliveryController@index', 'CfsDeliveryController@getCfs','CfsDeliveryController@postCfs',
+//    'as'   => 'cfs.index',
+//]);
 
 Route::resource('cfs', 'CfsDeliveryController');
 
@@ -230,6 +230,10 @@ Route::post('cfs/{id}/edit/step/{step}', 'CfsDeliveryController@postEditCfsStep'
 
 
 //TRUCKING ROUTES
+
+Route::get('trucking/step/{step}', 'TruckingDeliveryController@getTruckingStep')->where(['step' => '[1-4]']);
+
+Route::post('trucking/step/{step}', 'TruckingDeliveryController@postTruckingStep')->where(['step' => '[1-4]']);
 
 Route::get('/trucking/downloadExcel/{type}', 'TruckingDeliveryController@downloadExcel');
 
@@ -251,9 +255,7 @@ Route::resource('trucking', 'TruckingDeliveryController');
 
 Route::post('trucking', 'TruckingDeliveryController@postTrucking');
 
-Route::get('trucking/step/{step}', 'TruckingDeliveryController@getTruckingStep')->where(['step' => '[1-4]']);
 
-Route::post('trucking/step/{step}', 'TruckingDeliveryController@postTruckingStep')->where(['step' => '[1-4]']);
 
 Route::post('/trucking/{id}/photos/', 'TruckingDeliveryController@addPhoto');
 

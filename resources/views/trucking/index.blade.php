@@ -14,11 +14,13 @@
                     <div class="panel-body">
                         @include('errors.list')
 
-                        @if(session()->has('success'))
-                            <div class="alert alert-success">
-                                {{ session()->get('success') }}
-                            </div>
-                        @endif
+                        {{--@if(session()->has('success'))--}}
+                            {{--<div class="alert alert-success">--}}
+                                {{--{{ session()->get('success') }}--}}
+                            {{--</div>--}}
+                        {{--@endif--}}
+
+
                         <h4>Add New Trucking Delivery</h4>
 
                         {!! Form::open(['files'=>true]) !!}
@@ -29,7 +31,7 @@
                         {!! Form::label('ref_no', 'Reference/Load No.') !!}<br>
                         <div class="input-group col-xs-12">
                             {!! Form::text('ref_no', null, ['class'=>'form-control']) !!}
-
+                            {{ csrf_field() }}
                             <span class="input-group-btn">
                                          <button type="submit" class="btn btn-warning pull-right">Submit</button>
                                     </span>
