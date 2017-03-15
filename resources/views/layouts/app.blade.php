@@ -178,7 +178,7 @@
 
 
         nav.sidebar, .main{
-            margin-top:95px;
+            margin-top:135px;
             -webkit-transition: margin 200ms ease-out;
             -moz-transition: margin 200ms ease-out;
             -o-transition: margin 200ms ease-out;
