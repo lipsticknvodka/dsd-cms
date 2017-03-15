@@ -649,7 +649,8 @@ button#search.btn-warning {
 #search-bar {
 	background-color: #960a0a;
 	padding: 0px 10px;
-	top: 96px;
+	top: 81px;
+	height: 55px;
 	position: fixed;
 	width: 100%;
 

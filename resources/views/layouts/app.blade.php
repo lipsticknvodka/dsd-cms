@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>DSD Companies</title>
-{{--    {{ HTML::style('css/style.css') }}--}}
+    {{--    {{ HTML::style('css/style.css') }}--}}
 
     <link rel="stylesheet" type="text/css" href="/css/style.css" >
 
-{{--    <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" >--}}
+    {{--    <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" >--}}
 
     {{--<link type="text/css" href="css/bootstrap-timepicker.min.css" />--}}
 
@@ -62,33 +62,25 @@
             margin-top: 40px;
         }
 
-        /*.pull-right {*/
-            /*float: right;*/
-        /*}*/
-
-        /*a, a:active {*/
-            /*color: #333;*/
-            /*text-decoration: none;*/
-        /*}*/
-
-        /*a:hover {*/
-            /*color: #999;*/
-        /*}*/
-
-
-        #trucking.arrow-steps {
-            width: 625px;
+        .pull-right {
+            float: right;
         }
 
+        a, a:active {
+            color: #333;
+            text-decoration: none;
+        }
 
+        a:hover {
+            color: #999;
+        }
 
+        /* Breadcrups CSS */
 
         .arrow-steps{
             margin-left: auto;
             margin-right: auto;
-            width:475px;
-            margin-top:150px;
-            margin-bottom:50px;
+            width:90%;
         }
         .arrow-steps .step {
             text-align: center;
@@ -96,7 +88,7 @@
             cursor: default;
             margin: 0 3px;
             padding: 10px 10px 10px 20px;
-            width: 150px;
+            width: 180px;
             font-size: 16px;
             letter-spacing: 2px;
             font-weight: bold;
@@ -178,7 +170,7 @@
 
 
         nav.sidebar, .main{
-            margin-top:150px;
+            margin-top:135px;
             -webkit-transition: margin 200ms ease-out;
             -moz-transition: margin 200ms ease-out;
             -o-transition: margin 200ms ease-out;
@@ -196,7 +188,7 @@
         }
 
         /*nav:hover .forAnimate{*/
-            /*opacity: 1;*/
+        /*opacity: 1;*/
         /*}*/
 
 
@@ -205,123 +197,97 @@
 
 
         /*.navbar-nav>li {*/
-            /*float: left;*/
-            /*!* width: 10; *!*/
-            /*width: 200px;*/
+        /*float: left;*/
+        /*!* width: 10; *!*/
+        /*width: 200px;*/
         /*}*/
-            .main{
-                position: absolute;
-                width: calc(100% - 40px);
-                margin-left: 40px;
-                float: right;
-            }
+        .main{
+            position: absolute;
+            width: calc(100% - 40px);
+            margin-left: 40px;
+            float: right;
+        }
 
-            nav.sidebar:hover + .main{
-                margin-left: 200px;
-            }
+        nav.sidebar:hover + .main{
+            margin-left: 200px;
+        }
 
-            nav.sidebar.navbar.sidebar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
-                margin-left: 0px;
-            }
+        nav.sidebar.navbar.sidebar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+            margin-left: 0px;
+        }
 
-            nav.sidebar .navbar-brand, nav.sidebar .navbar-header{
-                text-align: center;
-                width: 100%;
-                margin-left: 0px;
-            }
+        nav.sidebar .navbar-brand, nav.sidebar .navbar-header{
+            text-align: center;
+            width: 100%;
+            margin-left: 0px;
+        }
 
-            nav.sidebar a{
-                padding-right: 13px;
-            }
+        nav.sidebar a{
+            padding-right: 13px;
+        }
 
-            nav.sidebar .navbar-nav > li:first-child{
-                border-top: 1px #e5e5e5 solid;
-            }
+        nav.sidebar .navbar-nav > li:first-child{
+            border-top: 1px #e5e5e5 solid;
+        }
 
-            nav.sidebar .navbar-nav > li{
-                border-bottom: 1px #e5e5e5 solid;
-                margin-bottom: 0px;
-            }
+        nav.sidebar .navbar-nav > li{
+            border-bottom: 1px #e5e5e5 solid;
+            margin-bottom: 0px;
+        }
 
-            nav.sidebar .navbar-nav .open .dropdown-menu {
-                position: static;
-                float: none;
-                width: auto;
-                margin-top: 0;
-                background-color: transparent;
-                border: 0;
-                -webkit-box-shadow: none;
-                box-shadow: none;
-            }
+        nav.sidebar .navbar-nav .open .dropdown-menu {
+            position: static;
+            float: none;
+            width: auto;
+            margin-top: 0;
+            background-color: transparent;
+            border: 0;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
 
-            nav.sidebar .navbar-collapse, nav.sidebar .container-fluid{
-                padding: 0 0px 0 0px;
-            }
+        nav.sidebar .navbar-collapse, nav.sidebar .container-fluid{
+            padding: 0 0px 0 0px;
+        }
 
-            .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
-                color: #777;
-            }
+        .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+            color: #777;
+        }
 
-            nav.sidebar{
-                width: 200px;
-                height: 100%;
-                margin-left: -160px;
-                float: left;
-                margin-bottom: 0px;
-            }
+        nav.sidebar{
+            width: 200px;
+            height: 100%;
+            margin-left: -160px;
+            float: left;
+            margin-bottom: 0px;
+        }
 
-            nav.sidebar li {
-                width: 100%;
-            }
-
-        .side-body {
-            /*margin-left: 310px;*/
-            /*margin-left: 287px;*/
-            margin-left: 190px;
-            margin-bottom: 50px !important;
-            margin-top: 25px !important;
-            min-height: 600px !important;
+        nav.sidebar li {
+            width: 100%;
         }
 
 
-        @media screen and (max-width:992px) {
 
-            #trucking.arrow-steps {
-                width: 545px;
-            }
-
-            .arrow-steps {
-                width: 420px;
-            }
-
-            .arrow-steps .step {
-                width: 130px !important;
-            }
-
-            .side-body{
-                margin-left:40px;
-            }
+        .forAnimate{
+            opacity: 0;
         }
-            .forAnimate{
-                opacity: 0;
-            }
         /*}*/
 
         /*@media (min-width: 330px) {*/
 
-            .main{
-                width: calc(100% - 200px);
-                margin-left: 200px;
-            }
+        .main{
+            width: calc(100% - 200px);
+            margin-left: 200px;
+        }
 
-            nav.sidebar{
-                margin-left: 0px;
-                float: left;
-            }
+        nav.sidebar{
+            margin-left: 0px;
+            float: left;
+        }
 
-            nav.sidebar .forAnimate{
-                opacity: 1;
-            }
+        nav.sidebar .forAnimate{
+            opacity: 1;
+        }
         /*}*/
 
     </style>
@@ -330,18 +296,20 @@
 {{--<div class="wrapper">--}}
 
 
-<header id="header">
+<header>
     <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="row hidden-xs" id="user-links">
-                <div class="pull-right col-xs-4" role="group" aria-label="">
+                <div class="pull-right" role="group" aria-label="">
+                    {{--<img src="/images/dsd-admin-icons/user-loggedin.png">--}}
+                    {{--<p>Welcome, {‌{ Auth::user()->name }} --}}
                     <div class="user-loggedIn" style="display:flex;">
                         @if(Auth::check())
                             <img src="/images/dsd-admin-icons/user-loggedin.png" height="22px" style="padding-right:5px;"><p>Welcome, {{Auth::user()->name}} | {{link_to_route('logout', 'Logout')}}</p>
 
-                            @else
-                                                          {{link_to_route('login', 'Login')}}
-                            <a href="/login">Login</a>
+                        @else
+                            {{--                                                          {{link_to_route('login', 'Login')}}--}}
+                            {{--<a href="/login">Login</a>--}}
 
                         @endif
                     </div>
@@ -360,23 +328,23 @@
 
 
             <div class="collapse navbar-collapse navHeaderCollapse">
-                <!-- <div class="collapse navbar-collapse cbp-spmenu cbp-spmenu-horizonal cbp-spmenu-top navHeaderCollapse">-->
-                <div class="visible-xs row" id="header-buttons">
-                    <div class="btn-group" role="group" aria-label="">
-                        <a href="/request-quote"><button type="button" class="btn btn-warning">Request Quote</button></a>
-                        <a href="/request-account"><button type="button" class="btn btn-warning" href="request-account.php">Request Account</button></a>
-                    </div>
+                {{--<!-- <div class="collapse navbar-collapse cbp-spmenu cbp-spmenu-horizonal cbp-spmenu-top navHeaderCollapse">-->--}}
+                {{--<div class="visible-xs row" id="header-buttons">--}}
+                {{--<div class="btn-group" role="group" aria-label="">--}}
+                {{--<a href="/request-quote"><button type="button" class="btn btn-warning">Request Quote</button></a>--}}
+                {{--<a href="/request-account"><button type="button" class="btn btn-warning" href="request-account.php">Request Account</button></a>--}}
+                {{--</div>--}}
 
                 <div class="row visible-xs" id="user-links">
                     <div class="pull-left" role="group" aria-label="">
-                        <img src="/images/dsd-admin-icons/user-loggedin.png">
-                        <p>Welcome, {‌{ Auth::user()->name }}
-                        <div class="col-xs-12 user-loggedIn" style="display:flex;">
+                        {{--<img src="/images/dsd-admin-icons/user-loggedin.png">--}}
+                        {{--<p>Welcome, {‌{ Auth::user()->name }} --}}
+                        <div class=" col-xs-12 user-loggedIn" style="display:flex;">
                             @if(Auth::check())
                                 <img src="/images/dsd-admin-icons/user-loggedin.png" height="22px" style="padding-right:5px;"><p>Welcome, {{Auth::user()->name}} | {{link_to_route('logout', 'Logout')}}</p>
 
                             @else
-                                <li>{{link_to_route('login', 'Login')}}</li>
+                                {{--<li>{{link_to_route('login', 'Login')}}</li>--}}
 
                             @endif
                         </div>
@@ -411,29 +379,31 @@
 
                 </ul>
             </div>
-
+        </div>
 
 
         <div class="row-fluid" id="search-bar">
             <div class="container">
+                <form action="/search-results-admin" method="POST" role="search">
+                    {{ csrf_field() }}
+                    <div class="col-xs-12 col-sm-6">
+                        {{Form::open(['method'=>'GET','url'=>'search-results', 'role'=>'search'])}}
 
-                <div class="form-group col-xs-12 col-sm-4" id="search-input">
-                    <form action="/search-results-admin" method="POST" role="search">
-                   <div class="input-group">
-                    <div class="icon-addon addon-sm">
-
-                        <input type="text" class="form-control" name="adminQuery"
-                               placeholder="Search accounts, cfs and trucking" id="search">
-                        <label for="search" class="glyphicon glyphicon-search" rel="tooltip" title="search"></label>
-                        <span class="input-group-btn">
-                        <button type="submit" id='search' class="btn btn-warning hidden-xs hidden-sm hidden-md hidden-lg hidden-xl" >Submit</button>
-
-                        </span>
-
+{{--                        {!! Form::label('adminQuery','Search by MAWB, HAWB, or Reference/Load #')  !!}--}}
+                        <input type="text" class="form-control" name="adminQuery" id="search-input"
+                               placeholder="Search all accounts, CFS, and trucking deliveries">
+                                    <button type="submit" type="hidden" id='search' class="hidden"/>
+                        {{Form::close()}}
                     </div>
-                </div>
                 </form>
-                </div>
+
+                {{--<div class="form-group col-sm-4" id="search-input">--}}
+                {{--<div class="icon-addon addon-sm">--}}
+                {{--<input type="text" placeholder="Search by MAWB or Reference No." class="form-control" id="search">--}}
+                {{--<label for="search" class="glyphicon glyphicon-search" rel="tooltip" title="search"></label>--}}
+                {{--<input type="submit" type="hidden"/>--}}
+                {{--</div>--}}
+                {{--</div>--}}
             </div>
         </div>
     </div>
@@ -443,78 +413,78 @@
 <section class="row-fluid">
     <nav class="navbar navbar-default sidebar" role="navigation">
         {{--<div class="container-fluid">--}}
-            {{--<div class="navbar-header">--}}
-                {{--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">--}}
-                    {{--<span class="sr-only">Toggle navigation</span>--}}
-                    {{--<span class="icon-bar"></span>--}}
-                    {{--<span class="icon-bar"></span>--}}
-                    {{--<span class="icon-bar"></span>--}}
-                {{--</button>--}}
-            {{--</div>--}}
+        {{--<div class="navbar-header">--}}
+        {{--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">--}}
+        {{--<span class="sr-only">Toggle navigation</span>--}}
+        {{--<span class="icon-bar"></span>--}}
+        {{--<span class="icon-bar"></span>--}}
+        {{--<span class="icon-bar"></span>--}}
+        {{--</button>--}}
+        {{--</div>--}}
         {{--<div class="container">--}}
-            {{--<div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">--}}
+        {{--<div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">--}}
 
-                <ul class="nav navbar-nav">
-                    <li class="panel panel-default"><a href="/dashboard">Dashboard<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-dashboard"></span></a></li>
-                        <!-- Dropdown-->
-                        <li class="panel panel-default" id="dropdown">
-                        <a data-toggle="collapse" href="#dropdown-accounts">
-                       Accounts <span class="caret"></span> <span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-user"></span>
-                        </a>
+        <ul class="nav navbar-nav">
+            <li class="panel panel-default"><a href="/dashboard">Dashboard<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-dashboard"></span></a></li>
+            <!-- Dropdown-->
+            <li class="panel panel-default" id="dropdown">
+                <a data-toggle="collapse" href="#dropdown-accounts">
+                    Accounts <span class="caret"></span> <span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-user"></span>
+                </a>
 
-                        <div id="dropdown-accounts" class="panel-collapse collapse">
-                        <div class="panel-body">
+                <div id="dropdown-accounts" class="panel-collapse collapse">
+                    <div class="panel-body">
                         <ul class="nav navbar-nav">
-                        <li><a href="/account">View All<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-list"></span></a></li>
-                        {{--<li><a href="/account/step/1">Add New<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-plus"></span></a></li>--}}
-                        <li><a href="/account/trash">Trash<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-trash"></span></a></li>
-                        {{--<li><a href="/account/history"> History<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-time"></span></a></li>--}}
+                            <li><a href="/account">View All<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-list"></span></a></li>
+                            {{--<li><a href="/account/step/1">Add New<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-plus"></span></a></li>--}}
+                            <li><a href="/account/trash">Trash<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-trash"></span></a></li>
+                            {{--<li><a href="/account/history"> History<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-time"></span></a></li>--}}
                         </ul>
-                        </div>
-                        </div><!-- /.navbar-collapse -->
-                        </li>
+                    </div>
+                </div><!-- /.navbar-collapse -->
+            </li>
 
-                        <!-- Dropdown-->
-                    <li class="panel panel-default" id="dropdown">
-                        <a data-toggle="collapse" href="#dropdown-cfs">
-                            CFS <span class="caret"></span> <span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-plane"></span>
-                        </a>
+            <!-- Dropdown-->
+            <li class="panel panel-default" id="dropdown">
+                <a data-toggle="collapse" href="#dropdown-cfs">
+                    CFS <span class="caret"></span> <span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-plane"></span>
+                </a>
 
-                        <div id="dropdown-cfs" class="panel-collapse collapse">
-                            <div class="panel-body">
-                                <ul class="nav navbar-nav">
-                                    <li><a href="/cfs">View All <span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-list"></span></a></li>
-                                    <li><a href="/cfs/open">Open/Pending<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-pushpin"></span></a></li>
-                                    <li><a href="/cfs/trash">Trash<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-trash"></span></a></li>
-                                    {{--<li><a href="/cfs/history"> History<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-time"></span></a></li>--}}
-                                </ul>
-                            </div>
-                        </div><!-- /.navbar-collapse -->
-                    </li>
+                <div id="dropdown-cfs" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul class="nav navbar-nav">
+                            <li><a href="/cfs">View All <span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-list"></span></a></li>
+                            <li><a href="/cfs/open">Open Transactions<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-plus"></span></a></li>
+                            <li><a href="/cfs/trash">Trash<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-trash"></span></a></li>
+                            {{--<li><a href="/cfs/history"> History<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-time"></span></a></li>--}}
+                        </ul>
+                    </div>
+                </div><!-- /.navbar-collapse -->
+            </li>
 
-                        <!-- Dropdown-->
-                    <li class="panel panel-default" id="dropdown">
-                        <a data-toggle="collapse" href="#dropdown-trucking">
-                            Trucking <span class="caret"></span> <span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-road"></span>
-                        </a>
+            <!-- Dropdown-->
+            <li class="panel panel-default" id="dropdown">
+                <a data-toggle="collapse" href="#dropdown-trucking">
+                    Trucking <span class="caret"></span> <span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-road"></span>
+                </a>
 
-                        <div id="dropdown-trucking" class="panel-collapse collapse">
-                            <div class="panel-body">
-                                <ul class="nav navbar-nav">
-                                    <li><a href="/trucking">View All<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-list"></span></a></li>
-                                    <li><a href="/trucking/open">Open/Pending<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-pushpin"></span></a></li>
-                                    <li><a href="/trucking/trash">Trash<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-trash"></span></a></li>
-                                    {{--<li><a href="/trucking/history"> History<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-time"></span></a></li>--}}
-                                </ul>
-                            </div>
+                <div id="dropdown-trucking" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul class="nav navbar-nav">
+                            <li><a href="/trucking">View All<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-list"></span></a></li>
+                            <li><a href="/trucking/open">Open Transactions<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-plus"></span></a></li>
+                            <li><a href="/trucking/trash">Trash<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-trash"></span></a></li>
+                            {{--<li><a href="/trucking/history"> History<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-time"></span></a></li>--}}
+                        </ul>
+                    </div>
 
-                        </div><!-- /.navbar-collapse -->
-                    </li>
+                </div><!-- /.navbar-collapse -->
+            </li>
 
-                    <li class="panel panel-default"><a href="history"> History<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-time"></span></a></li>
+            <li class="panel panel-default"><a href="history"> History<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-time"></span></a></li>
 
-                </ul>
-            </div>
+        </ul>
+        </div>
         </div>
     </nav>
 
@@ -532,14 +502,14 @@
 </div>
 {{--</div>--}}
 
-    {{--<div class="push"></div>--}}
+{{--<div class="push"></div>--}}
 
 <footer>
     <div class="row-fluid" id="footer">
         <div class="container">
             <div class="col-xs-12 col-sm-5">
                 <h4>Vision</h4> <p>To create an enduring, people-centered partnership, founded on basis of trust and respect, which has been earned through cultivating a consistent delivery of superior services, to a worldwide base of customers, creating a Global reach, with a Local Touch.</p>
-                <p class="copy"><a href="/"><img src="images/logo.png" id="footer-logo" class="img-responsive hidden-xs" alt="dsd trucking" width="50"></a>&copy; Copyright 2015 DSD Trucking</p>
+                <p class="copy"><a href="home"><img src="images/logo.png" id="footer-logo" class="img-responsive hidden-xs" alt="dsd trucking" width="50"></a>&copy; Copyright 2015 DSD Trucking</p>
             </div>
 
             <div class="col-xs-12 col-sm-4">
@@ -580,10 +550,10 @@
             </div>
         </div>
     </div>
-        {{--<div class="push"></div>--}}
+    {{--<div class="push"></div>--}}
     {{--</div>--}}
 
-{{--</div>--}}
+    {{--</div>--}}
 
 
 </footer>
@@ -612,29 +582,29 @@
 
 
 {{--<script type="application/javascript">--}}
-    {{--$(function () {--}}
-        {{--$('.navbar-toggle').click(function () {--}}
-            {{--$('.navbar-nav').toggleClass('slide-in');--}}
-            {{--$('.side-body').toggleClass('body-slide-in');--}}
-            {{--$('#search').removeClass('in').addClass('collapse').slideUp(200);--}}
+{{--$(function () {--}}
+{{--$('.navbar-toggle').click(function () {--}}
+{{--$('.navbar-nav').toggleClass('slide-in');--}}
+{{--$('.side-body').toggleClass('body-slide-in');--}}
+{{--$('#search').removeClass('in').addClass('collapse').slideUp(200);--}}
 
-            {{--/// uncomment code for absolute positioning tweek see top comment in css--}}
-            {{--//$('.absolute-wrapper').toggleClass('slide-in');--}}
+{{--/// uncomment code for absolute positioning tweek see top comment in css--}}
+{{--//$('.absolute-wrapper').toggleClass('slide-in');--}}
 
-        {{--});--}}
+{{--});--}}
 
 
 
-        {{--// Remove menu for searching--}}
-        {{--$('#search-trigger').click(function () {--}}
-            {{--$('.navbar-nav').removeClass('slide-in');--}}
-            {{--$('.side-body').removeClass('body-slide-in');--}}
+{{--// Remove menu for searching--}}
+{{--$('#search-trigger').click(function () {--}}
+{{--$('.navbar-nav').removeClass('slide-in');--}}
+{{--$('.side-body').removeClass('body-slide-in');--}}
 
-            {{--/// uncomment code for absolute positioning tweek see top comment in css--}}
-            {{--//$('.absolute-wrapper').removeClass('slide-in');--}}
+{{--/// uncomment code for absolute positioning tweek see top comment in css--}}
+{{--//$('.absolute-wrapper').removeClass('slide-in');--}}
 
-        {{--});--}}
-    {{--});--}}
+{{--});--}}
+{{--});--}}
 
 
 {{--</script>--}}
