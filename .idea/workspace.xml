@@ -4,8 +4,6 @@
     <list default="true" id="635dbcc3-90c9-47b7-900f-255a9309811b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/cfs/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/cfs/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
     </list>
     <ignored path="dsd-cms.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,8 +35,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="706" column="21" lean-forward="false" selection-start-line="706" selection-start-column="21" selection-end-line="706" selection-end-column="21" />
+            <state relative-caret-position="160">
+              <caret line="1652" column="21" lean-forward="false" selection-start-line="1652" selection-start-column="21" selection-end-line="1652" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -93,7 +91,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>nivo</find>
       <find>$truckingDelivery</find>
       <find>#page-wrapper</find>
       <find>panel-body</find>
@@ -123,6 +120,7 @@
       <find>.side-body</find>
       <find>content</find>
       <find>#content</find>
+      <find>side</find>
     </findStrings>
     <replaceStrings>
       <replace>home</replace>
@@ -531,12 +529,12 @@
       <workItem from="1489504148806" duration="4487000" />
       <workItem from="1489516895910" duration="2817000" />
       <workItem from="1489530786582" duration="1472000" />
-      <workItem from="1489532816619" duration="9480000" />
+      <workItem from="1489532816619" duration="9771000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="958178000" />
+    <option name="totallyTimeSpent" value="958469000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -1028,8 +1026,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="706" column="21" lean-forward="false" selection-start-line="706" selection-start-column="21" selection-end-line="706" selection-end-column="21" />
+        <state relative-caret-position="160">
+          <caret line="1652" column="21" lean-forward="false" selection-start-line="1652" selection-start-column="21" selection-end-line="1652" selection-end-column="22" />
           <folding />
         </state>
       </provider>
