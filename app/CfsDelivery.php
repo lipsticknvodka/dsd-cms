@@ -41,11 +41,11 @@ class CfsDelivery extends Model
         'deleted_at' => 'Deleted At'
     );
 
-//    use SoftDeletes;
+    use SoftDeletes;
 
     protected $dates = ['deleted_at'];
 
-    protected $table = ['cfs_deliveries'];
+    protected $table = 'cfs_deliveries';
 //    protected $with = 'account';
     protected $fillable = [
         'account_id',
