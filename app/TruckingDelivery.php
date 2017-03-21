@@ -10,6 +10,12 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class TruckingDelivery extends Model
 {
     //
+//        public static function boot()
+//    {
+//        parent::boot();
+//    }
+//    protected $guarded = [];
+
     use \Venturecraft\Revisionable\RevisionableTrait;
 
     protected $revisionEnabled = true;
@@ -204,25 +210,6 @@ class TruckingDelivery extends Model
 
 //        return $this->belongsTo('App\Account');
     }
-
-
-
-
-//    use \Venturecraft\Revisionable\RevisionableTrait;
-//
-//    protected $revisionCreationsEnabled = true;
-//
-//    public function revisionHistory()
-//    {
-//
-//
-//        return $this->morphMany('\Venturecraft\Revisionable\Revision', 'revisionable');
-//    }
-
-//    public function account()
-//    {
-//        return $this->belongsTo('App\Account');
-//    }
 
 
 }

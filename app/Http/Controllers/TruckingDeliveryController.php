@@ -9,6 +9,7 @@ use App\Photo;
 use App\Pod;
 use App\TruckingDelivery;
 use Illuminate\Support\Facades\Input;
+use Session;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 //use GuzzleHttp\Psr7\UploadedFile;
 //use Illuminate\Http\UploadedFile;
@@ -90,7 +91,7 @@ class TruckingDeliveryController extends Controller
 
         return redirect()->action('TruckingDeliveryController@getTruckingStep', ['step' => 1]);
 
-        return view('trucking.edit', compact('truckingDelivery'));
+//        return view('trucking.edit', compact('truckingDelivery'));
 
     }
 
@@ -108,10 +109,7 @@ class TruckingDeliveryController extends Controller
     {
 
 
-//        return $accounts;
-
         return view('trucking.index');
-
 
     }
 
@@ -123,11 +121,11 @@ class TruckingDeliveryController extends Controller
         ]);
 
 //        AFTER DEPLOY WITH POSTICO, NULL ERROR RETURNED
-//        $trucking = TruckingDelivery::firstOrCreate(['ref_no' => $request->input('ref_no')]);
+        $trucking = TruckingDelivery::firstOrCreate(['ref_no' => $request->input('ref_no')]);
 
-        $trucking = TruckingDelivery::firstOrNew(['ref_no' => $request->input('ref_no')]);
+//        $trucking = TruckingDelivery::firstOrNew(['ref_no' => $request->input('ref_no')]);
 
-
+//
         $request->session()->put('trucking', $trucking);
 
 
@@ -156,52 +154,49 @@ class TruckingDeliveryController extends Controller
     {
 
 //
-//        switch ($step)
-//        {
-//            case 1:
-//                $rules = [
-//                    'mawb'=>'required',
-////                    'acct_type'=>'required'
-//                ];
-//                break;
-//            case 2:
-//                $rules = [
+        switch ($step)
+        {
+            case 1:
+                $rules = [
+                    'mawb'=>'required',
+//                    'acct_type'=>'required'
+                ];
+                break;
+            case 2:
+                $rules = [
 //                    'driver' => 'required|min:2|max:50',
-////                    'address_1' => 'required|min:2|max:50',
-////                    'city' => 'required|min:2|max:50',
-////                    'state' => 'required|min:2|max:50',
-////                    'zip' => 'required|min:2|max:50',
-//
-//                ];
-//                break;
-//            case 3:
-//                $rules = [
-//                    'availability' => 'required|min:2|max:50',
-////                    'primary_contact' => 'required|min:2|max:50',
-////                    'email' => 'required|min:2|max:50',
-//                ];
-//                break;
-//            case 4:
-//                $rules = [
-//                    'status' => 'required|min:2|max:50',
-////                    'primary_contact' => 'required|min:2|max:50',
-////                    'email' => 'required|min:2|max:50',
-//                ];
-//                break;
-//            default:
-//                abort(400, "No rules for this step!");
-//        }
+//                    'address_1' => 'required|min:2|max:50',
+//                    'city' => 'required|min:2|max:50',
+//                    'state' => 'required|min:2|max:50',
+//                    'zip' => 'required|min:2|max:50',
 
-//        $this->validate($request, $rules);
+                ];
+                break;
+            case 3:
+                $rules = [
+//                    'availability' => 'required|min:2|max:50',
+//                    'primary_contact' => 'required|min:2|max:50',
+//                    'email' => 'required|min:2|max:50',
+                ];
+                break;
+            case 4:
+                $rules = [
+//                    'status' => 'required|min:2|max:50',
+//                    'primary_contact' => 'required|min:2|max:50',
+//                    'email' => 'required|min:2|max:50',
+                ];
+                break;
+            default:
+                abort(400, "No rules for this step!");
+        }
+
+        $this->validate($request, $rules);
 
 //        NOT UPDATING AFTER DEPLOYMENT
-//        $request->session()->get('trucking')->update($request->all());
-//
-        $request->session()->get('trucking')->save($request->all());
+        $request->session()->get('trucking')->update($request->all());
 
-
-
-//        dd('trucking');
+//        Session::get('trucking')->save($request->all());
+//        $request->session()->get('trucking')->save($request->all());
 
         if ($step == $this->lastStep) {
 //            return redirect()->action('AccountsController@getAccountDone');

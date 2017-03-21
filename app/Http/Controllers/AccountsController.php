@@ -192,32 +192,7 @@ class AccountsController extends Controller
 
     public function postAccountStep(Request $request, $step)
     {
-//        if($request->hasFile('rates_1')) {
 //
-//            $file = $request->file('rates_1');
-//
-//            $name = time() . $file->getClientOriginalName();
-//
-//            $file->move('uploads/rates', $name);
-//
-////            $file->getClientOriginalName()->save();
-//
-//        }
-
-//        $files =[];
-//        if ($request->file('rates_1')) $files[] = $request->file('rates_1');
-//        if ($request->file('rates_2')) $files[] = $request->file('rates_2');
-//        if ($request->file('rates_3')) $files[] = $request->file('rates_3');
-//        foreach ($files as $file)
-//        {
-//            if(!empty($file)){
-//                $filename=$file->getClientOriginalName();
-//                $file->move(
-//                    base_path().'/public/uploads/', $filename
-//                );
-//            }
-//
-//        }
 
         switch ($step)
         {

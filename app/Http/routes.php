@@ -231,9 +231,14 @@ Route::post('cfs/{id}/edit/step/{step}', 'CfsDeliveryController@postEditCfsStep'
 
 //TRUCKING ROUTES
 
-Route::get('trucking/step/{step}', 'TruckingDeliveryController@getTruckingStep')->where(['step' => '[1-4]']);
 
-Route::post('trucking/step/{step}', 'TruckingDeliveryController@postTruckingStep')->where(['step' => '[1-4]']);
+//Route::group(['middleware' => 'web'], function() {
+
+    Route::get('trucking/step/{step}', 'TruckingDeliveryController@getTruckingStep')->where(['step' => '[1-4]']);
+
+    Route::post('trucking/step/{step}', 'TruckingDeliveryController@postTruckingStep')->where(['step' => '[1-4]']);
+//});
+
 
 Route::get('/trucking/downloadExcel/{type}', 'TruckingDeliveryController@downloadExcel');
 

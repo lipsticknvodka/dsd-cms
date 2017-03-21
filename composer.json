@@ -12,7 +12,8 @@
         "venturecraft/revisionable": "1.*",
         "intervention/image": "~2.0",
         "maatwebsite/excel": "~2.1.0",
-        "dompdf/dompdf": "0.6.2"
+        "dompdf/dompdf": "0.6.2",
+        "ext-memcached": "*"
     },
 
     "require-dev": {
