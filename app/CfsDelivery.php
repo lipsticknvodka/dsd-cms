@@ -41,7 +41,7 @@ class CfsDelivery extends Model
         'deleted_at' => 'Deleted At'
     );
 
-    use SoftDeletes;
+//    use SoftDeletes;
 
     protected $dates = ['deleted_at'];
 
