@@ -26,7 +26,6 @@
                                 <h3>Welcome to DSD Trucking Inc. Tracking</h3>
                                 <p>We have designed  this free cargo tracking section in our website, it will allow you to see the progress of your shipments.  You can search your shipments by entering your reference number and/or load number as shown on your Delivery Order.  Once your shipment is completed you will be able to download a Proof of Delivery for your records. </p>
 
-                                <p>If you would prefer to speak to our Dispatch Team about your shipment please contact DSD Trucking Division at the main number <a href="tel:+13107251999">310-725-1999</a>.</p>
 
                                 <form action="/freight-availability/trucking" method="POST" role="search">
                                 {{ csrf_field() }}
@@ -35,7 +34,7 @@
 
                                     {!! Form::label('truckingQuery','Search by MAWB, HAWB, or Reference/Load #')  !!}
                                     <input type="text" class="form-control" name="truckingQuery"
-                                    placeholder="xxx-xxxx xxxx, xxxxxxxxxxx, or xxxxxxxxxx"> <span class="input-group-btn">
+                                    placeholder=" "> <span class="input-group-btn">
                                     <button type="submit" id='search' class="btn btn-warning">
                                     <span class="glyphicon glyphicon-search"></span>
                                     </button>
@@ -44,13 +43,15 @@
                                 </div>
                                 </form>
 
+                                <p>If you would prefer to speak to our Dispatch Team about your shipment please contact DSD Trucking Division at the main number <a href="tel:+13107251999">310-725-1999</a>.</p>
+
                                 {{--Display results--}}
                             </div>
                             <div id="cfs-search" class="tab-pane fade">
                                 <h3>Welcome to DSD Container Freight Station Cargo Tracking!</h3>
                                 <p>We have designed this free cargo tracking section in our website that will allow you to check the status of your shipments.  You can search your shipments by entering the Master number and/or HAWB number, please include all dashes and spaces as they appear on your manifest.</p>
 
-                                <p>If you prefer to speak to one of our CFS representatives about your shipment please contact DSD Container Freight Station at <a href="tel:+13107251999">310-725-1999</a>.</p>
+
 
                              {{--<div class="row">--}}
                                  {{--<div class="col-xs-6">--}}
@@ -62,7 +63,7 @@
                                              <div class="input-group">
                                              {!! Form::label('cfsQuery','Search by MAWB or HAWB')  !!}
                                              <input type="text" class="form-control" name="cfsQuery"
-                                                    placeholder="xxx-xxxx xxxx, xxxxxxxxxxx, or xxxxxxxxxx">
+                                                    placeholder="">
                                                  {{--{!! Form::label('cfsQuery','Search by MAWB and/or HAWB')  !!}--}}
                                                  {{--<input type="text" class="form-control" name="cfsQuery2"--}}
                                                         {{--placeholder="xxx-xxxx xxxx, xxxxxxxxxxx, or xxxxxxxxxx">--}}
@@ -75,7 +76,7 @@
                                              {{Form::close()}}
                                          {{--</div>--}}
                                      {{--</form>--}}
-
+                                                 <p>If you prefer to speak to one of our CFS representatives about your shipment please contact DSD Container Freight Station at <a href="tel:+13107251999">310-725-1999</a>.</p>
                                  </div>
 
 
@@ -102,7 +103,7 @@
                         {{--Display results--}}
 
 
-
+<hr/>
                         <small><strong>Terms & Conditions</strong></small><br/>
                         <small>You are authorized to use this tracking system solely to track your shipments.  No other use may be made of the tracking system and information without DSD Container Freight Station's written consent.</small>
                     </div>
