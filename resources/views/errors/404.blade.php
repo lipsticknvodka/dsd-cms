@@ -3,9 +3,9 @@
 @section('content')
 
         <div class="container">
-            <div class="row">
+            <div class="row" id="content-wrapper">
                 <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-                    <div class="panel panel-default" id="content">
+                    <div class="panel panel-default" id="customer-content">
                         <div class="panel-heading">Error 404</div>
 
                         <div class="panel-body">

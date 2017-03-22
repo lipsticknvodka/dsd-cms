@@ -16,12 +16,17 @@ html, body {
 	height: 100%;
 	margin: 0;
 }
-
-.content {
-	padding: 20px;
+#content-wrapper {
+	/*padding: 20px;*/
 	min-height: 100%;
 	margin: 0 auto -50px;
 }
+
+.footer,
+.push {
+	height: 50px;
+}
+
 
 .row {
 	/*max-width:100%;*/
@@ -182,6 +187,10 @@ span.icon-bar {
 
 .panel-body#content {
     padding: 25px 50px ;
+}
+
+#customer-content.panel.panel-default {
+	margin-top:170px !important;
 }
 
 /*nav.sidebar .panel-body {*/

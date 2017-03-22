@@ -124,9 +124,9 @@
 </div>
 {{--</div>--}}
 
+<div class="push"></div>
 
-
-<footer>
+<footer id="footer">
     <div class="row-fluid" id="footer">
         <div class="container">
             <div class="col-xs-12 col-sm-5">

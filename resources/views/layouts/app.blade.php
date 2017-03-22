@@ -303,6 +303,7 @@
             margin-left: 200px;
         }
 
+
         nav.sidebar{
             margin-left: 0px;
             float: left;
@@ -315,7 +316,7 @@
             padding:15px !important;
             border-bottom:#ccc solid 5px;
         }
-        }
+        /*}*/
         /*}*/
 
     </style>
@@ -546,9 +547,9 @@
 </div>
 {{--</div>--}}
 
-{{--<div class="push"></div>--}}
+<div class="push"></div>
 
-<footer>
+<footer id="footer">
     <div class="row-fluid" id="footer">
         <div class="container">
             <div class="col-xs-12 col-sm-5">

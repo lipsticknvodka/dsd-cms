@@ -100,7 +100,7 @@ Route::delete('/user/{id}', 'HomeController@deleteUser');
 
 Route::get('/register', function(){
 
-    return view('register');
+    return view('auth.register');
 });
 
 //

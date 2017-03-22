@@ -9,9 +9,10 @@
 
                     <div class="panel-body">
 
-                        {{--<div class="row">--}}
-                            {{--<a href="/register">+ Add New User</a>--}}
-                        {{--</div>--}}
+                        <div class="row">
+                            <a href="/register">+ Add New User</a>
+                        </div>
+
                         <div class="row">
                             <div class="col-xs-12 col-sm-10">
                                 <div class="row title-button-row">
