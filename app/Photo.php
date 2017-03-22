@@ -6,9 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+use Intervention\Image\Facades\Image;
+
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
-use Image;
+//use Image;
 
 class Photo extends Model
 {
