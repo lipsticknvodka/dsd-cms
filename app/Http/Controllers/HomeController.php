@@ -6,6 +6,7 @@ use App\Account;
 use App\CfsDelivery;
 use App\Http\Requests;
 use App\TruckingDelivery;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 
@@ -136,6 +137,22 @@ class HomeController extends Controller
         }
 
         return view('search-results-admin')->with('truckingDelivery', $truckingDelivery);
+    }
+
+    public function users(){
+
+        $users = User::all();
+
+        return view('/users', compact($users, 'users'));
+    }
+
+    public function deleteUser($id){
+
+        $user = User::findOrFail($id);
+
+        $user->delete();
+
+        return redirect('/users')->with('success', 'User was successfully deleted.');
     }
 
 //    public function adminSearch(){

@@ -11,7 +11,7 @@
 
                     <div class="content-body">
 
-                        <div class="arrow-steps clearfix">
+                        <div class="arrow-steps clearfix" id="three-arrows">
                             <div class="step current"><div class="glyphicon glyphicon-folder-open"></div><span>General</span> </div>
                             <div class="step current"> <div class="glyphicon glyphicon-list"></div><span>Master</span> </div>
                             <div class="step"> <div class="glyphicon glyphicon-home"></div><span>House</span> </div>

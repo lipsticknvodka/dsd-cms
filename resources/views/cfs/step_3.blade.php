@@ -9,7 +9,7 @@
 
                     <div class="content-body">
 
-                        <div class="arrow-steps clearfix">
+                        <div class="arrow-steps clearfix" id="three-arrows">
                             <div class="step current"><div class="glyphicon glyphicon-folder-open"></div><span>General</span> </div>
                             <div class="step current"> <div class="glyphicon glyphicon-list"></div><span>Master</span> </div>
                             <div class="step current"> <div class="glyphicon glyphicon-home"></div><span>House</span> </div>
@@ -210,7 +210,8 @@
                                             <a id="back-btn" class="btn btn-warning" href="{{ URL::previous() }}">Back</a>
                                             <button type="submit" class="btn btn-warning">Add HAWB</button>
                                         </div>
-                                        {{--</form>--}}
+                                    </div>
+                                        </form>
                                         {{--{!! Form::close() !!}--}}
                                         {{--<form action="{{ url('/closeHawb/' . $hawb->id) }}" method="POST">--}}
                                         {{--{!! csrf_field() !!}--}}

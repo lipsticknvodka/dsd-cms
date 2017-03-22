@@ -26,7 +26,7 @@
 
 
                         <div class="table-responsive">
-                            <h4>Recently DeletedTransactions</h4>
+                            <h4>Recently Deleted Transactions</h4>
                             <table class="table table-striped">
                                 <thead>
                                 <tr>
@@ -38,6 +38,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+
                                 @foreach($cfsDeliveries as $cfsDelivery)
                                     <tr>
                                         <td>

@@ -14,14 +14,14 @@
 
 
                             @foreach($revisions as $revision )
-{{--                                @if($revision->old_value = 'null'))--}}
+                                @if($revision->old_value != 'null' && !empty($revision->old_value ))
                                 <p class="history col-xs-12">
                                     <strong>{{$revision->user->name }}</strong> changed
                                     <strong>{{ $revision->key }}</strong> from
                                     <code>{{ $revision->old_value }}</code> to <code>{{ $revision->new_value }}</code> in {{$revision->revisionable_type}}
                                     <small>{{ $revision->created_at->diffForHumans() }}</small>
                                 </p>
-                                {{--@endif--}}
+                                @endif
                             @endforeach
 
                             {{--@foreach($revisions as $history)--}}
@@ -45,7 +45,7 @@
                         </div>
 
                         <div class="row">
-
+<hr/>
                             <div class="col-xs-12">
                                 {!! $revisions->render() !!}
                             </div>

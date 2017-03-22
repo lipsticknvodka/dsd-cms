@@ -61,7 +61,7 @@
         #search-bar {
             background-color: #960a0a !important;
             padding: 0px 10px;
-            top: 81px;
+            top: 105px;
             height: 55px;
             position: fixed;
             width: 100%;
@@ -71,9 +71,9 @@
             /*margin-top: 40px;*/
         /*}*/
 
-        .pull-right {
-            float: right;
-        }
+        /*.pull-right {*/
+            /*float: right;*/
+        /*}*/
 
         /*a, a:active {*/
             /*color: #333;*/
@@ -86,10 +86,19 @@
 
         /* Breadcrups CSS */
 
+
+        #three-arrows {
+            width:560px;
+        }
+
+        #four-arrows {
+            width:560px;
+        }
+
         .arrow-steps{
             margin-left: auto;
             margin-right: auto;
-            width:90%;
+            /*width:90%;*/
         }
         .arrow-steps .step {
             text-align: center;
@@ -179,7 +188,7 @@
 
 
         nav.sidebar, .main{
-            margin-top:135px;
+            /*margin-top:157px;*/
             -webkit-transition: margin 200ms ease-out;
             -moz-transition: margin 200ms ease-out;
             -o-transition: margin 200ms ease-out;
@@ -305,14 +314,19 @@
 {{--<div class="wrapper">--}}
 
 
-<header>
+<header id="header">
     <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-            <div class="row hidden-xs" id="user-links">
-                <div class="pull-right" role="group" aria-label="">
+            <div class="row">
+                <div class="col-sm-6">
+                     <a href="/" class="navbar-brand"><img src="images/logo.png" id="header-logo" alt="dsd trucking">DSD Companies</a>
+                </div>
+
+                {{--<div class="hidden-xs" id="user-links">--}}
+                <div class="col-sm-6" role="group" aria-label="">
                     {{--<img src="/images/dsd-admin-icons/user-loggedin.png">--}}
                     {{--<p>Welcome, {‌{ Auth::user()->name }} --}}
-                    <div class="user-loggedIn" style="display:flex;">
+                    <div class="user-loggedIn hidden-xs pull-right" style="display:flex;">
                         @if(Auth::check())
                             <img src="/images/dsd-admin-icons/user-loggedin.png" height="22px" style="padding-right:5px;"><p>Welcome, {{Auth::user()->name}} | {{link_to_route('logout', 'Logout')}}</p>
 
@@ -322,10 +336,10 @@
 
                         @endif
                     </div>
-                </div>
-            </div>
 
-            <a href="/" class="navbar-brand"><img src="images/logo.png" id="header-logo" alt="dsd trucking">DSD Companies</a>
+                    {{--NAV HERE--}}
+
+            {{--<a href="/" class="navbar-brand"><img src="images/logo.png" id="header-logo" alt="dsd trucking">DSD Companies</a>--}}
 
 
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navHeaderCollapse" aria-expanded="false" aria-controls="navbar">
@@ -344,7 +358,7 @@
                 {{--<a href="/request-account"><button type="button" class="btn btn-warning" href="request-account.php">Request Account</button></a>--}}
                 {{--</div>--}}
 
-                <div class="row visible-xs" id="user-links">
+                <div class="visible-xs" id="user-links">
                     <div class="pull-left" role="group" aria-label="">
                         {{--<img src="/images/dsd-admin-icons/user-loggedin.png">--}}
                         {{--<p>Welcome, {‌{ Auth::user()->name }} --}}
@@ -389,7 +403,9 @@
                 </ul>
             </div>
         </div>
+            </div>
 
+        </div>
 
         <div class="row-fluid" id="search-bar">
             <div class="container">
@@ -405,12 +421,21 @@
                         {{Form::close()}}
                     </div>
                 </form>
+            </div>
+        </div>
+                {{--<div class="form-group col-sm-4" id="search-input">--}}
+                    {{--<div class="icon-addon addon-sm">--}}
+                        {{--<input type="text" placeholder="Search by MAWB or Reference No." class="form-control" id="search">--}}
+                        {{--<label for="search" class="glyphicon glyphicon-search" rel="tooltip" title="search"></label>--}}
+                        {{--<input type="submit" type="hidden" action="/search-results-admin"/>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
 
                 {{--<div class="form-group col-sm-4" id="search-input">--}}
                 {{--<div class="icon-addon addon-sm">--}}
                 {{--<input type="text" placeholder="Search by MAWB or Reference No." class="form-control" id="search">--}}
                 {{--<label for="search" class="glyphicon glyphicon-search" rel="tooltip" title="search"></label>--}}
-                {{--<input type="submit" type="hidden"/>--}}
+                {{--<input type="submit" type="hidden" action="/search-results-admin"/>--}}
                 {{--</div>--}}
                 {{--</div>--}}
             </div>
@@ -463,7 +488,7 @@
                     <div class="panel-body">
                         <ul class="nav navbar-nav">
                             <li><a href="/cfs">View All <span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-list"></span></a></li>
-                            <li><a href="/cfs/open">Open Transactions<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-plus"></span></a></li>
+                            <li><a href="/cfs/open">Open/Pending<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-flag"></span></a></li>
                             <li><a href="/cfs/trash">Trash<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-trash"></span></a></li>
                             {{--<li><a href="/cfs/history"> History<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-time"></span></a></li>--}}
                         </ul>
@@ -481,7 +506,7 @@
                     <div class="panel-body">
                         <ul class="nav navbar-nav">
                             <li><a href="/trucking">View All<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-list"></span></a></li>
-                            <li><a href="/trucking/open">Open Transactions<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-plus"></span></a></li>
+                            <li><a href="/trucking/open">Open/Pending<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-flag"></span></a></li>
                             <li><a href="/trucking/trash">Trash<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-trash"></span></a></li>
                             {{--<li><a href="/trucking/history"> History<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-time"></span></a></li>--}}
                         </ul>
@@ -490,11 +515,11 @@
                 </div><!-- /.navbar-collapse -->
             </li>
 
+            <li class="panel panel-default"><a href="users"> Users<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-user"></span></a></li>
             <li class="panel panel-default"><a href="history"> History<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-time"></span></a></li>
-
         </ul>
-        </div>
-        </div>
+        {{--</div>--}}
+        {{--</div>--}}
     </nav>
 
 </section>

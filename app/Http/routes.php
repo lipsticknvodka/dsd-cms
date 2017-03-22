@@ -94,6 +94,9 @@ Route::any('/search-results-admin', 'HomeController@adminSearch');
 
 Route::get('/search-results-admin/{id}', 'HomeController@adminSearchResult');
 
+Route::get('/users', 'HomeController@users');
+
+Route::delete('/user/{id}', 'HomeController@deleteUser');
 
 //
 //Route::any('/freight-availability/cfs',function(Request $request){

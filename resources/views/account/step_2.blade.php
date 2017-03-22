@@ -10,7 +10,7 @@
 
                     <div class="content-body">
 
-                        <div class="arrow-steps clearfix">
+                        <div class="arrow-steps clearfix" id="three-arrows">
                             <div class="step current"><div class="glyphicon glyphicon-folder-open"></div><span>General</span> </div>
                             <div class="step current"> <div class="glyphicon glyphicon-credit-card"></div><span>Billing</span> </div>
                             <div class="step"> <div class="glyphicon glyphicon-phone-alt"></div><span>Contact</span> </div>
