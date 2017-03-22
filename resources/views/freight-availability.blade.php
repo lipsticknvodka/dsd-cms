@@ -47,6 +47,8 @@
 
                                 {{--Display results--}}
                             </div>
+
+
                             <div id="cfs-search" class="tab-pane fade">
                                 <h3>Welcome to DSD Container Freight Station Cargo Tracking!</h3>
                                 <p>We have designed this free cargo tracking section in our website that will allow you to check the status of your shipments.  You can search your shipments by entering the Master number and/or HAWB number, please include all dashes and spaces as they appear on your manifest.</p>
@@ -74,15 +76,15 @@
                                         </span>
                                              {{--</div>--}}
                                              {{Form::close()}}
-                                         {{--</div>--}}
-                                     {{--</form>--}}
+                                         </div>
+                                     </form>
                                                  <p>If you prefer to speak to one of our CFS representatives about your shipment please contact DSD Container Freight Station at <a href="tel:+13107251999">310-725-1999</a>.</p>
                                  </div>
 
 
                              {{--</div>--}}
                             </div>
-                        </div>
+                        {{--</div>--}}
 
                         {{--<form action="/search" method="POST" role="search">--}}
                             {{--{{ csrf_field() }}--}}
