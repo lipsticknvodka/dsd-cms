@@ -190,7 +190,7 @@ class CfsDeliveryController extends Controller
     {
         $cfs = DB::table('cfs_deliveries');
 
-//        $cfs = CfsDelivery::all();
+//        $cfsDelivery = CfsDelivery::all();
 
         $account = Account::pluck('name', 'id')->all();
 

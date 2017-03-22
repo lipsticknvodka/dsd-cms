@@ -19,9 +19,9 @@ class RevisionController extends Controller
     public function showRevisions(Request $request){
 
         //SHOW ALL REVISIONS
-        $revisions = Revision::whereNotNull('old_value')->orderBy('created_at', 'desc')->paginate(25);
+//        $revisions = Revision::wherefind('old_value')->orderBy('created_at', 'desc')->paginate(25);
 
-
+        $revisions = Revision::all();
 //        $formattedName = $revisions->fieldName();
 //        $output = Revision::where('key', $revisions->key)->FormatFieldNames();
 //        protected function key(){

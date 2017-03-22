@@ -92,7 +92,7 @@
         }
 
         #four-arrows {
-            width:560px;
+            width:745px;
         }
 
         .arrow-steps{
@@ -284,6 +284,11 @@
             width: 100%;
         }
 
+        .navbar-nav>li>a {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
 
 
         .forAnimate{
@@ -305,6 +310,11 @@
 
         nav.sidebar .forAnimate{
             opacity: 1;
+
+        .dropdown-menu > li > a {
+            padding:15px !important;
+            border-bottom:#ccc solid 5px;
+        }
         }
         /*}*/
 
@@ -515,7 +525,7 @@
                 </div><!-- /.navbar-collapse -->
             </li>
 
-            <li class="panel panel-default"><a href="users"> Users<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-user"></span></a></li>
+            {{--<li class="panel panel-default"><a href="users"> Users<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-user"></span></a></li>--}}
             <li class="panel panel-default"><a href="history"> History<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-time"></span></a></li>
         </ul>
         {{--</div>--}}

@@ -46,7 +46,7 @@
                                         <tr>
                                             <td><a data-toggle="collapse" data-target="#{{$hawb->hawb}}">{{$hawb->hawb}}</a></td>
 
-                                            <td>{{$hawb->pallet_ct}}</td>
+                                            <td>{{$cfs->hawb->pallet_ct}}</td>
                                             <td>{{$hawb->piece_ct}}</td>
                                             <td>{{$hawb->weight_no}} {{$hawb->weight_type}}</td>
                                             <td></td>

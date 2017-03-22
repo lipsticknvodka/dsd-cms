@@ -98,6 +98,11 @@ Route::get('/users', 'HomeController@users');
 
 Route::delete('/user/{id}', 'HomeController@deleteUser');
 
+Route::get('/register', function(){
+
+    return view('register');
+});
+
 //
 //Route::any('/freight-availability/cfs',function(Request $request){
 //

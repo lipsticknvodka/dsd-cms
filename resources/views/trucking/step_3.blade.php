@@ -11,7 +11,7 @@
 
                     <div class="content-body">
 
-                        <div id="trucking" class="arrow-steps clearfix">
+                        <div id="trucking" class="arrow-steps clearfix" id="four-arrows">
                             <div class="step current"><div class="glyphicon glyphicon-folder-open"></div><span>General</span> </div>
                             <div class="step current"> <div class="glyphicon glyphicon-map-marker"></div><span>Location</span> </div>
                             <div class="step current"> <div class="glyphicon glyphicon-list"></div><span>Breakdown</span> </div>

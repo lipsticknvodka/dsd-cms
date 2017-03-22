@@ -34,7 +34,7 @@
 
                             {{--@foreach($account->revisionHistory as $history )--}}
                             {{--<p class="history col-xs-12">--}}
-                            {{--<strong>{{$history->userResponsible()->name }}</strong> changed--}}
+{{--                            <strong>{{$history->userResponsible()->name }}</strong> changed--}}
                             {{--<strong>{{ $history->fieldName() }}</strong> from--}}
                             {{--<code>{{ $history->oldValue() }}</code> to <code>{{ $history->newValue() }}</code>--}}
                             {{--<small>{{ $history->created_at->diffForHumans() }}</small>--}}
@@ -47,7 +47,7 @@
                         <div class="row">
 <hr/>
                             <div class="col-xs-12">
-                                {!! $revisions->render() !!}
+{{--                                {!! $revisions->render() !!}--}}
                             </div>
                         </div>
                     </div>

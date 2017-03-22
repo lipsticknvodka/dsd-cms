@@ -316,19 +316,19 @@ class AccountsController extends Controller
     }
 
 
-
-
+//
+//
 //        public function history(Request $request){
 //
 ////        $account = Account::all();
 ////            $account= Account::get();
 //
-////            $revisions = Revision::latest()->first();
+//            $revisions = Revision::latest()->first();
 ////        $revisions = Revision::all();
-//$revisions = $request->get('revisions');
-//        dd($revisions);
+////$revisions = $request->get('revisions');
+////        dd($revisions);
 //
-////        return view('account.history', compact('revisions'));
+//        return view('history', compact('revisions'));
 //
 //        }
 
