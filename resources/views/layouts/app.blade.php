@@ -337,14 +337,22 @@
                 <div class="col-sm-6" role="group" aria-label="">
                     {{--<img src="/images/dsd-admin-icons/user-loggedin.png">--}}
                     {{--<p>Welcome, {‌{ Auth::user()->name }} --}}
-                    <div class="user-loggedIn hidden-xs pull-right" style="display:flex;">
+                    <div class="user-loggedIn hidden-xs pull-right col-sm-7" style="display:flex;">
                         @if(Auth::check())
                             <img src="/images/dsd-admin-icons/user-loggedin.png" height="22px" style="padding-right:5px;"><p>Welcome, {{Auth::user()->name}} | {{link_to_route('logout', 'Logout')}}</p>
 
                         @else
-                            {{--                                                          {{link_to_route('login', 'Login')}}--}}
+
+
+
+                                                                                      {{--{{link_to_route('login', 'Login')}}--}}
                             {{--<a href="/login">Login</a>--}}
 
+
+                            <div class="btn-group" role="group" aria-label="">
+                                <a href="request-quote"><button type="button" class="btn btn-warning">Request Quote</button></a>
+                                <a href="request-account"><button type="button" class="btn btn-warning" href="request-account.php">Request Account</button></a>
+                            </div>
                         @endif
                     </div>
 
