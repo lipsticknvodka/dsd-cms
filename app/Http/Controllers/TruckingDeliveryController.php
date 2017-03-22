@@ -156,36 +156,36 @@ class TruckingDeliveryController extends Controller
 //
         switch ($step)
         {
-            case 1:
-                $rules = [
-                    'mawb'=>'required',
-//                    'acct_type'=>'required'
-                ];
-                break;
-            case 2:
-                $rules = [
-//                    'driver' => 'required|min:2|max:50',
-//                    'address_1' => 'required|min:2|max:50',
-//                    'city' => 'required|min:2|max:50',
-//                    'state' => 'required|min:2|max:50',
-//                    'zip' => 'required|min:2|max:50',
-
-                ];
-                break;
-            case 3:
-                $rules = [
-//                    'availability' => 'required|min:2|max:50',
-//                    'primary_contact' => 'required|min:2|max:50',
-//                    'email' => 'required|min:2|max:50',
-                ];
-                break;
-            case 4:
-                $rules = [
-//                    'status' => 'required|min:2|max:50',
-//                    'primary_contact' => 'required|min:2|max:50',
-//                    'email' => 'required|min:2|max:50',
-                ];
-                break;
+//            case 1:
+//                $rules = [
+//                    'mawb'=>'required',
+////                    'acct_type'=>'required'
+//                ];
+//                break;
+//            case 2:
+//                $rules = [
+////                    'driver' => 'required|min:2|max:50',
+////                    'address_1' => 'required|min:2|max:50',
+////                    'city' => 'required|min:2|max:50',
+////                    'state' => 'required|min:2|max:50',
+////                    'zip' => 'required|min:2|max:50',
+//
+//                ];
+//                break;
+//            case 3:
+//                $rules = [
+////                    'availability' => 'required|min:2|max:50',
+////                    'primary_contact' => 'required|min:2|max:50',
+////                    'email' => 'required|min:2|max:50',
+//                ];
+//                break;
+//            case 4:
+//                $rules = [
+////                    'status' => 'required|min:2|max:50',
+////                    'primary_contact' => 'required|min:2|max:50',
+////                    'email' => 'required|min:2|max:50',
+//                ];
+//                break;
             default:
                 abort(400, "No rules for this step!");
         }
