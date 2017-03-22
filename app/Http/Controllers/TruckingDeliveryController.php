@@ -29,9 +29,9 @@ class TruckingDeliveryController extends Controller
     public function __construct()
     {
         $this->middleware('auth', ['except'=>
-            'show',
-            'customerSearch',
-            'customerSearchResult'
+           ['show',
+               'customerSearch',
+               'customerSearchResult']
         ]);
     }
 
