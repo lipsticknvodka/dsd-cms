@@ -1,11 +1,9 @@
-<link rel="preload" type="text/css" href="css/style.css" as="style" onload="this.rel='stylesheet'">
-
 @extends('layouts.app')
 
 @section('content')
     <div class="container-fluid">
         <div class="row-fluid">
-            <div class="col-xs-12 col-sm-10">
+            <div class="v">
                 <div class="panel panel-default" id="content">
                     <div class="panel-heading">Trucking Deliveries</div>
 
