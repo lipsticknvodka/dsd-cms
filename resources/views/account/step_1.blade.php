@@ -6,7 +6,7 @@
 
     <div class="container-fluid">
         <div class="row-fluid">
-            <div class="col-xs-12 col-sm-10">
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1">
                 {{--<div class="panel panel-default" id="content">--}}
                     {{--<div class="panel-heading">Create New Account</div>--}}
 
