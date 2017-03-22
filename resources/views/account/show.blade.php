@@ -61,7 +61,7 @@
 
                             <div class="col-xs-12 col-sm-5">
                                 <h3>Rates</h3>
-                                @if (count($account->rates) === 1)
+{{--                                @if (count($account->rates) === 1)--}}
 
                                     {{--<ul>--}}
                                     @foreach($account->rates as $rate)
@@ -87,9 +87,9 @@
                                         </div>
                                     @endforeach
                                     {{--</ul>--}}
-                                @else
-                                    No rates uploaded.
-                                @endif
+                                {{--@else--}}
+                                    {{--No rates uploaded.--}}
+                                {{--@endif--}}
                             </div>
                         </div>
 
