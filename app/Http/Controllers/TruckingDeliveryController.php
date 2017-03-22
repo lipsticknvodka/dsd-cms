@@ -154,8 +154,8 @@ class TruckingDeliveryController extends Controller
     {
 
 //
-        switch ($step)
-        {
+//        switch ($step)
+//        {
 //            case 1:
 //                $rules = [
 //                    'mawb'=>'required',
@@ -186,11 +186,11 @@ class TruckingDeliveryController extends Controller
 ////                    'email' => 'required|min:2|max:50',
 //                ];
 //                break;
-            default:
-                abort(400, "No rules for this step!");
-        }
+//            default:
+//                abort(400, "No rules for this step!");
+//        }
 
-        $this->validate($request, $rules);
+//        $this->validate($request, $rules);
 
 //        NOT UPDATING AFTER DEPLOYMENT
         $request->session()->get('trucking')->update($request->all());
