@@ -482,7 +482,7 @@
             <!-- Dropdown-->
             <li class="panel panel-default" id="dropdown">
                 <a data-toggle="collapse" href="#dropdown-accounts">
-                    Accounts <span class="caret"></span> <span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-user"></span>
+                    Accounts <span class="caret"></span> <span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-pushpin"></span>
                 </a>
 
                 <div id="dropdown-accounts" class="panel-collapse collapse">

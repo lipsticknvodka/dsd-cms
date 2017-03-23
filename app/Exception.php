@@ -25,10 +25,10 @@ class Exception extends Model
 
     protected static function boot()
     {
-//        static::creating(function($exception) {
-//
-//            return $exception->upload();
-//        });
+        static::creating(function($exception) {
+
+            return $exception->upload();
+        });
     }
 
     public function truckingDelivery() {
