@@ -94,11 +94,15 @@ Route::any('/search-results-admin', 'HomeController@adminSearch');
 
 Route::get('/search-results-admin/{id}', 'HomeController@adminSearchResult');
 
-Route::get('/users', 'HomeController@users');
+Route::get('/users', 'UserController@index');
 
-Route::delete('/user/{id}', 'HomeController@deleteUser');
+Route::delete('/user/{id}', 'UserController@destroy');
+
+//Route::delete('/user/{id}', 'HomeController@deleteUser');
 
 Route::get('/register', function(){
+
+    $this->middleware('auth');
 
     return view('auth.register');
 });

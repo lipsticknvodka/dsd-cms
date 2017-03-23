@@ -44,7 +44,7 @@
                                                 <td>{{$user->email}}</td>
                                                 <td>{{$user->created_at}}</td>
                                                 <td> <form method="POST" action="/user/{{$user->id}}" class="col-xs-1">
-                                                        {{--                                <form method="POST" action="{{route('deleteException')}}">--}}
+                                                                                        {{--<form method="POST" action="{{route('deleteException')}}">--}}
                                                         {!! csrf_field() !!}
 
                                                         <input type="hidden" name="_method" value="DELETE">
@@ -52,19 +52,27 @@
                                                         <button type="submit" class="fa fa-times" id="deleteFileButton"></button>
                                                     </form></td>
 
+                                                {{--<td>--}}
+                                                    {{--{!! Form::open(['method'=>'DELETE', 'action'=>['UsersController@destroy', $user->id]])!!}--}}
+                                                    {{--<div class="form-group">--}}
+                                                        {{--{!! Form::submit('Delete User', ['class'=>'btn btn-danger']) !!}--}}
+                                                    {{--</div>--}}
+                                                    {{--{!! Form::close() !!}--}}
+                                                {{--</td>--}}
+
 {{--
 
-                                                <td><div class="dropdown">
-                                                        <a class="btn btn-danger dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            Action
-                                                        </a>
+                                                {{--<td><div class="dropdown">--}}
+                                                        {{--<a class="btn btn-danger dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
+                                                            {{--Action--}}
+                                                        {{--</a>--}}
 
-                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                            <li><a class="dropdown-item" href="#">Edit</a></li>
-                                                            <li> <a class="dropdown-item" href="#">Delete</a></li>
+                                                        {{--<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">--}}
+                                                            {{--<li><a class="dropdown-item" href="#">Edit</a></li>--}}
+                                                            {{--<li> <a class="dropdown-item" href="#">Delete</a></li>--}}
 
-                                                        </div>
-                                                    </div></td>
+                                                        {{--</div>--}}
+                                                    {{--</div></td>--}}
 
                                                 {{--<li><a href="{‌{route('account.show', ['id' => $account->id])}}">{‌{$account->name}}</a></li>--}}
                                                 {{--                                            <li><a href="{{route('account.show', $account->id)}}">{{$account->name}}</a></li>--}}

@@ -329,12 +329,12 @@
     <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-3">
                      <a href="/" class="navbar-brand"><img src="images/logo.png" id="header-logo" alt="dsd trucking">DSD Companies</a>
                 </div>
 
                 {{--<div class="hidden-xs" id="user-links">--}}
-                <div class="col-sm-6" role="group" aria-label="">
+                <div class="col-sm-9" role="group" aria-label="">
                     {{--<img src="/images/dsd-admin-icons/user-loggedin.png">--}}
                     {{--<p>Welcome, {‌{ Auth::user()->name }} --}}
                     <div class="user-loggedIn hidden-xs pull-right col-sm-7" style="display:flex;">
@@ -349,7 +349,7 @@
                             {{--<a href="/login">Login</a>--}}
 
 
-                            <div class="btn-group" role="group" aria-label="">
+                            <div class="btn-group pull-right" role="group" aria-label="">
                                 <a href="request-quote"><button type="button" class="btn btn-warning">Request Quote</button></a>
                                 <a href="request-account"><button type="button" class="btn btn-warning" href="request-account.php">Request Account</button></a>
                             </div>
