@@ -102,7 +102,7 @@ Route::delete('/user/{id}', 'UserController@destroy');
 
 Route::get('/register', function(){
 
-    $this->middleware('auth');
+//    $this->middleware('auth');
 
     return view('auth.register');
 });

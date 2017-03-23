@@ -500,7 +500,9 @@
             <!-- Dropdown-->
             <li class="panel panel-default" id="dropdown">
                 <a data-toggle="collapse" href="#dropdown-cfs">
-                    CFS <span class="caret"></span> <span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-plane"></span>
+
+                    CFS <span class="caret"></span> <i style="font-size:16px; color:#777;" class="fa fa-ship pull-right showopacity"></i>
+                    {{--CFS <span class="caret"></span> <span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-scale"></span>--}}
                 </a>
 
                 <div id="dropdown-cfs" class="panel-collapse collapse">
