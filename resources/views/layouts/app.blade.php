@@ -534,7 +534,8 @@
                 </div><!-- /.navbar-collapse -->
             </li>
 
-            {{--<li class="panel panel-default"><a href="users"> Users<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-user"></span></a></li>--}}
+            <li class="panel panel-default"><a href="users"> Users<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-user"></span></a></li>
+
             <li class="panel panel-default"><a href="history"> History<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-time"></span></a></li>
         </ul>
         {{--</div>--}}
