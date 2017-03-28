@@ -335,9 +335,8 @@
 
                 {{--<div class="hidden-xs" >--}}
                 <div class="col-sm-9" role="group" aria-label="">
-                    {{--<img src="/images/dsd-admin-icons/user-loggedin.png">--}}
-                    {{--<p>Welcome, {‌{ Auth::user()->name }} --}}
-                    <div class="user-loggedIn hidden-xs pull-right col-sm-7">
+
+                    <div class="user-loggedIn hidden-xs pull-right col-sm-12">
                         @if(Auth::check())
                            <p>Welcome, {{Auth::user()->name}} | {{link_to_route('logout', 'Logout')}}</p> <img src="/images/dsd-admin-icons/user-loggedin.png" height="22px" style="padding-right:5px;">
 

@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class Exception extends Model
 {
-    use SoftDeletes;
+//    use SoftDeletes;
 
     protected $dates = ['deleted_at'];
 
