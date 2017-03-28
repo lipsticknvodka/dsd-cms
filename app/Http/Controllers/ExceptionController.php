@@ -11,11 +11,11 @@ class ExceptionController extends Controller
 {
     //
 
-//    public function destroy($id)
-//    {
-//
-//        $exception = Exception::findOrFail($id)->delete();
-//
-//        return back();
-//    }
+    public function destroy($id)
+    {
+
+        $exception = Exception::findOrFail($id)->delete();
+
+        return back();
+    }
 }

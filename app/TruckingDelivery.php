@@ -16,6 +16,9 @@ class TruckingDelivery extends Model
 //    }
 //    protected $guarded = [];
 
+
+    use SoftDeletes;
+
     use \Venturecraft\Revisionable\RevisionableTrait;
 
     protected $revisionEnabled = true;
@@ -76,7 +79,7 @@ class TruckingDelivery extends Model
 //        'deleted_at' => 'Deleted At'
     );
 
-    use SoftDeletes;
+//    use SoftDeletes;
 
     protected $dates = ['deleted_at'];
 

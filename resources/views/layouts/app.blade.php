@@ -333,13 +333,13 @@
                      <a href="/" class="navbar-brand"><img src="images/logo.png" id="header-logo" alt="dsd trucking">DSD Companies</a>
                 </div>
 
-                {{--<div class="hidden-xs" id="user-links">--}}
+                {{--<div class="hidden-xs" >--}}
                 <div class="col-sm-9" role="group" aria-label="">
                     {{--<img src="/images/dsd-admin-icons/user-loggedin.png">--}}
                     {{--<p>Welcome, {‌{ Auth::user()->name }} --}}
-                    <div class="user-loggedIn hidden-xs pull-right col-sm-7" style="display:flex;">
+                    <div class="user-loggedIn hidden-xs pull-right col-sm-7">
                         @if(Auth::check())
-                            <img src="/images/dsd-admin-icons/user-loggedin.png" height="22px" style="padding-right:5px;"><p>Welcome, {{Auth::user()->name}} | {{link_to_route('logout', 'Logout')}}</p>
+                           <p>Welcome, {{Auth::user()->name}} | {{link_to_route('logout', 'Logout')}}</p> <img src="/images/dsd-admin-icons/user-loggedin.png" height="22px" style="padding-right:5px;">
 
                         @else
 
@@ -482,7 +482,7 @@
             <!-- Dropdown-->
             <li class="panel panel-default" id="dropdown">
                 <a data-toggle="collapse" href="#dropdown-accounts">
-                    Accounts <span class="caret"></span> <span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-pushpin"></span>
+                    Accounts <span class="caret"></span> <span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-user"></span>
                 </a>
 
                 <div id="dropdown-accounts" class="panel-collapse collapse">

@@ -200,7 +200,7 @@
                             <div class="col-sm-4">
                                 <h3>Exception</h3>
 
-{{--                                @if($truckingDelivery->exception)--}}
+                                @if($truckingDelivery->exception)
                                     <div class="row">
                                         <form class="col-xs-2" method="POST" action="/exception/{{$truckingDelivery->exception->id}}">
 
@@ -213,9 +213,9 @@
 
                                         <a class="col-xs-10" href="{{$truckingDelivery->exception->path}}" target="_blank">View Exception</a>
                                     </div>
-                               {{--@else--}}
-                                {{--<p>No exception uploaded.</p>--}}
-                                {{--@endif--}}
+                               @else
+                                <p>No exception uploaded.</p>
+                                @endif
 
 
                             </div>

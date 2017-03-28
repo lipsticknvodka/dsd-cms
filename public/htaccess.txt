@@ -1,6 +1,1 @@
 ErrorDocument 404 /404.php
-
-#Force www:
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^dsdcompanies.com [NC]
-RewriteRule ^(.*)$ http://www.dsdcompanies.com/$1 [L,R=301,NC]

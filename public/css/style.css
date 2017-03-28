@@ -167,6 +167,16 @@ span.icon-bar {
 
 }
 
+.user-loggedIn p{
+	float:right;
+
+}
+
+.user-loggedIn img{
+	float:right
+
+}
+
 #header-buttons a{
 	color:#FFFFFF;	
 }

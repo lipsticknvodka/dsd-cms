@@ -30,7 +30,7 @@
 
                             {{--<h3 class="col-xs-12">Master</h3>--}}
                             <div class="col-xs-7">
-                                <p><strong>Account</strong> {{$cfsDelivery->account->name}} </p>
+                                <p><strong>Account</strong> {{$cfsDelivery->account->name or 'No account selected'}} </p>
                                 {{--<p><strong>Estimated Availability </strong> {{$cfsDelivery->est_avail_time}}</p>--}}
                                 <p><strong>US Customs Code </strong> {{$cfsDelivery->us_customs_code}}</p>
                                 {{--<p><strong>Availability</strong> {{$cfsDelivery->availability}}</p>--}}
@@ -40,10 +40,10 @@
                             </div>
 
                             <div class="col-xs-5">
-                                <p><strong>Arrival at DSD</strong> {{$cfsDelivery->arrival_date}} @ {{$cfsDelivery->arrival_time}}</p>
-                                <p><strong>Pick Up Date</strong> {{$cfsDelivery->pick_up_date}} @ {{$cfsDelivery->pick_up_time}}</p>
-                                <p><strong>Last Free Day</strong> {{$cfsDelivery->last_free_day}}</p>
-                                <p><strong>General Order</strong> {{$cfsDelivery->general_order}}</p>
+                                <p><strong>Arrival at DSD</strong> {{$cfsDelivery->arrival_date or 'No arrival date entered.'}} @ {{$cfsDelivery->arrival_time or 'No arrival time entered.'}}</p>
+                                <p><strong>Pick Up Date</strong> {{$cfsDelivery->pick_up_date or 'No pick up date entered.'}} @ {{$cfsDelivery->pick_up_time or 'No pick up time entered.'}}</p>
+                                <p><strong>Last Free Day</strong> {{$cfsDelivery->last_free_day or 'No LFD entered.'}}</p>
+                                <p><strong>General Order</strong> {{$cfsDelivery->general_order or 'No GO entered.'}}</p>
                             </div>
                         </div>
 
@@ -51,7 +51,7 @@
 
 
 
-                        <div class="table-responsive">
+                        {{--<div class="table-responsive">--}}
 
                                 @if(!empty($cfsDelivery->hawbs))
                                 <h3>HOUSES</h3>
@@ -76,7 +76,7 @@
                                                         <p>on {{$hawb->closed_date}} @ {{$hawb->closed_time}}</p>
                                                         <p><strong>Company </strong>{{$hawb->co_name}}</p>
                                                         <p><strong>Driver </strong>{{$hawb->driver}}</p>
-                                                        <p><strong>Transaction <span class="closed">Closed</span> </strong>{{$hawb->closed_date}} @ {{$hawb->closed_time}}</p>
+                                                        {{--<p><strong>Transaction <span class="closed">Closed</span> </strong>{{$hawb->closed_date}} @ {{$hawb->closed_time}}</p>--}}
                                                     @else
                                                         <h4>Transaction <strong><span class="Open">{{$hawb->status}}</span></strong></h4>
                                                     @endif
@@ -89,8 +89,8 @@
                                                             <p><strong>Piece Count</strong> {{$hawb->piece_ct}}</p>
                                                         </div>
                                                         <div class="col-xs-5">
-                                                            <p><strong>Driver</strong> {{$hawb->driver_name}}</p>
-                                                            <p><strong>Company </strong> {{$hawb->company_name}}</p>
+                                                            <p><strong>Driver</strong> {{$hawb->driver_name or 'No driver entered.'}}</p>
+                                                            <p><strong>Company </strong> {{$hawb->company_name or 'No company entered.'}}</p>
                                                         </div>
                                                         {{--<div class="col-xs-4">--}}
                                                         {{--<p><strong>Closed</strong> {{$hawb->closed_date}} @ {{$hawb->closed_time}}</p>--}}
@@ -123,7 +123,7 @@
                             {{ Form::close() }}
                         </div>
 
-                        </div>
+                        {{--</div>--}}
 
                         </div>
 

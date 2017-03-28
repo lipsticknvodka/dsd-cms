@@ -23,49 +23,103 @@
 
 
                         <div class="row-fluid">
-                            <div class="col-xs-12">
+                            {{--<div class="col-xs-12">--}}
                                 <a href="#addHawb" role="button" class="btn btn-large btn-primary" data-toggle="modal">Add HAWB</a>
-                            </div>
+                            {{--</div>--}}
 
 
-                            <div class="table-responsive">
-                                <h4 class="col-xs-12">Houses</h4>
-                                <table class="table table-striped">
-                                    <thead>
-                                    <tr>
-                                        <th>HAWB</th>
-                                        <th>Pallet Count</th>
-                                        <th>Piece Count</th>
-                                        <th>Weight</th>
-                                        <th>Status</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-
-                                    @foreach($cfs->hawbs as $hawb)
-                                        <tr>
-                                            <td><a data-toggle="collapse" data-target="#{{$hawb->hawb}}">{{$hawb->hawb}}</a></td>
-
-                                            <td>{{$cfs->hawb->pallet_ct}}</td>
-                                            <td>{{$hawb->piece_ct}}</td>
-                                            <td>{{$hawb->weight_no}} {{$hawb->weight_type}}</td>
-                                            <td></td>
-                                            <div id="{{$hawb->hawb}}" class="collapse">
-                                                Insert more info here
-                                            </div>
-
-                                        </tr>
 
 
-                                    @endforeach
+                                    @if(!empty($cfs->hawbs))
+                                        <h3>HOUSES</h3>
+
+                                        <div class="table-responsive">
+                                            <h4 class="col-xs-12">Houses</h4>
+                                            <table class="table table-striped">
+                                                <thead>
+                                                <tr>
+                                                    <th>HAWB</th>
+                                                    <th>Pallet Count</th>
+                                                    <th>Piece Count</th>
+                                                    <th>Weight</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                        @foreach($cfs->hawbs as $hawb)
+                                            <tr>
+                                                <td><a data-toggle="collapse" data-target="#{{$hawb->hawb}}">{{$hawb->hawb}}</a></td>
+
+                                                <td>{{$hawb->pallet_ct}}</td>
+                                                <td>{{$hawb->piece_ct}}</td>
+                                                <td>{{$hawb->weight_no}} {{$hawb->weight_type}}</td>
+                                                <td>
+                                                    <div id="{{$hawb->hawb}}" class="collapse">
+                                                        Insert more info here
+                                                    </div>
+                                                </td>
+                                            </tr>
 
 
-                                    </tbody>
-                                </table>
-                            </div>
+                                        @endforeach
 
-                            </div>
-                        </div>
+                                        </tbody>
+                                            </table>
+                                        </div>
+                                        {{--@foreach($cfs->hawbs as $hawb)--}}
+
+                                            {{--<div class="row" id="{{$hawb->id}}">--}}
+                                                {{--<div class="col-xs-1">--}}
+                                                    {{--<form method="POST" action="/hawb/{{$hawb->id}}" class="col-xs-1">--}}
+                                                        {{--                                <form method="POST" action="{{route('deleteException')}}">--}}
+                                                        {{--{!! csrf_field() !!}--}}
+
+                                                        {{--<input type="hidden" name="_method" value="DELETE">--}}
+
+                                                        {{--<button type="submit" class="fa fa-times" id="deleteFileButton"></button>--}}
+                                                    {{--</form>--}}
+                                                {{--</div>--}}
+
+                                                {{--<div class="col-xs-11">--}}
+                                                    {{--<h4><strong>HAWB </strong>{{$hawb->hawb}}</h4>--}}
+                                                    {{--@if($hawb->status == "Closed")--}}
+                                                        {{--<h4>Transaction <strong><span class="closed">{{$hawb->status}}</span></strong> </h4>--}}
+                                                        {{--<p>on {{$hawb->closed_date}} @ {{$hawb->closed_time}}</p>--}}
+                                                        {{--<p><strong>Company </strong>{{$hawb->co_name}}</p>--}}
+                                                        {{--<p><strong>Driver </strong>{{$hawb->driver}}</p>--}}
+                                                        {{--<p><strong>Transaction <span class="closed">Closed</span> </strong>{{$hawb->closed_date}} @ {{$hawb->closed_time}}</p>--}}
+                                                    {{--@else--}}
+                                                        {{--<h4>Transaction <strong><span class="Open">{{$hawb->status}}</span></strong></h4>--}}
+                                                    {{--@endif--}}
+                                                    {{--<h4>{{$hawb->availability}}</h4>--}}
+
+                                                    {{--<div class="row">--}}
+                                                        {{--<div class="col-xs-7">--}}
+                                                            {{--<p><strong>Weight</strong> {{$hawb->weight_no}} {{$hawb->weight_type}}</p>--}}
+                                                            {{--<p><strong>Pallet Count</strong> {{$hawb->pallet_ct}}</p>--}}
+                                                            {{--<p><strong>Piece Count</strong> {{$hawb->piece_ct}}</p>--}}
+                                                        {{--</div>--}}
+                                                        {{--<div class="col-xs-5">--}}
+                                                            {{--<p><strong>Driver</strong> {{$hawb->driver_name or 'No driver entered.'}}</p>--}}
+                                                            {{--<p><strong>Company </strong> {{$hawb->company_name or 'No company entered.'}}</p>--}}
+                                                        {{--</div>--}}
+                                                        {{--<div class="col-xs-4">--}}
+                                                        {{--<p><strong>Closed</strong> {{$hawb->closed_date}} @ {{$hawb->closed_time}}</p>--}}
+                                                        {{--</div>--}}
+                                                    {{--</div>--}}
+
+                                                    {{--<hr/>--}}
+                                                {{--</div>--}}
+                                            {{--</div>--}}
+
+                                        {{--@endforeach--}}
+                                        @endif
+
+
+
+
+
+
 
 
 
@@ -78,7 +132,8 @@
 
 
                         {!! Form::close() !!}
-
+                        </div>
+                    </div>
             </div>
         </div>
     </div>
