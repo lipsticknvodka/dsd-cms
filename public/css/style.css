@@ -701,11 +701,18 @@ button#search.btn-warning {
 
 }
 
+#search-bar .glyphicon {
+	top: -25px;
+	padding-left: 5px;
+	color: #960a0a;
+}
+
 #search-input {
 	margin-bottom:0px;
 	padding:10px 0px;
 	opacity: .35;
 	/*margin-left: 145px;*/
+	padding-left: 25px;
 }
 
 /*#search-input.icon-addon.form-control {*/

@@ -334,11 +334,11 @@
                 </div>
 
                 {{--<div class="hidden-xs" >--}}
-                <div class="col-sm-9" id="header-buttons" role="group" aria-label="">
+                <div class="col-sm-9" role="group" aria-label="">
 
-                    <div class="user-loggedIn hidden-xs">
+                    <div class="user-loggedIn hidden-xs pull-right">
                         @if(Auth::check())
-                           <p>Welcome, {{Auth::user()->name}} | {{link_to_route('logout', 'Logout')}}</p> <img src="/images/dsd-admin-icons/user-loggedin.png" height="22px" style="padding-right:5px;">
+                            <img src="/images/dsd-admin-icons/user-loggedin.png" height="22px" style="padding-right:5px;"> <p>Welcome, {{Auth::user()->name}} | {{link_to_route('logout', 'Logout')}}</p>
 
                         @else
 
@@ -434,7 +434,7 @@
 
 {{--                        {!! Form::label('adminQuery','Search by MAWB, HAWB, or Reference/Load #')  !!}--}}
                         <input type="text" class="form-control" name="adminQuery" id="search-input"
-                               placeholder="Search all accounts, CFS, and trucking deliveries">
+                               placeholder="Search all accounts, CFS, and trucking deliveries"><span class="glyphicon glyphicon-search"></span>
                                     <button type="submit" type="hidden" id='search' class="hidden"/>
                         {{Form::close()}}
                     </div>
