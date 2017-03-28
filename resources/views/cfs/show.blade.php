@@ -118,6 +118,8 @@
 
                         <div class="btn-group-md pull-right">
                             <a href="/cfs/{{ $cfsDelivery->id }}/edit" class="btn btn-danger">Edit</a>
+
+
                             {{ Form::open(['method' => 'DELETE', 'route' => ['cfs.destroy', $cfsDelivery->id]]) }}
                             {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
                             {{ Form::close() }}

@@ -164,7 +164,7 @@ span.icon-bar {
 
 .user-loggedIn {
 	padding-bottom:0px !important;
-
+	display: inline-flex;
 }
 
 .user-loggedIn p{

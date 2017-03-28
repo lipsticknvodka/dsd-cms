@@ -206,6 +206,8 @@
 
                                             {!! csrf_field() !!}
 
+                                            {!! csrf_token() !!}
+
                                             <input type="hidden" name="_method" value="DELETE">
 
                                             <button type="submit" class="fa fa-times pull-left" id="deleteFileButton"></button>
