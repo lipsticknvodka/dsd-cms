@@ -168,12 +168,12 @@ span.icon-bar {
 }
 
 .user-loggedIn p{
-	float:right;
+	float:right !important;
 
 }
 
 .user-loggedIn img{
-	float:right
+	float:right !important;
 
 }
 
