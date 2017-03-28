@@ -334,7 +334,7 @@
                 </div>
 
                 {{--<div class="hidden-xs" >--}}
-                <div class="col-sm-9" role="group" aria-label="">
+                <div class="col-sm-9" id="header-buttons" role="group" aria-label="">
 
                     <div class="user-loggedIn hidden-xs">
                         @if(Auth::check())
