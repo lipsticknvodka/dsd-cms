@@ -164,7 +164,7 @@ span.icon-bar {
 
 .user-loggedIn {
 	padding-bottom:0px !important;
-	display: inline-flex;
+	/*display: inline-flex;*/
 }
 
 .user-loggedIn p{
@@ -189,6 +189,25 @@ span.icon-bar {
 #header-buttons.row, #user-links.row {
 	margin-left:0px;	
 }
+
+i.fa.fa-btn.fa-sign-in {
+	color: #fff;
+}
+
+.btn-group button.btn.btn-warning {
+	margin-left: 5px;
+}
+
+input.deleteLink {
+	border: none;
+	background: none;
+	font-weight: bold;
+	font-size: 12px;
+	color: #337ab7;
+	letter-spacing: 1px;
+	padding:0px;
+}
+
 
 .nav {
 	font-size:13px;	
@@ -702,9 +721,9 @@ button#search.btn-warning {
 }
 
 #search-bar .glyphicon {
-	top: -25px;
-	padding-left: 5px;
-	color: #960a0a;
+	top: -25px !important;
+	padding-left: 5px !important;
+	color: #960a0a !important;
 }
 
 #search-input {

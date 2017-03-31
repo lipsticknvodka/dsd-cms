@@ -47,33 +47,20 @@
                                         <td>{{$account->account_no}}</td>
                                         <td>{{$account->acct_type}}</td>
                                         <td>{{$account->deleted_at}}</td>
-                                        <td>
-                                            <a role="button" class="btn btn-primary" href="{{ url('/account/'.$account->id.'/restore') }}">
-                                                Restore
-                                            </a>
-                                        </td>
+
+                                        <td><small><a href="/account/{{ $account->id }}/restore">Restore</a></small></td>
 
                                         <td>
-
-                                            <a role="button" class="btn btn-primary" href="{{ url('/account/'.$account->id.'/permDelete') }}">
-                                               Delete
-                                            </a>
-
-                                            {{--{!! Form::open(['method'=>'DELETE'],[url('/account/'.{$account->id}.'/permDelete)]) !!}--}}
-
-                                            {{--<button type="submit" value="Delete">Delete</button>--}}
-                                            {{--{!! Form::close() !!}--}}
-
+                                            <small>
+                                                <a href="{{ url('/account/'.$account->id.'/permDelete') }}">
+                                                    Delete
+                                                </a>
+                                            </small>
                                         </td>
 
-                                        {{--<li><a href="{‌{route('account.show', ['id' => $account->id])}}">{‌{$account->name}}</a></li>--}}
-                                        {{--                                            <li><a href="{{route('account.show', $account->id)}}">{{$account->name}}</a></li>--}}
                                     </tr>
 
                                 @endforeach
-
-
-                                {{--                                            {!! $accounts->forumindex->render() !!}--}}
                                 </tbody>
                             </table>
 

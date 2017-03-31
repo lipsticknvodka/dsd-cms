@@ -140,7 +140,11 @@
                     {{--</div></div></div>--}}
 
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-centered"><div class="item"><div class="content">
-                        <h4 class="no-margin-bottom"><strong>Human Resources</h4><p class="no-margin-bottom">Kennya Martinez</strong></p> <!--<i class="fa fa-envelope 2x"></i>--> <a href="mailto:kennya@dsdcompanies.com">kennya@dsdcompanies.com</a>
+                        <h4 class="no-margin-bottom"><strong>Director of Human Resources &amp; Compliance</h4><p class="no-margin-bottom">Wendy S. Ramirez</strong></p> <!--<i class="fa fa-envelope 2x"></i>--> <a href="mailto:wendy@dsdcompanies.com">wendy@dsdcompanies.com</a>
+                    </div></div></div>
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-centered"><div class="item"><div class="content">
+                        <h4 class="no-margin-bottom"><strong>Human Resources Manager</h4><p class="no-margin-bottom">Kennya Martinez</strong></p> <!--<i class="fa fa-envelope 2x"></i>--> <a href="mailto:kennya@dsdcompanies.com">kennya@dsdcompanies.com</a>
                     </div></div></div>
 
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-centered"><div class="item"><div class="content">

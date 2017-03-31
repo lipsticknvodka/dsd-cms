@@ -14,8 +14,8 @@ if(isset($_POST['submitButton'])){
 			  //'general'=>'michelleprather@gmail.com',
 			  'air-freight'=>'carlos@dsdcompanies.com', //Air Freight
 			  'ocean-freight'=>'jose@dsdcompanies.com', //Ocean Freight/Intermodal
-			  'trucking-pick-up'=>'roberto@dsdcompanies.com', //Trucking-Pick up
-			  'trucking-deliveries'=>'simon@dsdcompanies.com', //Trucking-Deliveries
+			  'trucking-pick-up'=>'roberto@dsdcompanies.com', //Trucking-Pick up ??
+			  'trucking-deliveries'=>'simon@dsdcompanies.com', //Trucking-Deliveries ??
 			 // 'hot-shot'=>'', 
 			  'warehousing'=>'fausto@dsdcompanies.com', //Warehousing - Carlos ???
 			  'cargo-screening'=>'edbuccio@dsdcompanies.com', //Cargo Screening

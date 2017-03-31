@@ -38,10 +38,10 @@
                         <div class="row">
                             <h4 class="col-sm-6">Recent CFS Deliveries</h4>
 
-                            <div class="col-sm-6">
-                                    <a href="{{ URL::to('/cfs/downloadExcel/xls') }}"><button class="btn btn-warning pull-right">Download xls</button></a>
+                            <div class="btn-group col-sm-6">
+                                    <a href="{{ URL::to('/cfs/downloadExcel/xls') }}"><button class="btn btn-warning pull-right">Download .xls</button></a>
 
-                                    <a href="{{ URL::to('/cfs/downloadExcel/csv') }}"><button class="btn btn-warning pull-right">Download CSV</button></a>
+                                    <a href="{{ URL::to('/cfs/downloadExcel/csv') }}"><button class="btn btn-warning pull-right">Download .csv</button></a>
                             </div>
                         </div>
 
@@ -57,6 +57,7 @@
                                     <th class="hidden-xs">G.O.</th>
                                     <th>Availability</th>
                                     <th>Status</th>
+                                    <th></th>
                                     <th></th>
                                 </tr>
                                 </thead>
@@ -74,19 +75,27 @@
                                         <td class="hidden-xs">{{$cfsDelivery->general_order}}</td>
                                         <td>{{$cfsDelivery->availability}}</td>
                                         <td>{{$cfsDelivery->status}}</td>
-                                        <td><div class="dropdown">
-                                                <a class="btn btn-danger dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    Action
-                                                </a>
+                                        <td><small><a href="/cfs/{{ $cfsDelivery->id }}/edit">Edit</a></small></td>
+                                        <td>
+                                            <small>
+                                                {{ Form::open(['method' => 'DELETE', 'route' => ['cfs.destroy', $cfsDelivery->id]]) }}
+                                                {{ Form::submit('Delete', ['class'=>'deleteLink']) }}
+                                                {{ Form::close() }}
+                                            </small>
+                                        </td>
+                                        {{--<td><div class="dropdown">--}}
+                                                {{--<a class="btn btn-danger dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
+                                                    {{--Action--}}
+                                                {{--</a>--}}
 
-                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                    <li><a class="dropdown-item" href="/cfs/{{ $cfsDelivery->id }}/edit">Edit</a></li>
+                                                {{--<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">--}}
+                                                    {{--<li><a class="dropdown-item" href="/cfs/{{ $cfsDelivery->id }}/edit">Edit</a></li>--}}
                                                     {{--<li> <a class="dropdown-item" href="account/destroy">Delete</a></li>--}}
-                                                    {{ Form::open(['method' => 'DELETE', 'route' => ['cfs.destroy', $cfsDelivery->id]]) }}
-                                                    {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
-                                                    {{ Form::close() }}
-                                                </div>
-                                            </div></td>
+                                                    {{--{{ Form::open(['method' => 'DELETE', 'route' => ['cfs.destroy', $cfsDelivery->id]]) }}--}}
+                                                    {{--{{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}--}}
+                                                    {{--{{ Form::close() }}--}}
+                                                {{--</div>--}}
+                                            {{--</div></td>--}}
 
                                         {{--<li><a href="{‌{route('account.show', ['id' => $account->id])}}">{‌{$account->name}}</a></li>--}}
                                         {{--                                            <li><a href="{{route('account.show', $account->id)}}">{{$account->name}}</a></li>--}}

@@ -30,6 +30,7 @@
                                         <th>Availability</th>
                                         <th>Status</th>
                                         <th></th>
+                                        <th></th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -45,17 +46,27 @@
                                             <td class="hidden-xs">{{$cfsDelivery->general_order}}</td>
                                             <td>{{$cfsDelivery->availability}}</td>
                                             <td>{{$cfsDelivery->status}}</td>
-                                            <td><div class="dropdown">
-                                                    <a class="btn btn-danger dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        Action
-                                                    </a>
+                                            {{--<td><div class="dropdown">--}}
+                                                    {{--<a class="btn btn-danger dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
+                                                        {{--Action--}}
+                                                    {{--</a>--}}
 
-                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                        <li><a class="dropdown-item" href="#">Edit</a></li>
-                                                        <li> <a class="dropdown-item" href="#">Delete</a></li>
+                                                    {{--<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">--}}
+                                                        {{--<li><a class="dropdown-item" href="#">Edit</a></li>--}}
+                                                        {{--<li> <a class="dropdown-item" href="#">Delete</a></li>--}}
 
-                                                    </div>
-                                                </div></td>
+                                                    {{--</div>--}}
+                                                {{--</div></td>--}}
+
+                                            <td><small><a href="/cfs/{{ $cfsDelivery->id }}/edit">Edit</a></small></td>
+                                            <td>
+                                                <small>
+                                                    {{ Form::open(['method' => 'DELETE', 'route' => ['cfs.destroy', $cfsDelivery->id]]) }}
+                                                    {{ Form::submit('Delete', ['class'=>'deleteLink']) }}
+                                                    {{ Form::close() }}
+                                                </small>
+                                            </td>
+
 
                                             {{--<li><a href="{‌{route('account.show', ['id' => $account->id])}}">{‌{$account->name}}</a></li>--}}
                                             {{--                                            <li><a href="{{route('account.show', $account->id)}}">{{$account->name}}</a></li>--}}
@@ -106,13 +117,14 @@
                                             <th class="hidden-xs">Destination</th>
                                             <th>Status</th>
                                             <th></th>
+                                            <th></th>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         @foreach($truckingDeliveries as $truckingDelivery)
                                             <tr>
                                                 <td>
-                                                    <a href="/trucking/{{$truckingDelivery->id}}">{{$truckingDelivery->mawb}}</a>
+                                                    <a href="/trucking/{{$truckingDelivery->id}}">{{$truckingDelivery->ref_no}}</a>
                                                     {{--<a href="{‌{route('account.show', ['id' => $account->id])}}">{‌{$account->name}}</a>--}}
                                                                                                             {{--<a href="">{{$account->name}}</a>--}}
                                                 </td>
@@ -121,17 +133,14 @@
                                                 <td class="hidden-xs">{{$truckingDelivery->trans_type}}</td>
                                                 <td class="hidden-xs">{{$truckingDelivery->destination_city}}, {{$truckingDelivery->destination_state}}</td>
                                                 <td>{{$truckingDelivery->availability}}</td>
-                                                <td><div class="dropdown">
-                                                        <a class="btn btn-danger dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            Action
-                                                        </a>
-
-                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                            <li><a class="dropdown-item" href="#">Edit</a></li>
-                                                            <li> <a class="dropdown-item" href="#">Delete</a></li>
-
-                                                        </div>
-                                                    </div></td>
+                                                <td><small><a href="/trucking/{{ $truckingDelivery->id }}/edit">Edit</a></small></td>
+                                                <td>
+                                                    <small>
+                                                        {{ Form::open(['method' => 'DELETE', 'route' => ['trucking.destroy', $truckingDelivery->id]]) }}
+                                                        {{ Form::submit('Delete', ['class'=>'deleteLink']) }}
+                                                        {{ Form::close() }}
+                                                    </small>
+                                                </td>
 
                                                 {{--<li><a href="{‌{route('account.show', ['id' => $account->id])}}">{‌{$account->name}}</a></li>--}}
 {{--                                                                                            <li><a href="{{route('account.show', $account->id)}}">{{$account->name}}</a></li>--}}

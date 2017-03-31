@@ -42,9 +42,9 @@
                         <div class="row">
                             <h4 class="col-sm-6">Recent Trucking Deliveries</h4>
 
-                            <div class="col-sm-6">
-                                <a href="{{ URL::to('/trucking/downloadExcel/xls') }}"><button class="btn btn-warning pull-right">Download XLS</button></a>
-                                <a href="{{ URL::to('/trucking/downloadExcel/csv') }}"><button class="btn btn-warning pull-right">Download CSV</button></a>
+                            <div class="btn-group col-sm-6">
+                                <a href="{{ URL::to('/trucking/downloadExcel/xls') }}"><button class="btn btn-warning pull-right">Download .xls</button></a>
+                                <a href="{{ URL::to('/trucking/downloadExcel/csv') }}"><button class="btn btn-warning pull-right">Download .csv</button></a>
                             </div>
                         </div>
 
@@ -85,6 +85,7 @@
                                     {{--<th>Destination</th>--}}
                                     <th>Status</th>
                                     <th></th>
+                                    <th></th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -102,18 +103,27 @@
                                         <td>{{$truckingDelivery->out_for_delivery_date}}</td>
 {{--                                        <td>{{$truckingDelivery->destination_city}}, {{$truckingDelivery->destination_state}}</td>--}}
                                         <td>{{$truckingDelivery->availability}}</td>
-                                        <td><div class="dropdown pull-right">
-                                                <a class="btn btn-danger dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    Action <span class="caret"></span>
-                                                </a>
+                                        <td><small><a href="/trucking/{{ $truckingDelivery->id }}/edit">Edit</a></small></td>
 
-                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                    <li><a class="dropdown-item" href="/trucking/{{ $truckingDelivery->id }}/edit">Edit</a></li>
+                                        <td>
+                                            <small>
+                                                {{ Form::open(['method' => 'DELETE', 'route' => ['trucking.destroy', $truckingDelivery->id]]) }}
+                                                {{ Form::submit('Delete', ['class'=>'deleteLink']) }}
+                                                {{ Form::close() }}
+                                            </small>
+                                        </td>
+                                        {{--<td><div class="dropdown pull-right">--}}
+                                                {{--<a class="btn btn-danger dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
+                                                    {{--Action <span class="caret"></span>--}}
+                                                {{--</a>--}}
+
+                                                {{--<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">--}}
+                                                    {{--<li><a class="dropdown-item" href="/trucking/{{ $truckingDelivery->id }}/edit">Edit</a></li>--}}
                                                     {{--<li> <a class="dropdown-item" href="account/destroy">Delete</a></li>--}}
-                                                    {{ Form::open(['method' => 'DELETE', 'route' => ['trucking.destroy', $truckingDelivery->id]]) }}
-                                                    {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
-                                                    {{ Form::close() }}
-                                                </div>
+                                                    {{--{{ Form::open(['method' => 'DELETE', 'route' => ['trucking.destroy', $truckingDelivery->id]]) }}--}}
+                                                    {{--{{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}--}}
+                                                    {{--{{ Form::close() }}--}}
+                                                {{--</div>--}}
 
                                         {{--<li><a href="{‌{route('account.show', ['id' => $account->id])}}">{‌{$account->name}}</a></li>--}}
                                                                                     {{--<li><a href="{{route('account.show', $account->id)}}">{{$account->name}}</a></li>--}}

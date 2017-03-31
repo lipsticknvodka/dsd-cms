@@ -95,7 +95,7 @@
 
                         <hr/>
 
-                        <div class="input-group-md pull-right">
+                        <div class="btn-group-md pull-right">
                             <a href="/account/{{ $account->id }}/edit"><button class="btn btn-danger">Edit</button></a>
                             {{ Form::open(['method' => 'DELETE', 'route' => ['account.destroy', $account->id]]) }}
                             {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
@@ -103,56 +103,7 @@
                         </div>
 
                     </div>
-                        </div>
-
-
-
-                        {{--<hr/>--}}
-
-                        {{--<div class="row">--}}
-                            {{--<div class="col-xs-12">--}}
-                                {{--<h4><strong>Rates</strong></h4>--}}
-                                {{--@if (count($account->rates) === 1)--}}
-
-                                    {{--<ul>--}}
-                                    {{--@foreach($account->rates as $rate)--}}
-                                        {{--<div class="row">--}}
-                                            {{--<div class="col-xs-1 pull-left">--}}
-                                            {{--<form method="POST" action="/rate/{{$rate->id}}" class="col-xs-1">--}}
-                                                {{--                                <form method="POST" action="{{route('deleteException')}}">--}}
-                                                {{--{!! csrf_field() !!}--}}
-
-                                                {{--<input type="hidden" name="_method" value="DELETE">--}}
-
-                                                {{--<button type="submit" class="fa fa-times" id="deleteFileButton"></button>--}}
-                                            {{--</form>--}}
-                                            {{--</div>--}}
-
-                                            {{--<div class="col-xs-11" >--}}
-
-                                                {{--<a href="{{$rate->path}}" target="_blank">--}}
-                                                    {{--{{$rate->name}}--}}
-                                                {{--</a>--}}
-
-                                            {{--</div>--}}
-                                        {{--</div>--}}
-                                    {{--@endforeach--}}
-                                    {{--</ul>--}}
-                                {{--@else--}}
-                                    {{--No rates uploaded.--}}
-                                {{--@endif--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-
-                        {{--<div class="btn-group-md pull-right">--}}
-                            {{--<a href="/account/{{ $account->id }}/edit"><button class="btn btn-danger">Edit</button></a>--}}
-                            {{--{{ Form::open(['method' => 'DELETE', 'route' => ['account.destroy', $account->id]]) }}--}}
-                            {{--{{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}--}}
-                            {{--{{ Form::close() }}--}}
-                        {{--</div>--}}
-
-                    {{--</div>--}}
-                {{--</div>--}}
+                </div>
             </div>
         </div>
     </div>

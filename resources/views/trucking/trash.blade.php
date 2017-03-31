@@ -49,19 +49,14 @@
                                         <td class="hidden-xs">{{$truckingDelivery->trans_type}}</td>
                                         <td>{{$truckingDelivery->availability}}</td>
                                         <td>{{$truckingDelivery->deleted_at}}</td>
-                                        <td>
-
-                                            <a role="button" class="btn btn-primary" href="{{ url('/trucking/'.$truckingDelivery->id.'/restore') }}">
-                                                Restore
-                                            </a>
-                                        </td>
+                                        <td><small><a href="/trucking/{{ $truckingDelivery->id }}/restore">Restore</a></small></td>
 
                                         <td>
-
-                                            <a role="button" class="btn btn-primary" href="{{ url('/trucking/'.$truckingDelivery->id.'/permDelete') }}">
-                                                Delete
-                                            </a>
-
+                                            <small>
+                                                <a href="{{ url('/trucking/'.$truckingDelivery->id.'/permDelete') }}">
+                                                    Delete
+                                                </a>
+                                            </small>
                                         </td>
                                     </tr>
 

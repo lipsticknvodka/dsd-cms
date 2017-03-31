@@ -48,19 +48,13 @@
                                         </td>
                                         <td class="hidden-xs">{{$cfsDelivery->account->name}}</td>
                                         <td class="hidden-xs">{{$cfsDelivery->deleted_at}}</td>
+                                        <td><small><a href="/cfs/{{ $cfsDelivery->id }}/restore">Restore</a></small></td>
                                         <td>
-
-                                            <a role="button" class="btn btn-primary" href="{{ url('/cfs/'.$cfsDelivery->id.'/restore') }}">
-                                                Restore
-                                            </a>
-                                        </td>
-
-                                        <td>
-
-                                            <a role="button" class="btn btn-primary" href="{{ url('/cfs/'.$cfsDelivery->id.'/permDelete') }}">
-                                                Delete
-                                            </a>
-
+                                            <small>
+                                                <a href="{{ url('/cfs/'.$cfsDelivery->id.'/permDelete') }}">
+                                                    Delete
+                                                </a>
+                                            </small>
                                         </td>
                                     </tr>
 
