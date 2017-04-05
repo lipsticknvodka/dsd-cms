@@ -515,6 +515,7 @@ nav.sidebar{
     /*z-index: 10;*/
 	position:fixed;
     z-index: 1;
+	margin-top: 13px;
 }
 
 #content .panel-body {
@@ -1708,10 +1709,12 @@ section#services-warehousing {
 		font-size:20px !important;	
 	}
 
+
+
     #search-bar {
         background-color: #960a0a;
         padding: 0px 10px;
-        top: 51px;
+        top: 75px !important;
         Z-INDEX: -1;
         position: fixed;
         width: 100%;
@@ -1722,10 +1725,23 @@ section#services-warehousing {
 
     }
 
-    nav.navbar.navbar-default.sidebar {
-        margin-top: 105px;
-    }
+	.navbar {
 
+		margin-bottom:0px !important;
+	}
+
+    /*nav.navbar.navbar-default.sidebar {*/
+        /*margin-top: 105px;*/
+    /*}*/
+
+	nav.navbar.navbar-default.sidebar {
+		margin-top: -27px;
+	}
+
+	.navbar-brand
+	{
+		top:0px !important;
+	}
 	
 	.btn-warning {
 		font-size:14px;

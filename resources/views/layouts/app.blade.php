@@ -61,7 +61,7 @@
         #search-bar {
             background-color: #960a0a !important;
             padding: 0px 10px;
-            top: 105px;
+            top: 115px;
             height: 55px;
             position: fixed;
             width: 100%;
@@ -244,11 +244,11 @@
             padding-right: 13px;
         }
 
-        nav.sidebar .navbar-nav > li:first-child{
+        nav.navbar-nav > li:first-child{
             border-top: 1px #e5e5e5 solid;
         }
 
-        nav.sidebar .navbar-nav > li{
+        nav .navbar-nav > li{
             border-bottom: 1px #e5e5e5 solid;
             margin-bottom: 0px;
         }
@@ -329,12 +329,12 @@
     <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="row">
-                <div class="col-sm-3">
+                <div class="col-xs-10 col-sm-3">
                      <a href="/" class="navbar-brand"><img src="images/logo.png" id="header-logo" alt="dsd trucking">DSD Companies</a>
                 </div>
 
                 {{--<div class="hidden-xs" >--}}
-                <div class="col-sm-9" role="group" aria-label="">
+                <div class="col-xs-2 col-sm-9" >
 
                     <div class="user-loggedIn hidden-xs pull-right col-sm-12">
                         @if(Auth::check())
@@ -354,7 +354,7 @@
                             </div>
                         @endif
                     </div>
-
+                </div>
                     {{--NAV HERE--}}
 
             {{--<a href="/" class="navbar-brand"><img src="images/logo.png" id="header-logo" alt="dsd trucking">DSD Companies</a>--}}
@@ -376,8 +376,8 @@
                 {{--<a href="/request-account"><button type="button" class="btn btn-warning" href="request-account.php">Request Account</button></a>--}}
                 {{--</div>--}}
 
-                <div class="visible-xs" id="user-links">
-                    <div class="pull-left" role="group" aria-label="">
+                <div class="visible-xs row" id="user-links">
+                    <div role="group" aria-label="">
                         {{--<img src="/images/dsd-admin-icons/user-loggedin.png">--}}
                         {{--<p>Welcome, {‌{ Auth::user()->name }} --}}
                         <div class=" col-xs-12 user-loggedIn" style="display:flex;">
