@@ -440,6 +440,7 @@ input.deleteLink {
 	top: 96px;
 	position: fixed;
 	width: 100%;
+	Z-INDEX: 1;
 }
 
 #search-input {
@@ -1715,7 +1716,7 @@ section#services-warehousing {
         background-color: #960a0a;
         padding: 0px 10px;
         top: 75px !important;
-        Z-INDEX: -1;
+
         position: fixed;
         width: 100%;
     }
@@ -1727,6 +1728,10 @@ section#services-warehousing {
 
 	#customer-content.panel.panel-default {
 		margin-top: 100px !important;
+	}
+
+	#content.panel.panel-default{
+		margin-top:0px;
 	}
 
 	.navbar {
@@ -1768,6 +1773,7 @@ section#services-warehousing {
 
 	#content .panel-body {
 		padding: 15px !important;
+
 	}
 	
 	.navbar-nav > li > a {

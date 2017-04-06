@@ -5,6 +5,11 @@
 
     RewriteEngine On
 
+    #Redirect dsdcompanies.com to www.dsdcompanies.com
+    RewriteEngine on
+    RewriteCond %{HTTP_HOST} ^dsdcompanies.com [NC]
+    RewriteRule ^(.*)$ http://www.dsdcompanies.com/$1 [L,R=301,NC]
+
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)/$ /$1 [L,R=301]

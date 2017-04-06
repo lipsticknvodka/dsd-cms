@@ -206,7 +206,7 @@
 
                                             {!! csrf_field() !!}
 
-                                            {!! csrf_token() !!}
+{{--                                            {!! csrf_token() !!}--}}
 
                                             <input type="hidden" name="_method" value="DELETE">
 
