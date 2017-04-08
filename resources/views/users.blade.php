@@ -44,13 +44,20 @@
                                                 <td>{{$user->email}}</td>
                                                 <td>{{$user->created_at}}</td>
                                                 <td> <form method="POST" action="/user/{{$user->id}}" class="col-xs-1">
-                                                                                        {{--<form method="POST" action="{{route('deleteException')}}">--}}
+                                                                                        <form method="POST" action="{{route('deleteException')}}">
                                                         {!! csrf_field() !!}
 
                                                         <input type="hidden" name="_method" value="DELETE">
 
                                                         <button type="submit" class="fa fa-times" id="deleteFileButton"></button>
                                                     </form></td>
+                                                {{--<td>--}}
+                                                    {{--<small>--}}
+                                                        {{--{{ Form::open(['method' => 'DELETE', 'route' => ['user.destroy', $user->id]]) }}--}}
+                                                        {{--{{ Form::submit('Delete', ['class'=>'deleteLink']) }}--}}
+                                                        {{--{{ Form::close() }}--}}
+                                                    {{--</small>--}}
+                                                {{--</td>--}}
 
                                                 {{--<td>--}}
                                                     {{--{!! Form::open(['method'=>'DELETE', 'action'=>['UsersController@destroy', $user->id]])!!}--}}
