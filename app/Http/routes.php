@@ -146,8 +146,12 @@ Route::get('/register', function(){
 Route::get('downloadExcel/{type}', 'MaatwebsiteDemoController@downloadExcel');
 //
 //Route::post('importExcel', 'MaatwebsiteDemoController@importExcel');
-//Route::get('/account/history', 'AccountsController@history');
-Route::get('/history', 'RevisionController@showRevisions');
+
+
+Route::get('/history', 'AccountsController@history');
+
+//WORKING ROUTE - KINDA HACKY
+//Route::get('/history', 'RevisionController@showRevisions');
 
 Route::resource('account', 'AccountsController');
 

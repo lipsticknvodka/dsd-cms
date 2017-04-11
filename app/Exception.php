@@ -12,6 +12,7 @@ class Exception extends Model
 {
 //    use SoftDeletes;
 
+
     protected $dates = ['deleted_at'];
 
     protected $table = 'exception_trucking_deliveries';

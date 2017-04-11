@@ -44,9 +44,13 @@ class User extends Authenticatable
         return $this->hasMany('App\Account');
     }
 
+//    public function identifiableName(){
+//        return $this->name;
+//    }
 
-    public function revisions(){
 
-        return $this->hasMany('\App\Revision');
-    }
+//    public function revisionHistory(){
+//
+//        return $this->hasMany('App\Revision');
+//    }
 }

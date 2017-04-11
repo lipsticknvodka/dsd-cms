@@ -17,17 +17,21 @@ class Account extends Model
     //
     use \Venturecraft\Revisionable\RevisionableTrait;
 
+
+
+//    use \bootRevisionableTrait;
+
 //    public static function boot()
 //    {
 //        parent::boot();
 //    }
-//    protected $guarded = [];
+    protected $guarded = [];
 
     protected $revisionEnabled = true;
     protected $revisionCleanup = true; //Remove old revisions (works only when used with $historyLimit)
     protected $historyLimit = 250; //Maintain a maximum of 100 changes at any point of time, while cleaning up old revisions.
 //    protected $revisionCreationsEnabled = true;
-    protected $revisionNullString = 'nothing';
+//    protected $revisionNullString = 'nothing';
 
     public function identifiableName(){
         return $this->name;
@@ -35,13 +39,14 @@ class Account extends Model
 
     protected $dontKeepRevisionOf = array(
         'updated_at',
-        'created_at',
+//        'created_at',
 //        'deleted_at'
     );
 
 
 
     protected $revisionFormattedFieldNames = array(
+//        'account' => 'Account',
         'account_no' => 'Account No.',
         'name' => 'Company Name',
         'acct_type' => 'Account Type',
@@ -56,12 +61,15 @@ class Account extends Model
         'fax' => 'Fax',
         'primary_contact' => 'Primary Contact',
         'email' => 'Email',
-        'deleted_at' => 'Deleted At'
+        'deleted_at' => 'Deleted At',
+        'created_at' => 'Created At',
     );
 
+
+//
 //    public function revisions()
 //    {
-//        return $this->morphMany('\App\Revision', 'revisions');
+//        return $this->morphMany('App/Revision', 'revisions');
 //    }
 
     use SoftDeletes;

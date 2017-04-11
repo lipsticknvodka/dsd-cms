@@ -41,13 +41,9 @@
 
                                 @foreach($cfsDeliveries as $cfsDelivery)
                                     <tr>
-                                        <td>
-                                            <a href="/trucking/{{$cfsDelivery->id}}">{{$cfsDelivery->mawb}}</a>
-                                            {{--<a href="{‌{route('account.show', ['id' => $account->id])}}">{‌{$account->name}}</a>--}}
-                                            {{--                                                        <a href="">{{$account->name}}</a>--}}
-                                        </td>
+                                        <td><p><strong>{{$cfsDelivery->account->name}}</strong></p></td>
                                         <td class="hidden-xs">{{$cfsDelivery->account->name}}</td>
-                                        <td class="hidden-xs">{{$cfsDelivery->deleted_at}}</td>
+                                        <td class="hidden-xs">{{$cfsDelivery->deleted_at->diffForHumans()}}</td>
                                         <td><small><a href="/cfs/{{ $cfsDelivery->id }}/restore">Restore</a></small></td>
                                         <td>
                                             <small>

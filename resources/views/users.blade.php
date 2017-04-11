@@ -31,6 +31,7 @@
                                             <th>Name</th>
                                             <th>Email</th>
                                             <th>Created</th>
+                                            <th>Last Log In</th>
                                             {{--<th class="hidden-xs">G.O.</th>--}}
                                             {{--<th>Availability</th>--}}
                                             {{--<th>Status</th>--}}
@@ -42,15 +43,29 @@
                                             <tr>
                                                 <td>{{$user->name}}</td>
                                                 <td>{{$user->email}}</td>
-                                                <td>{{$user->created_at}}</td>
-                                                <td> <form method="POST" action="/user/{{$user->id}}" class="col-xs-1">
-                                                                                        <form method="POST" action="{{route('deleteException')}}">
+                                                <td>{{$user->created_at->diffForHumans()}}</td>
+                                                <td></td>
+
+                                                <td>
+                                                    {{--<small>--}}
+                                                        {{--<a href="{{ url('/user/'.$user->id.'/delete') }}">--}}
+                                                            {{--Delete--}}
+                                                        {{--</a>--}}
+                                                    {{--</small>--}}
+
+                                                    <form method="POST" action="/user/{{$user->id}}" class="col-xs-1">
+
                                                         {!! csrf_field() !!}
 
                                                         <input type="hidden" name="_method" value="DELETE">
 
-                                                        <button type="submit" class="fa fa-times" id="deleteFileButton"></button>
-                                                    </form></td>
+                                                        <button type="submit" class="fa fa-times"></button>
+                                                    </form>
+                                                </td>
+
+
+
+
                                                 {{--<td>--}}
                                                     {{--<small>--}}
                                                         {{--{{ Form::open(['method' => 'DELETE', 'route' => ['user.destroy', $user->id]]) }}--}}
@@ -67,22 +82,8 @@
                                                     {{--{!! Form::close() !!}--}}
                                                 {{--</td>--}}
 
-{{--
 
-                                                {{--<td><div class="dropdown">--}}
-                                                        {{--<a class="btn btn-danger dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
-                                                            {{--Action--}}
-                                                        {{--</a>--}}
 
-                                                        {{--<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">--}}
-                                                            {{--<li><a class="dropdown-item" href="#">Edit</a></li>--}}
-                                                            {{--<li> <a class="dropdown-item" href="#">Delete</a></li>--}}
-
-                                                        {{--</div>--}}
-                                                    {{--</div></td>--}}
-
-                                                {{--<li><a href="{‌{route('account.show', ['id' => $account->id])}}">{‌{$account->name}}</a></li>--}}
-                                                {{--                                            <li><a href="{{route('account.show', $account->id)}}">{{$account->name}}</a></li>--}}
                                             </tr>
                                         @endforeach
 

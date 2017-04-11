@@ -27,9 +27,9 @@
                                 <thead>
                                 <tr>
                                     <th>Ref/Load No.</th>
-                                    <th class="hidden-xs">MAWB</th>
+                                    {{--<th class="hidden-xs">MAWB</th>--}}
                                     <th class="hidden-xs">HAWB</th>
-                                    <th class="hidden-xs">Type</th>
+                                    {{--<th class="hidden-xs">Type</th>--}}
                                     <th>Status</th>
                                     <th>Deleted At</th>
                                     <th></th>
@@ -40,15 +40,15 @@
                                 @foreach($truckingDeliveries as $truckingDelivery)
                                     <tr>
                                         <td>
-                                            <a href="/trucking/{{$truckingDelivery->id}}">{{$truckingDelivery->ref_no}}</a>
+                                         <p><strong>{{$truckingDelivery->ref_no}}</strong></p>
                                             {{--<a href="{‌{route('account.show', ['id' => $account->id])}}">{‌{$account->name}}</a>--}}
                                             {{--                                                        <a href="">{{$account->name}}</a>--}}
                                         </td>
-                                        <td class="hidden-xs">{{$truckingDelivery->mawb}}</td>
+{{--                                        <td class="hidden-xs">{{$truckingDelivery->mawb}}</td>--}}
                                         <td class="hidden-xs">{{$truckingDelivery->hawb}}</td>
-                                        <td class="hidden-xs">{{$truckingDelivery->trans_type}}</td>
+                                        {{--<td class="hidden-xs">{{$truckingDelivery->trans_type}}</td>--}}
                                         <td>{{$truckingDelivery->availability}}</td>
-                                        <td>{{$truckingDelivery->deleted_at}}</td>
+                                        <td>{{$truckingDelivery->deleted_at->diffForHumans()}}</td>
                                         <td><small><a href="/trucking/{{ $truckingDelivery->id }}/restore">Restore</a></small></td>
 
                                         <td>

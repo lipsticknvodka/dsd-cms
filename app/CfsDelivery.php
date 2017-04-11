@@ -22,11 +22,12 @@ class CfsDelivery extends Model
 
     protected $dontKeepRevisionOf = array(
         'updated_at',
-        'created_at',
-        'deleted_at'
+//        'created_at',
+//        'deleted_at'
     );
 
     protected $revisionFormattedFieldNames = array(
+        'account' =>'Account',
         'acct_name' => 'Account Name',
         'mawb' => 'MAWB',
         'arrival_date' => 'Arrival Date',
@@ -37,9 +38,11 @@ class CfsDelivery extends Model
         'master_weight_type' => 'Master Weight Type',
         'us_customs_code' => 'US Customs Code',
         'last_free_day' => 'Last Free Date',
-        'general_order' => 'General ORder',
+        'general_order' => 'General Order',
         'availability' => 'Availability',
-        'deleted_at' => 'Deleted At'
+        'deleted_at' => 'Deleted At',
+        'pick_up_date' => 'Pick Up Date',
+        'est_avail_date' => 'Estimated Availability Date'
     );
 
     use SoftDeletes;

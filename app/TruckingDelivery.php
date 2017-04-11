@@ -40,6 +40,7 @@ class TruckingDelivery extends Model
     protected $table = 'trucking_deliveries';
 
     protected $revisionFormattedFieldNames = array(
+        'account' => 'Account',
         'acct_name' => 'Account Name',
         'ref_no' => 'Reference No.',
         'trans_type' => 'Transaction Type',
@@ -76,6 +77,10 @@ class TruckingDelivery extends Model
         'received_by' => 'Received By',
         'trans_closed_date' => 'Transaction Closed Date',
         'trans_closed_time' => 'Transaction Closed Time',
+        'at_dsd_date' => 'At DSD Date',
+        'cargo_status' => 'Cargo Status',
+        'created_at' => 'Created At',
+        'deleted_at' => 'Deleted At'
 //        'deleted_at' => 'Deleted At'
     );
 

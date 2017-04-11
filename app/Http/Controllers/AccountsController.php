@@ -316,21 +316,29 @@ class AccountsController extends Controller
     }
 
 
-//
-//
-//        public function history(Request $request){
-//
-////        $account = Account::all();
-////            $account= Account::get();
-//
+
+
+        public function history(){
 //            $revisions = Revision::latest()->first();
-////        $revisions = Revision::all();
-////$revisions = $request->get('revisions');
-////        dd($revisions);
-//
-//        return view('history', compact('revisions'));
-//
-//        }
+
+
+//            $revisions->userResponsible();
+//        $account = Account::all();
+
+//        dd($revisions);
+
+//        $history = $account->revisionHistory;
+            $revisions = \Venturecraft\Revisionable\Revision::orderBy('created_at', 'desc')->paginate(10);
+//            $account = Account::first();
+//            $revisions = $account->RevisionHistory;
+//            $revisions = Revision::latest()->first();
+//        $revisions = Revision::all();
+//$revisions = $request->get('revisions');
+//        dd($revisions);
+
+        return view('history', compact('revisions'));
+
+        }
 
     public function downloadExcel($type)
     {

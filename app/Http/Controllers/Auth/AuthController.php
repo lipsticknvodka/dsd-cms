@@ -30,11 +30,15 @@ class AuthController extends Controller
      */
     protected $redirectTo = '/dashboard';
 
+//    protected $redirectPath = '/dashboard';
+
     /**
      * Create a new authentication controller instance.
      *
      * @return void
      */
+
+
     public function __construct()
     {
         $this->middleware($this->guestMiddleware(), ['except' => 'logout']);

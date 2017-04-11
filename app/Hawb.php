@@ -36,7 +36,8 @@ class Hawb extends Model
         'close_date' => 'Transaction Closed Date',
         'closed_time' => 'Transaction Closed Time',
         'status' => 'Transaction Status',
-//        'deleted_at' => 'Deleted At'
+        'deleted_at' => 'Deleted At',
+        'created_at'=> 'Created At'
     );
 
     use SoftDeletes;
@@ -57,7 +58,9 @@ class Hawb extends Model
         'driver_name',
         'closed_date',
         'closed_time',
-//        'status'=>'Open'
+        'created_at' => 'Created At',
+        'deleted_at' => 'Deleted At',
+        'status'=>'Status'
     ];
 
 
