@@ -31,7 +31,7 @@
                                 <thead>
                                 <tr>
                                     <th>MAWB</th>
-                                    <th class="hidden-xs">Account Name</th>
+                                    <th class="hidden-xs">HAWB</th>
                                     <th class="hidden-xs">Deleted At</th>
                                     <th></th>
                                     <th></th>
@@ -41,8 +41,8 @@
 
                                 @foreach($cfsDeliveries as $cfsDelivery)
                                     <tr>
-                                        <td><p><strong>{{$cfsDelivery->account->name}}</strong></p></td>
-                                        <td class="hidden-xs">{{$cfsDelivery->account->name}}</td>
+                                        <td><p><strong>{{$cfsDelivery->mawb}}</strong></p></td>
+                                        <td class="hidden-xs">{{$cfsDelivery->hawb->hawb or 'No HAWB entered'}}</td>
                                         <td class="hidden-xs">{{$cfsDelivery->deleted_at->diffForHumans()}}</td>
                                         <td><small><a href="/cfs/{{ $cfsDelivery->id }}/restore">Restore</a></small></td>
                                         <td>

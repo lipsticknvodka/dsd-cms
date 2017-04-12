@@ -11,14 +11,20 @@
 
                     <div class="content-body">
 
-                        <div id="trucking" class="arrow-steps clearfix" id="four-arrows">
+                        <div id="trucking" class="arrow-steps clearfix hidden-xs" id="four-arrows">
                             <div class="step current"><div class="glyphicon glyphicon-folder-open"></div><span>General</span> </div>
                             <div class="step current"> <div class="glyphicon glyphicon-map-marker"></div><span>Location</span> </div>
                             <div class="step current"> <div class="glyphicon glyphicon-list"></div><span>Breakdown</span> </div>
                             <div class="step"> <div class="glyphicon glyphicon-hourglass"></div><span>Availability</span> </div>
                         </div>
 
-                        @include('errors.list')
+                        <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3 hidden-xs">
+                            @include('errors.list')
+                        </div>
+
+                        <div class="visible-xs">
+                            @include('errors.list')
+                        </div>
 
                         {!! Form::model($trucking) !!}
 

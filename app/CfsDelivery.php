@@ -16,6 +16,7 @@ class CfsDelivery extends Model
     protected $historyLimit = 250; //Maintain a maximum of 500 changes at any point of time, while cleaning up old revisions.
     protected $revisionCreationsEnabled = true;
     protected $revisionNullString = 'nothing';
+    protected $revisionUnknownString = 'unknown';
     public function identifiableName(){
         return $this->name;
     }

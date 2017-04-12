@@ -740,7 +740,7 @@ button#search.btn-warning {
 	/*font-weight: bold !important;*/
 /*}*/
 
-	
+
 	
 section#sustainability .btn-default a{
 	 color: #DCBA95 !important;	
@@ -2107,6 +2107,14 @@ section#services-warehousing {
 
 	}
 	
+
+	.arrow-steps{
+		display: none;
+	}
+
+	.side-body {
+		margin-top:0px !important;
+	}
 }
 
 /* Extra Small Devices, Phones */ 

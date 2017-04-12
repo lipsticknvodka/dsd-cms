@@ -30,8 +30,9 @@ class Account extends Model
     protected $revisionEnabled = true;
     protected $revisionCleanup = true; //Remove old revisions (works only when used with $historyLimit)
     protected $historyLimit = 250; //Maintain a maximum of 100 changes at any point of time, while cleaning up old revisions.
-//    protected $revisionCreationsEnabled = true;
-//    protected $revisionNullString = 'nothing';
+    protected $revisionCreationsEnabled = true;
+    protected $revisionNullString = 'nothing';
+    protected $revisionUnknownString = 'unknown';
 
     public function identifiableName(){
         return $this->name;
@@ -46,7 +47,7 @@ class Account extends Model
 
 
     protected $revisionFormattedFieldNames = array(
-//        'account' => 'Account',
+        'account' => 'Account',
         'account_no' => 'Account No.',
         'name' => 'Company Name',
         'acct_type' => 'Account Type',

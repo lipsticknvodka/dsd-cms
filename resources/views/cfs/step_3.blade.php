@@ -9,14 +9,20 @@
 
                     <div class="content-body">
 
-                        <div class="arrow-steps clearfix" id="three-arrows">
+                        <div class="arrow-steps clearfix hidden-xs" id="three-arrows">
                             <div class="step current"><div class="glyphicon glyphicon-folder-open"></div><span>General</span> </div>
                             <div class="step current"> <div class="glyphicon glyphicon-list"></div><span>Master</span> </div>
                             <div class="step current"> <div class="glyphicon glyphicon-home"></div><span>House</span> </div>
                             {{--<div class="step"> <span>Step 4</span> </div>--}}
                         </div>
 
-                        @include('errors.list')
+                        <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3 hidden-xs">
+                            @include('errors.list')
+                        </div>
+
+                        <div class="visible-xs">
+                            @include('errors.list')
+                        </div>
 
                         {!! Form::model($cfs) !!}
 

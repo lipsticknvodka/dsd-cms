@@ -88,11 +88,11 @@
 
 
         #three-arrows {
-            width:560px;
+            width:410px;
         }
 
         #four-arrows {
-            width:745px;
+            width:545px;
         }
 
         .arrow-steps{
@@ -106,10 +106,10 @@
             cursor: default;
             margin: 0 3px;
             padding: 10px 10px 10px 20px;
-            width: 180px;
-            font-size: 16px;
+            width: 130px;
+            font-size: 14px;
             letter-spacing: 2px;
-            font-weight: bold;
+            /*font-weight: bold;*/
             float: left;
             position: relative;
             background-color: #ccc;

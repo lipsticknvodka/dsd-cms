@@ -43,13 +43,14 @@
                             {{--@endforeach--}}
                 {{--@endif--}}
                             @foreach($revisions as $history )
-
-                                @if(!empty($history->old_value && $history->userResponsible()->name) && $history->oldValue() != 'null')
+                                 @if(!empty($history->oldValue()))
+                                {{--@if(!empty($history->old_value && $history->userResponsible()->name) && $history->oldValue() != 'null')--}}
                             <p class="history col-xs-12">
-                            <strong>{{$history->userResponsible()->name or 'Admin'}}</strong> changed
-                            <strong>{{ $history->fieldName() }}</strong> from
-                            <code>{{ $history->oldValue() }}</code> to <code>{{ $history->newValue() }}</code> in
+                                <strong>{{$history->userResponsible()->name or 'A user'}}</strong> changed
+                                 <strong>{{ $history->fieldName() }}</strong> from
+                                <code>{{ $history->oldValue() }}</code> to <code>{{ $history->newValue() }}</code> in
                                 <strong>{{$history->revisonable_type}}</strong>
+                                <strong>{!! str_replace('App\\', ' ', $history->revisionable_type) !!}</strong>
                             <small>{{ $history->created_at->diffForHumans() }}</small>
                             </p>
                                 @endif

@@ -49,8 +49,9 @@
                                     <p>{{$account->address_1}}</p>
                                     @if($account->address_2)
                                         <p><strong>Apt/Suite No. </strong>{{$account->address_2}}</p>
+                                        <p>{{$account->city}}, {{$account->state}} {{$account->zip}}</p>
                                     @endif
-                                    <p>{{$account->city}}, {{$account->state}} {{$account->zip}}</p>
+
                                     <p><strong>Attn. To</strong> {{$account->attn_to}}</p>
                                 @else
                                     'No address entered';
@@ -95,7 +96,7 @@
 
                         <hr/>
 
-                        <div class="btn-group-md pull-right">
+                        <div class="input-group-md pull-right">
                             <a href="/account/{{ $account->id }}/edit"><button class="btn btn-danger">Edit</button></a>
                             {{ Form::open(['method' => 'DELETE', 'route' => ['account.destroy', $account->id]]) }}
                             {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}

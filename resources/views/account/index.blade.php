@@ -48,10 +48,10 @@
                                     <div class="row">
                                         <h4 class="col-sm-6">Recently Added Accounts</h4>
 
-                                        <div class="btn-group col-sm-6">
-                                            <a href="{{ URL::to('/account/downloadExcel/xls') }}"><button class="btn btn-warning pull-right">Download .xls</button></a>
-                                            <a href="{{ URL::to('/account/downloadExcel/csv') }}"><button class="btn btn-warning pull-right">Download .csv</button></a>
-                                        </div>
+                                        {{--<div class="btn-group col-sm-6">--}}
+                                            {{--<a href="{{ URL::to('/account/downloadExcel/xls') }}"><button class="btn btn-warning pull-right">Download .xls</button></a>--}}
+                                            {{--<a href="{{ URL::to('/account/downloadExcel/csv') }}"><button class="btn btn-warning pull-right">Download .csv</button></a>--}}
+                                        {{--</div>--}}
 
 
                                         {{--<div class="col-sm-6">--}}

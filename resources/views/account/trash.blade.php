@@ -40,7 +40,7 @@
                                 @foreach($accounts as $account)
                                     <tr>
                                         <td>
-                                            <a href="/account/{{$account->id}}">{{$account->name}}</a>
+                                            <strong>{{$account->name}}</strong>
                                             {{--<a href="{‌{route('account.show', ['id' => $account->id])}}">{‌{$account->name}}</a>--}}
                                             {{--                                                        <a href="">{{$account->name}}</a>--}}
                                         </td>

@@ -24,8 +24,11 @@
 
                         <div class="row">
                             {{--<h3 class="col-xs-12">{{$truckingDelivery->account ? $truckingDelivery->account->name : "No account selected"}}</h3>--}}
-                            <h3 class="col-xs-12"><strong>Load No.</strong> {{$truckingDelivery->ref_no}}</h3>
-                            <h4 class="col-xs-12"><strong>MAWB</strong> {{$truckingDelivery->mawb}} | <strong>HAWB</strong> {{$truckingDelivery->hawb}}</h4>
+                            <h3><strong>Load No.</strong> {{$truckingDelivery->ref_no}}</h3>
+                            <h4><strong>MAWB</strong> {{$truckingDelivery->mawb}} | <strong>HAWB</strong> {{$truckingDelivery->hawb}}</h4>
+                        </div>
+
+                        <hr />
 
                             <div class="col-sm-8">
                                 <div class="col-xs-6">
@@ -75,7 +78,7 @@
                                     <p><strong>Driver </strong> {{ $truckingDelivery->driver}}</p>
                                 </div>
 
-                            </div>
+                            {{--</div>--}}
 
                             <hr/>
                             <div class="col-xs-12 col-sm-4">

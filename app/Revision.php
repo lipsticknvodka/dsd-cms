@@ -15,15 +15,26 @@ class Revision extends Model
         return $this->belongsTo('\App\User');
     }
 
-    public function setModelAttribute($value){
+    public function setRevisionableTypeAttribute($value){
 
-            $this->attributes['revisionable_type'] = strtolower($value);
+
+
+//            $this->attributes['revisionable_type'] = substr(string $string, int $start, int|null $length = null);
+
+        $this->attributes['revisionable_type'] = strtolower($value);
+
+        return $value;
+
+
     }
+
 
 //    protected $revisions = Revision::with('revisionable')->all();
 
 //    public function identifiableName(){
 //        return $this->name;
 //    }
+
+
 
 }
