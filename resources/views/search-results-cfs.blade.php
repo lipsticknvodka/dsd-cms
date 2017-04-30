@@ -31,7 +31,7 @@
                                             {{--<p><strong>Driver </strong>{{$cfsDelivery->driver}}</p>--}}
                                             {{--<p><strong>Transaction Closed </strong>{{$cfsDelivery->closed_date}} @ {{$cfsDelivery->close_time}}</p>--}}
                                         @else
-                                            <h4>Transaction <strong><span class="Open">{{$hawb->status}}</span></strong></h4>
+{{--                                            <h4>Transaction <strong><span class="Open">{{$cfsDelivery->status}}</span></strong></h4>--}}
                                         @endif
                                         <p><strong>Availability</strong> {{$cfsDelivery->availability}}</p>
                                         <p><strong>Estimated Availability </strong>  {{$cfsDelivery->est_avail_date}} @ {{$cfsDelivery->est_avail_time}}</p>
@@ -40,7 +40,7 @@
 
                                     {{--<h3 class="col-xs-12">Master</h3>--}}
                                     <div class="col-xs-7">
-                                        <p><strong>Account</strong> {{$cfsDelivery->account->name}} </p>
+                                        <p><strong>Account</strong> {{$cfsDelivery->account->name or "No account selected."}} </p>
                                         {{--<p><strong>Estimated Availability </strong> {{$cfsDelivery->est_avail_time}}</p>--}}
                                         <p><strong>US Customs Code </strong> {{$cfsDelivery->us_customs_code}}</p>
                                         {{--<p><strong>Availability</strong> {{$cfsDelivery->availability}}</p>--}}

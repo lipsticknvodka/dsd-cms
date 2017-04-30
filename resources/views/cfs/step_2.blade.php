@@ -29,7 +29,7 @@
                         {!! Form::model($cfs) !!}
 
 
-                        <h4 class="col-xs-12">Master Level</h4>
+                        <h4 class="col-xs-12">Master</h4>
                         {{--<div class='col-sm-6'>--}}
                             {{--<div class="form-group">--}}
                                 {{--<div class='input-group date' id='datetimepicker1'>--}}
@@ -121,7 +121,7 @@
                             </div>
 
                             <div class="col-xs-6 col-sm-3">
-                                {!! Form::label('est_avail_date','Estimated Availability')  !!}
+                                {!! Form::label('est_avail_date','Availability Date')  !!}
                                 {!! Form::text('est_avail_date', null, ['class'=>'date form-control']) !!}
 
                             </div>
@@ -187,7 +187,7 @@
                         <div class="row">
                             <div class="form-group col-sm-6">
                                 {!! Form::label('us_customs_code','US Customs Code')  !!}
-                                {!! Form::select('us_customs_code', ['Cleared' => '1C / 1D - CLEARED', 'hold' => 'HOLD / NO 1C'], null, ['class'=>'form-control']) !!}
+                                {!! Form::select('us_customs_code', [''=>'Select Customs Code','Cleared' => '1C / 1D - CLEARED', 'hold' => 'HOLD / NO 1C'], null, ['class'=>'form-control']) !!}
                             </div>
 
                             <div class="form-group col-xs-2">
@@ -208,7 +208,7 @@
                         <div class="row">
                             <div class="col-sm-6">
                             <div class="form-group col-xs-6">
-                                {!! Form::label('pick_up_date','Pick Up')  !!}
+                                {!! Form::label('pick_up_date','Pick Up Date')  !!}
                                 {!! Form::text('pick_up_date', null, ['class'=>'date form-control']) !!}
 
                             </div>

@@ -1,26 +1,26 @@
-<link rel="preload" type="text/css" href="/css/style.css" as="style" onload="this.rel='stylesheet'">
+{{--<link rel="preload" type="text/css" href="/css/style.css" as="style" onload="this.rel='stylesheet'">--}}
 
 @extends('layouts.app')
 
 @section('content')
     <div class="container-fluid">
         <div class="row-fluid">
-            <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2">
                 {{--<div class="panel panel-default" id="content">--}}
                     {{--<div class="panel-heading">Create New Trucking Delivery</div>--}}
 
                     <div class="content-body">
 
-                        <div id="trucking" class="arrow-steps clearfix hidden-xs" id="four-arrows">
+                        <div id="four-arrows" class="arrow-steps clearfix hidden-xs">
                             <div class="step current"><div class="glyphicon glyphicon-folder-open"></div><span>General</span> </div>
                             <div class="step current"> <div class="glyphicon glyphicon-map-marker"></div><span>Location</span> </div>
                             <div class="step current"> <div class="glyphicon glyphicon-list"></div><span>Breakdown</span> </div>
                             <div class="step"> <div class="glyphicon glyphicon-hourglass"></div><span>Availability</span> </div>
                         </div>
 
-                        <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3 hidden-xs">
-                            @include('errors.list')
-                        </div>
+                        {{--<div class="form-group col-xs-12 col-sm-6 col-sm-offset-3 hidden-xs">--}}
+                            {{--@include('errors.list')--}}
+                        {{--</div>--}}
 
                         <div class="visible-xs">
                             @include('errors.list')

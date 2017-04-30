@@ -40,13 +40,26 @@ Route::get('/', function () {
 
 //Route::get('/logout', ['as' => 'logout', 'uses' => 'Auth\AuthController@logout']);
 
-Route::group(['middleware' => 'admin'], function() {
 
-
-
-});
 
 Route::auth();
+
+//Route::get('register', ['middleware'=>'auth', 'uses'=>function(){
+//
+////    $this->middleware('auth');
+//
+////    return view('auth.register');
+//    return view('auth.register');
+//}]);
+
+//Route::group(['middleware' => ['web','auth']], function () {
+//
+//    // Registration Routes...
+//    $this->get('register', 'Auth\AuthController@showRegistrationForm');
+//    $this->post('register', 'Auth\AuthController@register');
+//
+//});
+
 
 Route::get('/logout', ['as' => 'logout', 'uses' => 'Auth\AuthController@logout']);
 
@@ -98,14 +111,15 @@ Route::get('/users', 'UserController@index');
 
 Route::delete('/user/{id}', 'UserController@destroy');
 
+//Route::get('auth/login', 'Auth\AuthController@getLogin');
+//Route::post('auth/login', 'Auth\AuthController@postLogin');
+//Route::get('auth/logout', 'Auth\AuthController@getLogout');
+//Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
 //Route::delete('/user/{id}', 'HomeController@deleteUser');
 
-Route::get('/register', function(){
 
-//    $this->middleware('auth');
 
-    return view('auth.register');
-});
 
 //
 //Route::any('/freight-availability/cfs',function(Request $request){

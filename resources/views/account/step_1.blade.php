@@ -43,7 +43,7 @@
 
                         <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
                             {!! Form::label('acct_type','Account Type')  !!}
-                            {!! Form::select('acct_type', ['CFS' => 'CFS', 'Trucking' => 'Trucking', 'CFS & Trucking' => 'CFS & Trucking'], null, ['class'=>'form-control']) !!}
+                            {!! Form::select('acct_type', [''=>'Select Account Type', 'CFS' => 'CFS', 'Trucking' => 'Trucking', 'CFS &amp; Trucking' => 'CFS &amp; Trucking'], null, ['class'=>'form-control']) !!}
                         </div>
 
                             <div class="col-xs-12 col-sm-6 col-sm-offset-3">

@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User;
+
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -29,7 +29,7 @@ class UserController extends Controller
 
         $users = User::all();
 
-        return view('/users', compact($users, 'users'));
+        return view('users.index', compact($users, 'users'));
     }
 
     /**
@@ -40,6 +40,9 @@ class UserController extends Controller
     public function create()
     {
         //
+        $user = new User;
+
+        return view('users.add-user')->with(compact('user'));
     }
 
     /**
@@ -48,9 +51,14 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateOrEditUserRequest $request)
     {
-        //
+        $request->merge(['password' => Hash::make($request->password)]);
+
+        $user = User::create($request->all());
+
+        return redirect('/admin/users');
+
     }
 
     /**
@@ -72,7 +80,9 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::findOrFail($id);
+
+        return view('users.edit')->with(compact('user'));
     }
 
     /**
@@ -82,9 +92,23 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CreateOrEditUserRequest $request, $id)
     {
-        //
+        $form = $request->all();
+
+        // if password is empty then leave it alone
+        if(empty($form['password'])) {
+            array_forget($form,'password');
+        } else {
+            $form['password'] = Hash::make($form['password']);
+        }
+
+        $user = User::findOrFail($id);
+
+        $user->update($form);
+
+        return redirect('/users.index');
+
     }
 
     /**

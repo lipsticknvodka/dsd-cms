@@ -33,7 +33,7 @@
                             </div>
 
                             <div class="form-group col-xs-12">
-                                {!! Form::label('account_id','Customer')  !!}
+                                {!! Form::label('account_id','Account')  !!}
                                 {{--{{ Form::select('account_id', $account, old('account'), ['class' => 'form-control']) }}--}}
                                 {{ Form::select('account_id', [''=>'Select account'] + $account, null, ['class' => 'form-control']) }}
                             </div>

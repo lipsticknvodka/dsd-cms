@@ -92,9 +92,69 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'name' => [
+            'required' => 'Please enter a Name for the account',
         ],
+        'acct_type' => [
+            'required' => 'Please select an Account Type from the list',
+        ],
+        'bill_to' => [
+            'required' => 'Bill To is a required field',
+        ],
+        'phone' => [
+            'required' => 'Plesae enter a valid Phone number',
+        ],
+        'primary_contact' => [
+            'required' => 'Please enter the Primary Contact',
+        ],
+        'email' => [
+            'required' => 'Please enter a valid Email address for the primary contact',
+        ],
+        'mawb' => [
+            'required' => 'The MAWB field is required',
+        ],
+        'account_id' => [
+            'required' => 'Please choose an Account from the list',
+        ],
+        'pallet_ct' => [
+            'required' => 'Please enter a value for Pallet Count',
+        ],
+        'master_weight' => [
+            'required' => 'Please enter the Master Weight',
+        ],
+        'hawb' => [
+            'required' => 'The HAWB field is required',
+        ],
+        'shipper_name' => [
+            'required' => 'Please enter the Shipper\'s Name',
+        ],
+        'shipper_address_1' => [
+            'required' => 'Please enter the Shipper\'s Address',
+        ],
+        'shipper_city' => [
+            'required' => 'Please enter the Shipper\'s City',
+        ],
+        'shipper_state' => [
+            'required' => 'Please enter the Shipper\'s State',
+        ],
+        'shipper_zip' => [
+            'required' => 'Please enter the Shipper\'s Zip',
+        ],
+        'destination_address_1' => [
+            'required' => 'Please enter the Destination Address',
+        ],
+        'destination_city' => [
+            'required' => 'Please enter the Destination City',
+        ],
+        'destination_state' => [
+            'required' => 'Please enter the Destination State',
+        ],
+        'destination_zip' => [
+            'required' => 'Please enter the Destination Zip',
+        ],
+//        'attribute-name' => [
+//            'rule-name' => 'custom-message',
+//        ],
     ],
 
     /*

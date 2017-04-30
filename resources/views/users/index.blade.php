@@ -9,9 +9,9 @@
 
                     <div class="panel-body">
 
-                        <div class="row">
-                            <a href="/register">+ Add New User</a>
-                        </div>
+                        {{--<div class="row">--}}
+                            {{--<a href="register">+ Add New User</a>--}}
+                        {{--</div>--}}
 
                         <div class="row">
                             <div class="col-xs-12 col-sm-10">
@@ -31,7 +31,7 @@
                                             <th>Name</th>
                                             <th>Email</th>
                                             <th>Created</th>
-                                            <th>Last Log In</th>
+                                            {{--<th>Last Log In</th>--}}
                                             {{--<th class="hidden-xs">G.O.</th>--}}
                                             {{--<th>Availability</th>--}}
                                             {{--<th>Status</th>--}}
@@ -44,13 +44,13 @@
                                                 <td>{{$user->name}}</td>
                                                 <td>{{$user->email}}</td>
                                                 <td>{{$user->created_at->diffForHumans()}}</td>
-                                                <td></td>
+                                                {{--<td></td>--}}
 
                                                 <td>
                                                     {{--<small>--}}
-                                                        {{--<a href="{{ url('/user/'.$user->id.'/delete') }}">--}}
-                                                            {{--Delete--}}
-                                                        {{--</a>--}}
+                                                    {{--<a href="{{ url('/user/'.$user->id.'/delete') }}">--}}
+                                                    {{--Delete--}}
+                                                    {{--</a>--}}
                                                     {{--</small>--}}
 
                                                     <form method="POST" action="/user/{{$user->id}}" class="col-xs-1">
@@ -67,19 +67,19 @@
 
 
                                                 {{--<td>--}}
-                                                    {{--<small>--}}
-                                                        {{--{{ Form::open(['method' => 'DELETE', 'route' => ['user.destroy', $user->id]]) }}--}}
-                                                        {{--{{ Form::submit('Delete', ['class'=>'deleteLink']) }}--}}
-                                                        {{--{{ Form::close() }}--}}
-                                                    {{--</small>--}}
+                                                {{--<small>--}}
+                                                {{--{{ Form::open(['method' => 'DELETE', 'route' => ['user.destroy', $user->id]]) }}--}}
+                                                {{--{{ Form::submit('Delete', ['class'=>'deleteLink']) }}--}}
+                                                {{--{{ Form::close() }}--}}
+                                                {{--</small>--}}
                                                 {{--</td>--}}
 
                                                 {{--<td>--}}
-                                                    {{--{!! Form::open(['method'=>'DELETE', 'action'=>['UsersController@destroy', $user->id]])!!}--}}
-                                                    {{--<div class="form-group">--}}
-                                                        {{--{!! Form::submit('Delete User', ['class'=>'btn btn-danger']) !!}--}}
-                                                    {{--</div>--}}
-                                                    {{--{!! Form::close() !!}--}}
+                                                {{--{!! Form::open(['method'=>'DELETE', 'action'=>['UsersController@destroy', $user->id]])!!}--}}
+                                                {{--<div class="form-group">--}}
+                                                {{--{!! Form::submit('Delete User', ['class'=>'btn btn-danger']) !!}--}}
+                                                {{--</div>--}}
+                                                {{--{!! Form::close() !!}--}}
                                                 {{--</td>--}}
 
 
@@ -92,10 +92,10 @@
                                     </table>
 
                                     {{--<div class="row">--}}
-                                        {{--<hr/>--}}
-                                        {{--<div class="col-xs-12">--}}
-                                            {{--{{$users->render()}}--}}
-                                        {{--</div>--}}
+                                    {{--<hr/>--}}
+                                    {{--<div class="col-xs-12">--}}
+                                    {{--{{$users->render()}}--}}
+                                    {{--</div>--}}
                                     {{--</div>--}}
                                 </div>
                             </div>

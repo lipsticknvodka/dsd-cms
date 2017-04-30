@@ -78,7 +78,8 @@
                                              {{Form::close()}}
                                          </div>
                                      </form>
-                                                 <p>If you prefer to speak to one of our CFS representatives about your shipment please contact DSD Container Freight Station at <a href="tel:+13107251999">310-725-1999</a>.</p>
+                                <br />
+                                <p>If you prefer to speak to one of our CFS representatives about your shipment please contact DSD Container Freight Station at <a href="tel:+13107251999">310-725-1999</a>.</p>
                                  </div>
 
 

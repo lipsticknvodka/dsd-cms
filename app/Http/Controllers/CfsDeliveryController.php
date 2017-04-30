@@ -217,17 +217,15 @@ class CfsDeliveryController extends Controller
             case 1:
                 $rules = [
                     'mawb'=>'required',
-//                    'acct_type'=>'required'
+                    'account_id'=>'required'
                 ];
                 break;
             case 2:
                 $rules = [
-                    'us_customs_code' => 'required|min:1|max:50',
-//                    'pallet_ct' => 'required|min:1|max:3',
-//                    'address_1' => 'required|min:2|max:50',
-//                    'city' => 'required|min:2|max:50',
-//                    'state' => 'required|min:2|max:50',
-//                    'zip' => 'required|min:2|max:50',
+//                    'us_customs_code' => 'required|min:1|max:50',
+                    'pallet_ct' => 'required',
+                    'master_weight' => 'required',
+//
 
                 ];
                 break;

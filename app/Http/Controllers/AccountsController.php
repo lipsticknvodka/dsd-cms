@@ -205,7 +205,7 @@ class AccountsController extends Controller
                 break;
             case 2:
                 $rules = [
-//                    'bill_to' => 'required|min:2|max:50',
+                    'bill_to' => 'required|min:2|max:50',
 //                    'address_1' => 'required|min:2|max:50',
 //                    'city' => 'required|min:2|max:50',
 //                    'state' => 'required|min:2|max:50',
