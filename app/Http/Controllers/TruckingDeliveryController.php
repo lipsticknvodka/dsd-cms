@@ -449,9 +449,6 @@ class TruckingDeliveryController extends Controller
 
         $truckingDelivery = TruckingDelivery::find($id);
 
-//        $account = Account::findOrFail($id);
-
-//        dd(TruckingDelivery::find($id)->exception);
 //
         if(!$truckingDelivery){
 

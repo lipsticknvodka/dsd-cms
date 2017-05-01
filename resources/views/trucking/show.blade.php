@@ -24,7 +24,7 @@
 
                         <div class="row">
                             {{--<h3 class="col-xs-12">{{$truckingDelivery->account ? $truckingDelivery->account->name : "No account selected"}}</h3>--}}
-                            <h3><strong>Load No.</strong> {{$truckingDelivery->ref_no}}</h3>
+                            <h3><strong>Ref./Load No.</strong> {{$truckingDelivery->ref_no}}</h3>
                             <h4><strong>MAWB</strong> {{$truckingDelivery->mawb}} | <strong>HAWB</strong> {{$truckingDelivery->hawb}}</h4>
                         </div>
 
@@ -33,7 +33,7 @@
                             <div class="col-sm-8">
                                 <div class="col-xs-6">
 
-                                     <h4>{{$truckingDelivery->trans_type}}</h4>
+                                     <h4><strong>Type </strong>{{$truckingDelivery->trans_type}}</h4>
                                      <p><strong>Received</strong> {{$truckingDelivery->received_date}} @ {{$truckingDelivery->received_time}}</p>
 
                                     {{--<h4>Cargo Status</h4>--}}
@@ -75,15 +75,15 @@
                                     @else
                                         <h4>Transaction <strong><span class="Open">{{$truckingDelivery->availability}}</span></strong></h4>
                                     @endif
-                                    <p><strong>Driver </strong> {{ $truckingDelivery->driver}}</p>
+                                    <p><strong>Driver </strong> {{ $truckingDelivery->driver ? $truckingDelivery->driver : 'No driver entered.'}}</p>
                                 </div>
 
                             {{--</div>--}}
 
                             <hr/>
                             <div class="col-xs-12 col-sm-4">
-                                <h4>Cargo Status</h4>
-                                <h5>{{$truckingDelivery->cargo_status}}</h5>
+                                <h4><strong>Cargo Status</strong></h4>
+                                <h5>{{$truckingDelivery->cargo_status ? $truckingDelivery->cargo_status : 'No status at this time.'}}</h5>
 
                                 <hr class="hidden-xs"/>
 
@@ -146,7 +146,7 @@
                         <div class="row">
                             <div class="col-sm-4">
                                 <h3>Shipper Details</h3>
-                                        <p>{{$truckingDelivery->account ? $truckingDelivery->account->name : "No shipper account selected."}}</p>
+                                        <p>{{$truckingDelivery->account ? $truckingDelivery->account->name : "No account selected."}}</p>
 {{--                                        <h4>{{$truckingDelivery->shipper_name}}</h4>--}}
 
                                         <p>{{$truckingDelivery->shipper_address_1}}</p>
@@ -165,9 +165,8 @@
                                 <p>{{$truckingDelivery->destination_address_1}}</p>
                                 @if($truckingDelivery->destination_address_2)
                                     <p>{{$truckingDelivery->destination_address_2}}</p>
-                                    <p>{{$truckingDelivery->destination_city}}, {{$truckingDelivery->destination_state}} {{$truckingDelivery->destination_zip}}</p>
                                 @endif
-
+                                <p>{{$truckingDelivery->destination_city}}, {{$truckingDelivery->destination_state}} {{$truckingDelivery->destination_zip}}</p>
                             </div>
 
                             <div class="col-sm-4">
@@ -176,9 +175,8 @@
                                     <p>{{$truckingDelivery->location_address_1}}</p>
                                     @if($truckingDelivery->location_address_2)
                                         <h5><strong>Apt/Suite No. </strong>{{$truckingDelivery->location_address_2}}</h5>
-                                        <p>{{$truckingDelivery->location_city}}, {{$truckingDelivery->location_state}} {{$truckingDelivery->location_zip}}</p>
                                     @endif
-
+                                    <p>{{$truckingDelivery->location_city}}, {{$truckingDelivery->location_state}} {{$truckingDelivery->location_zip}}</p>
                                 @endif
 
                             </div>
@@ -200,7 +198,7 @@
 
                             <div class="col-sm-4">
                                 <h3>O/S/D</h3>
-                                <p>{{$truckingDelivery->overs_shorts_damages ? $truckingDelivery->overs_shorts_damages : "No overs, shorts, damages reported."}}</p>
+                                <p>{{$truckingDelivery->overs_shorts_damages ? $truckingDelivery->overs_shorts_damages : 'N/A'}}</p>
                             </div>
 
                             <div class="col-sm-4">

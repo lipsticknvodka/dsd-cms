@@ -35,6 +35,7 @@
                         </form>
 
 
+
                         @if(isset($details))
                             <p>Showing search results for <b> {{ $query }} </b> :</p>
 

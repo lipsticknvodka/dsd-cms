@@ -100,7 +100,7 @@
                                 {!! Form::text('received_by', null, ['class'=>'form-control']) !!}
                             </div>
                                 <div class="form-group col-xs-3">
-                                    {!! Form::label('trans_closed_date','Closed Date')  !!}
+                                    {!! Form::label('trans_closed_date','Closed')  !!}
                                     {!! Form::text('trans_closed_date', null, ['class'=>'date form-control']) !!}
                                 </div>
 

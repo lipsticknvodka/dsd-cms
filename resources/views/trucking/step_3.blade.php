@@ -18,9 +18,9 @@
                             <div class="step"> <div class="glyphicon glyphicon-hourglass"></div><span>Availability</span> </div>
                         </div>
 
-                        {{--<div class="form-group col-xs-12 col-sm-6 col-sm-offset-3 hidden-xs">--}}
-                            {{--@include('errors.list')--}}
-                        {{--</div>--}}
+                        <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3 hidden-xs">
+                            @include('errors.list')
+                        </div>
 
                         <div class="visible-xs">
                             @include('errors.list')
@@ -30,17 +30,17 @@
 
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-                        <div class="row-fluid">
+                        <div class="col-xs-12">
                             {{--<div class="row">--}}
 
                                 {{--<div class="col-xs-6">--}}
                                     {{--<h4 class="col-xs-12">Pallets</h4>--}}
-                                    <div class="form-group col-xs-3">
+                                    <div class="form-group col-xs-6 col-sm-3">
                                         {!! Form::label('pallet_exchange_qty','Exchange')  !!}
                                         {!! Form::text('pallet_exchange_qty', null, ['class'=>'form-control']) !!}
                                     </div>
 
-                                    <div class="form-group col-xs-3">
+                                    <div class="form-group col-xs-6 col-sm-3">
                                         {!! Form::label('pallet_shipper_qty','Shipper')  !!}
                                         {!! Form::text('pallet_shipper_qty', null, ['class'=>'form-control']) !!}
                                     </div>
@@ -54,17 +54,17 @@
 
                                 {{--<div class="col-xs-6">--}}
                                     {{--<h4 class="col-xs-12">Breakdown</h4>--}}
-                                    <div class="form-group col-xs-2">
+                                    <div class="form-group col-xs-4 col-sm-2">
                                         {!! Form::label('piece_ct','Pieces')  !!}
                                         {!! Form::text('piece_ct', null, ['class'=>'form-control']) !!}
                                     </div>
 
-                                    <div class="form-group col-xs-2">
+                                    <div class="form-group col-xs-4 col-sm-2">
                                         {!! Form::label('weight_no','Weight')  !!}
                                         {!! Form::text('weight_no', null, ['class'=>'form-control']) !!}
                                     </div>
 
-                                    <div class="form-group col-xs-2">
+                                    <div class="form-group col-xs-4 col-sm-2">
                                         {!! Form::label('weight_type','Type')  !!}
                                         {{--{!! Form::text('weight_type', null, ['class'=>'form-control']) !!}--}}
                                         {!! Form::select('weight_type', ['lb' => 'lb', 'kg' => 'kg'], null, ['class'=>'form-control']) !!}
