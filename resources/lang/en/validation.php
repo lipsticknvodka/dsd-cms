@@ -152,6 +152,18 @@ return [
         'destination_zip' => [
             'required' => 'Please enter the Destination Zip',
         ],
+        'pallet_exchange_qty' => [
+            'required' => 'Please enter the number of Exchange Pallets',
+        ],
+        'pallet_shipper_qty' => [
+            'required' => 'Please enter number of Shipper Pallets',
+        ],
+        'piece_ct' => [
+            'required' => 'Please the Piece Count',
+        ],
+        'weight_no' => [
+            'required' => 'Please enter the Weight',
+        ],
 //        'attribute-name' => [
 //            'rule-name' => 'custom-message',
 //        ],

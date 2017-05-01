@@ -308,7 +308,7 @@ class CfsDeliveryController extends Controller
 
     public function trashed(){
 
-        $cfsDeliveries = CfsDelivery::onlyTrashed()->paginate(10);
+        $cfsDeliveries = CfsDelivery::onlyTrashed()->latest()->paginate(10);
 
         return view('cfs.trash', compact('cfsDeliveries', $cfsDeliveries));
     }

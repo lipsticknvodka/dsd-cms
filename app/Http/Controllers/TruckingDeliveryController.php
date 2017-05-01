@@ -179,9 +179,10 @@ class TruckingDeliveryController extends Controller
                 break;
             case 3:
                 $rules = [
-//                    'availability' => 'required|min:2|max:50',
-//                    'primary_contact' => 'required|min:2|max:50',
-//                    'email' => 'required|min:2|max:50',
+                    'pallet_exchange_qty' => 'required',
+                    'pallet_shipper_qty' => 'required',
+                    'piece_ct' => 'required',
+                    'weight_no' => 'required',
                 ];
                 break;
             case 4:
@@ -273,7 +274,7 @@ class TruckingDeliveryController extends Controller
 
     public function trashed(){
 
-        $truckingDeliveries = TruckingDelivery::onlyTrashed()->paginate(10);
+        $truckingDeliveries = TruckingDelivery::onlyTrashed()->latest()->paginate(10);
 
         return view('trucking.trash', compact('truckingDeliveries', $truckingDeliveries));
     }

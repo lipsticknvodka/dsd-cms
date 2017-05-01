@@ -31,6 +31,7 @@
                                             {{--<th class="hidden-xs">Destination</th>--}}
                                             <th>Status</th>
                                             <th></th>
+                                            <th></th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -47,20 +48,29 @@
                                                 <td class="hidden-xs">{{$truckingDelivery->trans_type}}</td>
 {{--                                                <td class="hidden-xs">{{$truckingDelivery->destination_city}}, {{$truckingDelivery->destination_state}}</td>--}}
                                                 <td>{{$truckingDelivery->availability}}</td>
-                                                <td><div class="dropdown pull-right">
-                                                        <a class="btn btn-danger dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            Action <span class="caret"></span>
-                                                        </a>
+                                                <td><small><a href="/trucking/{{ $truckingDelivery->id }}/edit">Edit</a></small></td>
 
-                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                            <li><a class="dropdown-item" href="/trucking/{{ $truckingDelivery->id }}/edit">Edit</a></li>
-                                                            {{--<li> <a class="dropdown-item" href="account/destroy">Delete</a></li>--}}
-                                                            {{ Form::open(['method' => 'DELETE', 'route' => ['trucking.destroy', $truckingDelivery->id]]) }}
-                                                            {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
-                                                            {{ Form::close() }}
-                                                        </div>
-                                                    </div>
+                                                <td>
+                                                    <small>
+                                                        {{ Form::open(['method' => 'DELETE', 'route' => ['trucking.destroy', $truckingDelivery->id]]) }}
+                                                        {{ Form::submit('Delete', ['class'=>'deleteLink']) }}
+                                                        {{ Form::close() }}
+                                                    </small>
                                                 </td>
+                                                {{--<td><div class="dropdown pull-right">--}}
+                                                        {{--<a class="btn btn-danger dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
+                                                            {{--Action <span class="caret"></span>--}}
+                                                        {{--</a>--}}
+
+                                                        {{--<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">--}}
+                                                            {{--<li><a class="dropdown-item" href="/trucking/{{ $truckingDelivery->id }}/edit">Edit</a></li>--}}
+                                                            {{--<li> <a class="dropdown-item" href="account/destroy">Delete</a></li>--}}
+                                                            {{--{{ Form::open(['method' => 'DELETE', 'route' => ['trucking.destroy', $truckingDelivery->id]]) }}--}}
+                                                            {{--{{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}--}}
+                                                            {{--{{ Form::close() }}--}}
+                                                        {{--</div>--}}
+                                                    {{--</div>--}}
+                                                {{--</td>--}}
                                             </tr>
                                     @else
                                         {{--<h4>There are no open trucking deliveries.</h4>--}}
