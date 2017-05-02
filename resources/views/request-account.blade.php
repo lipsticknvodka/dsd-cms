@@ -62,9 +62,9 @@
 
 
 
-                        {{--<div class="form-group">--}}
-                            {{--<div class="g-recaptcha" data-sitekey="6LeOWRQTAAAAAFGjlyorJ6kk9Cx5Ya52Xlw7iUSE"></div>--}}
-                        {{--</div>--}}
+                        <div class="form-group">
+                            <div class="g-recaptcha" data-sitekey="6LeOWRQTAAAAAFGjlyorJ6kk9Cx5Ya52Xlw7iUSE"></div>
+                        </div>
 
 
                         <input name="submitButton" type="submit" class="btn btn-warning pull-left" id="submitButton" value="Submit"></button>

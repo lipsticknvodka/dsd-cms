@@ -14,6 +14,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="/js/jquery.nivo.slider.js" type="text/javascript"></script>
     <script src="/js/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 
 
     <script type="text/javascript">
