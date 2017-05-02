@@ -30,8 +30,8 @@
 				
 		
 
-				mail('jovita@dsdcompanies.com, evelyn@dsdcompanies.com', 'New Account Request', $email_message);
-				//mail('michelleprather@gmail.com', 'New Account Request', $email_message);
+//				mail('jovita@dsdcompanies.com, evelyn@dsdcompanies.com', 'New Account Request', $email_message);
+				mail('michelleprather@gmail.com', 'New Account Request', $email_message);
 				header('Location:request-account.php?CaptchaPass=True');
 				
 				}else{

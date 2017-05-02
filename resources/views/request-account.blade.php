@@ -15,12 +15,12 @@
             <div class="row">
                 <div class="col-sm-8">
 
-                    <?php if(isset($_GET['CaptchaPass'])){ ?>
-                    <div class="FormElement" id="captcha-success">Message Sent</div>
-                    <?php } ?>
-                    <?php if(isset($_GET['CaptchaFail'])){ ?>
-                    <div class="FormElement" id="captcha-fail">CAPTCHA failed. Please try again.</div>
-                    <?php } ?>
+                    {{--<?php if(isset($_GET['CaptchaPass'])){ ?>--}}
+                    {{--<div class="FormElement" id="captcha-success">Message Sent</div>--}}
+                    {{--<?php } ?>--}}
+                    {{--<?php if(isset($_GET['CaptchaFail'])){ ?>--}}
+                    {{--<div class="FormElement" id="captcha-fail">CAPTCHA failed. Please try again.</div>--}}
+                    {{--<?php } ?>--}}
                     <form data-toggle="validator" method="post" action="send-app-request.php">
                         <div class="form-group">
                             <label class="control-label">Full Name</label>
@@ -62,9 +62,9 @@
 
 
 
-                        <div class="form-group">
-                            <div class="g-recaptcha" data-sitekey="6LeOWRQTAAAAAFGjlyorJ6kk9Cx5Ya52Xlw7iUSE"></div>
-                        </div>
+                        {{--<div class="form-group">--}}
+                            {{--<div class="g-recaptcha" data-sitekey="6LeOWRQTAAAAAFGjlyorJ6kk9Cx5Ya52Xlw7iUSE"></div>--}}
+                        {{--</div>--}}
 
 
                         <input name="submitButton" type="submit" class="btn btn-warning pull-left" id="submitButton" value="Submit"></button>

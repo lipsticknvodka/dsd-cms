@@ -32,7 +32,7 @@
                             <div class="col-xs-7">
                                 <p><strong>Account</strong> {{$cfsDelivery->account->name or 'No account selected'}} </p>
                                 {{--<p><strong>Estimated Availability </strong> {{$cfsDelivery->est_avail_time}}</p>--}}
-                                <p><strong>US Customs Code </strong> {{$cfsDelivery->us_customs_code}}</p>
+                                <p><strong>US Customs Code </strong> {{$cfsDelivery->us_customs_code ? $cfsDelivery->us_customs_code : 'No code selected.'}}</p>
                                 {{--<p><strong>Availability</strong> {{$cfsDelivery->availability}}</p>--}}
                                 {{--<p><strong>Received</strong> {{$truckingDelivery->received_date}} @ {{$truckingDelivery->received_time}}</p>--}}
                                 <p><strong>Pallet Count</strong> {{$cfsDelivery->pallet_ct}}</p>

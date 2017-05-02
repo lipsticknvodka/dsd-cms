@@ -81,6 +81,7 @@
                             {{--</div>--}}
 
                             <hr/>
+
                             <div class="col-xs-12 col-sm-4">
                                 <h4><strong>Cargo Status</strong></h4>
                                 <h5>{{$truckingDelivery->cargo_status ? $truckingDelivery->cargo_status : 'No status at this time.'}}</h5>
@@ -175,8 +176,9 @@
                                     <p>{{$truckingDelivery->location_address_1}}</p>
                                     @if($truckingDelivery->location_address_2)
                                         <h5><strong>Apt/Suite No. </strong>{{$truckingDelivery->location_address_2}}</h5>
+                                        <p>{{$truckingDelivery->location_city}}, {{$truckingDelivery->location_state}} {{$truckingDelivery->location_zip}}</p>
                                     @endif
-                                    <p>{{$truckingDelivery->location_city}}, {{$truckingDelivery->location_state}} {{$truckingDelivery->location_zip}}</p>
+
                                 @endif
 
                             </div>
