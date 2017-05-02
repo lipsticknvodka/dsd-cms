@@ -43,8 +43,8 @@ if(isset($_POST['submitButton'])){
 				Additional Comments: ".$comments."
 			";
 			
-			mail('jovita@dsdcompanies.com, evelyn@dsdcompanies.com', 'New Quote Request', $email_message);
-			//mail('michelleprather@gmail.com', 'New Quote Request', $email_message);
+//			mail('jovita@dsdcompanies.com, evelyn@dsdcompanies.com', 'New Quote Request', $email_message);
+			mail('michelleprather@gmail.com', 'New Quote Request', $email_message);
 			
 			header('Location:request-quote.php?CaptchaPass=True');
 				
