@@ -41,7 +41,7 @@ Route::get('/', function () {
 //Route::get('/logout', ['as' => 'logout', 'uses' => 'Auth\AuthController@logout']);
 
 
-
+Route::post('/request-quote', 'HomeController@sendQuoteRequest');
 Route::auth();
 
 //Route::get('register', ['middleware'=>'auth', 'uses'=>function(){

@@ -19,8 +19,10 @@
                     <?php if(isset($_GET['CaptchaFail'])){ ?>
                     <div class="FormElement" id="captcha-fail">CAPTCHA failed. Please try again.</div>
                     <?php } ?>
-                    <form data-toggle="validator"  method="post" action="send-quote.php">
+                    {{--<form data-toggle="validator"  method="post" action="send-quote.php">--}}
+                        <form data-toggle="validator"  method="post" action="/request-quote">
                         <div class="form-group">
+
                             <label class="control-label">Full Name</label>
                             <input type="text" class="form-control" name="inputName" placeholder="First Last" required>
                         </div>

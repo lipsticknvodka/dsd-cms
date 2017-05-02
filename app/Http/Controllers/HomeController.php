@@ -102,6 +102,11 @@ class HomeController extends Controller
 
     }
 
+    public function sendQuoteRequest(Request $request){
+        $token = $request->input('g-recaptcha-response');
+        dd($token);
+    }
+
     public function adminSearch(){
         $adminQuery = Input::get ( 'adminQuery' );
         $trucking_deliveries = TruckingDelivery::where('ref_no','like','%'.$adminQuery.'%')->orWhere('mawb','like','%'.$adminQuery.'%')->orWhere('hawb','like','%'.$adminQuery.'%')->paginate(10);
