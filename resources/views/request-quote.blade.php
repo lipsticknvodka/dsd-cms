@@ -21,7 +21,7 @@
                     <?php } ?>
                     <form data-toggle="validator"  method="post" action="send-quote.php">
                         {{--<form data-toggle="validator"  method="post" action="/request-quote">--}}
-
+                        {!! Form::hidden('_token', csrf_token()) !!}
                         <div class="form-group">
 
                             <label class="control-label">Full Name</label>
