@@ -31,7 +31,7 @@
                             <table class="table table-striped">
                                 <thead>
                                 <tr>
-                                    <th>MAWB</th>
+                                    <th>HAWB</th>
                                     <th>HAWB</th>
                                     {{--<th>Ref/Load #</th>--}}
                                     {{--<th>Status</th>--}}
@@ -41,7 +41,7 @@
                                 @foreach($details as $cfsDelivery)
 
                                     <tr>
-                                        <td><a href="/cfs/{{$cfsDelivery->id}}">{{$cfsDelivery->mawb}}</a></td>
+                                        <td><a href="/cfs/{{$cfsDelivery->id}}">{{$cfsDelivery->hawb}}</a></td>
                                         <td>{{$cfsDelivery->hawb}}</td>
 {{--                                        <td>{{$cfsDelivery->ref_no}}</td>--}}
 {{--                                        <td>{{$cfsDelivery->availability}}</td>--}}

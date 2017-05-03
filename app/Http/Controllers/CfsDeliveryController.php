@@ -351,11 +351,16 @@ class CfsDeliveryController extends Controller
         $cfsQuery = Input::get ( 'cfsQuery' );
         $cfs_deliveries = CfsDelivery::where('mawb','like','%'.$cfsQuery.'%')->paginate(10);
 
+        $cfs_hawb = Hawb::where('hawb','like','%'.$cfsQuery.'%')->paginate(10);
 
         //    return view('search-results',['trucking_deliveries'=>$trucking_deliveries]);
 
         if(count($cfs_deliveries) > 0)
             return view('search-results-cfs-list')->withDetails($cfs_deliveries)->withQuery ( $cfsQuery );
+
+        elseif(count($cfs_hawb) > 0)
+            return view('search-results-cfs-hawb-list')->withDetails($cfs_hawb)->withQuery ( $cfsQuery );
+
         else return view('freight-availability')->withMessage('No CFS details found. Please try your search again !');
 
     }
@@ -363,6 +368,7 @@ class CfsDeliveryController extends Controller
     public function customerSearchResult($id){
 
         $cfsDelivery = CfsDelivery::find($id);
+
 
 //        $account = Account::findOrFail($id);
 
