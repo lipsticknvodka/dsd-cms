@@ -456,9 +456,9 @@
                 {{--<input type="submit" type="hidden" action="/search-results-admin"/>--}}
                 {{--</div>--}}
                 {{--</div>--}}
-            </div>
-        </div>
-    </div>
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
 </header>
 
 

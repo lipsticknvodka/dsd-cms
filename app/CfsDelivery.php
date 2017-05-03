@@ -43,7 +43,8 @@ class CfsDelivery extends Model
         'availability' => 'Availability',
         'deleted_at' => 'Deleted At',
         'pick_up_date' => 'Pick Up Date',
-        'est_avail_date' => 'Estimated Availability Date'
+        'est_avail_date' => 'Estimated Availability Date',
+        'piece_ct'=>'Piece Couny'
     );
 
     use SoftDeletes;
@@ -56,19 +57,22 @@ class CfsDelivery extends Model
         'account_id',
         'mawb',
 //        'hawb',
+        'piece_ct',
         'pallet_ct',
         'master_weight',
         'master_weight_type',
         'us_customs_code',
         'arrival_date',
+        'arrival_time',
         'pick_up_time',
         'pick_up_date',
         'est_avail_date',
         'est_avail_time',
         'last_free_day',
         'general_order',
-        'availability'
-
+        'availability',
+        'received_date',
+        'received_time',
     ];
 
     public function account(){

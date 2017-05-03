@@ -17,13 +17,16 @@ class CreateCfsDeliveriesTable extends Migration
             $table->integer('account_id');
             $table->string('mawb');
 //            $table->integer('hawb_id')->unique();
+            $table->string('received_date');
+            $table->string('received_time');
             $table->string('arrival_date');
+            $table->string('arrival_time');
             $table->string('pick_up_date');
             $table->string('pick_up_time');
             $table->string('est_avail_date');
             $table->string('est_avail_time');
             $table->integer('pallet_ct');
-//            $table->integer('piece_ct');
+            $table->integer('piece_ct');
 
             $table->integer('master_weight');
             $table->string('master_weight_type');

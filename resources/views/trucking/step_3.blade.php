@@ -210,8 +210,8 @@
         };
 
         Dropzone.options.exceptionUpload = {
-            maxFilesize: 1, // MB
-            maxFiles:1,
+            maxFilesize: 3, // MB
+            maxFiles:2,
             addRemoveLinks:true,
             acceptedFiles:"application/pdf",
         };

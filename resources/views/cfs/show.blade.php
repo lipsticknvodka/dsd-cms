@@ -36,7 +36,8 @@
                                 {{--<p><strong>Availability</strong> {{$cfsDelivery->availability}}</p>--}}
                                 {{--<p><strong>Received</strong> {{$truckingDelivery->received_date}} @ {{$truckingDelivery->received_time}}</p>--}}
                                 <p><strong>Pallet Count</strong> {{$cfsDelivery->pallet_ct}}</p>
-                                <p><strong>Weight</strong> {{$cfsDelivery->master_weight}} {{$cfsDelivery->master_weight_type}}</p>
+                                <p><strong>Piece Count</strong> {{$cfsDelivery->piece_ct}}</p>
+                                <p><strong>Weight</strong> {{$cfsDelivery->master_weight}}<small>{{$cfsDelivery->master_weight_type}}</small></p>
                             </div>
 
                             <div class="col-xs-5">
