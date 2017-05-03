@@ -169,8 +169,8 @@
 
     <script type="text/javascript">
         Dropzone.options.podUpload = {
-            maxFilesize: 1, // MB
-            maxFiles:1,
+            maxFilesize: 3, // MB
+            maxFiles:5,
             addRemoveLinks:true,
             acceptedFiles:"application/pdf",
         };

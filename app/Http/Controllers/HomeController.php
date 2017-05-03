@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Account;
 use App\CfsDelivery;
+use App\Hawb;
 use App\Http\Requests;
 use App\TruckingDelivery;
 use App\User;
@@ -113,16 +114,22 @@ class HomeController extends Controller
 //    return view('search-results',['trucking_deliveries'=>$trucking_deliveries]);
         $cfs_deliveries = CfsDelivery::where('mawb','like','%'.$adminQuery.'%')->paginate(10);
 
+        $cfs_hawb = Hawb::where('hawb','like','%'.$adminQuery.'%')->paginate(10);
+
         $account = Account::where('account_no','like','%'.$adminQuery.'%')->orWhere('name','like','%'.$adminQuery.'%')->paginate(10);
 
         if(count($trucking_deliveries) > 0)
             return view('search-results-admin-list')->withDetails($trucking_deliveries)->withQuery ( $adminQuery );
 
         elseif(count($cfs_deliveries) > 0)
-            return view('search-results-admin-list')->withDetails($cfs_deliveries)->withQuery ( $adminQuery );
+            return view('search-results-admin-cfs-list')->withDetails($cfs_deliveries)->withQuery ( $adminQuery );
+//
+        elseif(count($cfs_hawb) > 0)
+            return view('search-results-admin-cfs-hawb-list')->withDetails($cfs_hawb)->withQuery ( $adminQuery );
 
         elseif(count($account) > 0)
             return view('search-results-account-list')->withDetails($account)->withQuery ( $adminQuery );
+
 
         else return view('search-results-admin-list')->withMessage('No Details found. Please try your search again !');
 

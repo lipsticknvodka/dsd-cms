@@ -13,7 +13,7 @@
                             <div class="input-group col-xs-12">
                                 {{Form::open(['method'=>'GET','url'=>'search-results', 'role'=>'search'])}}
 
-                                {!! Form::label('truckingQuery','Search by MAWB, HAWB, or Reference/Load #')  !!}
+                                {!! Form::label('cfsQuery','Search by MAWB, HAWB, or Reference/Load #')  !!}
                                 <input type="text" class="form-control" name="truckingQuery"
                                        placeholder="{{$query}}"> <span class="input-group-btn">
                                     <button type="submit" id='search' class="btn btn-warning">
@@ -33,18 +33,18 @@
                                 <tr>
                                     <th>MAWB</th>
                                     <th>HAWB</th>
-                                    <th>Ref/Load #</th>
-                                    <th>Status</th>
+                                    {{--<th>Ref/Load #</th>--}}
+                                    {{--<th>Status</th>--}}
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($details as $truckingDelivery)
+                                @foreach($details as $cfsDelivery)
 
                                     <tr>
-                                        <td><a href="/trucking/{{$truckingDelivery->id}}">{{$truckingDelivery->mawb}}</a></td>
-                                        <td>{{$truckingDelivery->hawb}}</td>
-                                        <td>{{$truckingDelivery->ref_no}}</td>
-                                        <td>{{$truckingDelivery->availability}}</td>
+                                        <td><a href="/cfs/{{$cfsDelivery->id}}">{{$cfsDelivery->mawb}}</a></td>
+                                        <td>{{$cfsDelivery->hawb}}</td>
+{{--                                        <td>{{$cfsDelivery->ref_no}}</td>--}}
+{{--                                        <td>{{$cfsDelivery->availability}}</td>--}}
                                     </tr>
                                 @endforeach
                                 </tbody>
@@ -60,21 +60,21 @@
 
 
                         {{--<div class="row">--}}
-                                        {{--<hr/>--}}
-                                        {{--<div class="col-xs-12">--}}
-{{--                                            {{$truckingDeliveries->render()}}--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
+                        {{--<hr/>--}}
+                        {{--<div class="col-xs-12">--}}
+                        {{--                                            {{$truckingDeliveries->render()}}--}}
+                        {{--</div>--}}
+                        {{--</div>--}}
+                        {{--</div>--}}
 
 
 
-                            </div>
-
-                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
+    </div>
+    </div>
     </div>
 @endsection
