@@ -230,7 +230,7 @@ class HomeController extends Controller
     public function postRequestAccount(Request $request) {
         $token = $request->input('g-recaptcha-response');
 
-        if($token) {
+
 
             $this->validate($request,[
     //            'name' => 'required',
@@ -250,6 +250,8 @@ class HomeController extends Controller
                 'service_type' =>  $request->inputServiceType,
                 'comments' =>  $request->comments
             );
+
+        if($token) {
 
             Mail::send('emails.request-account', $data, function($message) use ($data){
                 $message->from($data['email']);
