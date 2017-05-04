@@ -638,18 +638,18 @@
 </script>
 
 
-<script>
-   $(function() {
-        $('#request-acct-form').submit(function(event) {
-            var verified = grecaptcha.getResponse();
+{{--<script>--}}
+   {{--$(function() {--}}
+        {{--$('#request-acct-form').submit(function(event) {--}}
+            {{--var verified = grecaptcha.getResponse();--}}
 
-            if(verified.length === 0) {
-                event.preventDefault();
-            }
-        });
-   });
+            {{--if(verified.length === 0) {--}}
+                {{--event.preventDefault();--}}
+            {{--}--}}
+        {{--});--}}
+   {{--});--}}
 
-</script>
+{{--</script>--}}
 
 {{--<script type="application/javascript">--}}
 {{--$(function () {--}}

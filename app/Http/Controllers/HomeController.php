@@ -230,7 +230,7 @@ class HomeController extends Controller
     public function postRequestAccount(Request $request) {
         $token = $request->input('g-recaptcha-response');
 
-        if(strlen($token) > 0) {
+        if($token) {
 
             $this->validate($request,[
     //            'name' => 'required',
