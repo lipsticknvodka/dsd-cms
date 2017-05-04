@@ -638,6 +638,19 @@
 </script>
 
 
+<script>
+   $(function() {
+        $('#request-acct-form').submit(function(event) {
+            var verified = grecaptcha.getResponse();
+
+            if(verified.length === 0) {
+                event.preventDefault();
+            }
+        });
+   });
+
+</script>
+
 {{--<script type="application/javascript">--}}
 {{--$(function () {--}}
 {{--$('.navbar-toggle').click(function () {--}}

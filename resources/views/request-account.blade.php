@@ -21,7 +21,7 @@
                     <?php if(isset($_GET['CaptchaFail'])){ ?>
                     <div class="FormElement" id="captcha-fail">CAPTCHA failed. Please try again.</div>
                     <?php } ?>
-                    <form action="{{ url('request-account') }}" method="POST">
+                    <form action="{{ url('request-account') }}" method="POST" id="request-acct-form">
 
                         {{ csrf_field() }}
 

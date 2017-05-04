@@ -229,41 +229,45 @@ class HomeController extends Controller
 
     public function postRequestAccount(Request $request) {
         $token = $request->input('g-recaptcha-response');
-        dd($token);
 
-        $this->validate($request,[
-//            'name' => 'required',
-//            'email' => 'required|email',
-//            'phone' => 'required',
-//            'company' => 'required',
-//            'service_type' => 'required',
+        if(strlen($token) > 0) {
 
-        ]);
+            $this->validate($request,[
+    //            'name' => 'required',
+    //            'email' => 'required|email',
+    //            'phone' => 'required',
+    //            'company' => 'required',
+    //            'service_type' => 'required',
 
-        $data = array(
+            ]);
 
-            'name' => $request->inputName,
-            'email' =>  $request->inputEmail,
-            'phone' =>  $request->inputPhone,
-            'company' =>  $request->inputCompany,
-            'service_type' =>  $request->inputServiceType,
-            'comments' =>  $request->comments
-        );
+            $data = array(
 
-        Mail::send('emails.request-account', $data, function($message) use ($data){
-            $message->from($data['email']);
-            $message->to('michelleprather@gmail.com');
-            $message->subject('You have a new account request');
-        });
+                'name' => $request->inputName,
+                'email' =>  $request->inputEmail,
+                'phone' =>  $request->inputPhone,
+                'company' =>  $request->inputCompany,
+                'service_type' =>  $request->inputServiceType,
+                'comments' =>  $request->comments
+            );
 
-//        Session::flash('success','Your account request has been sent.');
+            Mail::send('emails.request-account', $data, function($message) use ($data){
+                $message->from($data['email']);
+                $message->to('michelleprather@gmail.com');
+                $message->subject('You have a new account request');
+            });
 
-//        return view('request-quote')->withMessage('successful email');
+    //        Session::flash('success','Your account request has been sent.');
 
-//        return redirect()->withMessage('success');
+    //        return view('request-quote')->withMessage('successful email');
 
-        return redirect('request-account')->with('success', 'Your account request has been sent.');
+    //        return redirect()->withMessage('success');
 
+            return redirect('request-account')->with('success', 'Your account request has been sent.');
+        } else {
+
+            return redirect('request-account');
+        }
     }
 
 
