@@ -46,7 +46,11 @@
                 <?php if(isset($_GET['CaptchaFail'])){ ?>
                 <div class="FormElement" id="captcha-fail">CAPTCHA failed. Please try again.</div>
                 <?php } ?>
-                <form name="contact-form" data-toggle="validator" method="post" action="send-contact-form.php">
+
+                <form action="{{ url('contact') }}" method="POST">
+
+                    {{ csrf_field() }}
+                {{--<form name="contact-form" data-toggle="validator" method="post" action="send-contact-form.php">--}}
                     <div class="form-group">
                         <label class="control-label">Full Name</label>
                         <input type="text" class="form-control" name="inputName" placeholder="First Last" required>
@@ -71,7 +75,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="inputSubject" class="control-label">Subject</label>
+                        <label class="control-label">Subject</label>
                         <select name="recipient" multiple class="form-control">
                             <option value="general">General Inquiries</option>
                             <option value="air-freight">Air Freight</option>

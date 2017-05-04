@@ -11,6 +11,13 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 
+
+use Illuminate\Support\Facades\Mail;
+//use Mail;
+
+use Session;
+
+
 class HomeController extends Controller
 {
     /**
@@ -93,20 +100,173 @@ class HomeController extends Controller
 
     }
 
+    public function postContact(Request $request) {
+//        $token = $request->input('g-recaptcha-response');
+//        dd($token);
+
+        $this->validate($request,[
+//            'name' => 'required',
+//            'email' => 'required|email',
+//            'phone' => 'required',
+//            'company' => 'required',
+//            'subject' => 'required',
+//            'messageBody' => 'required',
+        ]);
+
+        $data = array(
+
+            'name' => $request->inputName,
+            'email' =>  $request->inputEmail,
+            'phone' =>  $request->inputPhone,
+            'company' =>  $request->inputCompanyName,
+            'recipient' =>  $request->recipient,
+            'messageBody' =>  $request->inputMessage,
+        );
+//
+        $recipient = array(
+//            'michelleprather@gmail.com'=>$request->mailTo == 'air-freight',
+//            'evelyn@dsdcompanies.com' ,'jovita@dsdcompanies.com'=>$request->mailTo == 'general',
+
+
+            'general'=>'evelyn@dsdcompanies.com, jovita@dsdcompanies.com', //general
+
+            'air-freight'=>'carlos@dsdcompanies.com', //Air Freight
+            'ocean-freight'=>'jose@dsdcompanies.com', //Ocean Freight/Intermodal
+            'trucking-pick-up'=>'roberto@dsdcompanies.com', //Trucking-Pick up ??
+            'trucking-deliveries'=>'simon@dsdcompanies.com', //Trucking-Deliveries ??
+            // 'hot-shot'=>'',
+            'warehousing'=>'fausto@dsdcompanies.com', //Warehousing - Carlos ???
+            'cargo-screening'=>'edbuccio@dsdcompanies.com', //Cargo Screening
+
+        );
+//
+////        $exploded_recipients = explode(",", 'recipient');
+//////
+////        foreach($exploded_recipients as $value) {
+//
+//            $email_to = $recipient;
+
+            Mail::send('emails.contact', $data, function ($message) use ($data, $recipient) {
+                $message->from($data['email']);
+                $message->to($recipient);
+                $message->subject('You have a new contact form inquiry.');
+            });
+//        }
+//        Session::flash('success','Your contact request has been sent.');
+
+//        return view('request-quote')->withMessage('successful email');
+
+        return redirect('contact')->with('success', 'Your contact form inquiry has been sent.');
+
+    }
+
+
     public function requestQuote(){
         return view('/request-quote');
 
     }
+
+    public function postRequestQuote(Request $request) {
+//        $token = $request->input('g-recaptcha-response');
+//        dd($token);
+
+        $this->validate($request,[
+//            'name' => 'required',
+//            'email' => 'required',
+//            'phone' => 'required',
+//            'shipType' => 'required',
+//            'length1' => 'required',
+//            'length2' => 'required',
+//            'length3' => 'required',
+//            'weight' => 'required',
+//            'numPieces' => 'required',
+//            'originZip' => 'required',
+//            'destinationZip' => 'required',
+        ]);
+
+        $data = array(
+
+            'name' => $request->inputName,
+            'email' =>  $request->inputEmail,
+            'phone' =>  $request->inputPhone,
+            'shipType' =>  $request->inputShipType,
+            'length1' =>  $request->inputLength_1,
+            'width1' =>  $request->inputWidth_1,
+            'height1' =>  $request->inputHeight_1,
+            'length2' => $request->inputLength_2,
+            'width2' => $request->inputWidth_2,
+            'height2' => $request->inputHeight_2,
+            'length3' =>  $request->inputLength_3,
+            'width3' => $request->inputWidth_3,
+            'height3' =>  $request->inputHeight_3,
+            'weight' =>  $request->inputWeight,
+            'numPieces' =>  $request->inputNumPieces,
+            'originZip' =>  $request->inputOriginZip,
+            'destinationZip' =>  $request->inputDestinationZip,
+            'comments' =>  $request->comments,
+        );
+
+        Mail::send('emails.request-quote', $data, function($message) use ($data){
+            $message->from($data['email']);
+            $message->to('michelleprather@gmail.com');
+            $message->subject('You have a new quote request');
+        });
+
+//        Session::flash('success','Your freight quote request has been sent.');
+
+//        return view('request-quote')->withMessage('successful email');
+
+//        return redirect()->url('request-quote');
+        return redirect('request-quote')->with('success', 'Your freight quote request has been sent.');
+
+    }
+
 
     public function requestAccount(){
         return view('/request-account');
 
     }
 
-    public function sendQuoteRequest(Request $request){
+    public function postRequestAccount(Request $request) {
         $token = $request->input('g-recaptcha-response');
         dd($token);
+
+        $this->validate($request,[
+//            'name' => 'required',
+//            'email' => 'required|email',
+//            'phone' => 'required',
+//            'company' => 'required',
+//            'service_type' => 'required',
+
+        ]);
+
+        $data = array(
+
+            'name' => $request->inputName,
+            'email' =>  $request->inputEmail,
+            'phone' =>  $request->inputPhone,
+            'company' =>  $request->inputCompany,
+            'service_type' =>  $request->inputServiceType,
+            'comments' =>  $request->comments
+        );
+
+        Mail::send('emails.request-account', $data, function($message) use ($data){
+            $message->from($data['email']);
+            $message->to('michelleprather@gmail.com');
+            $message->subject('You have a new account request');
+        });
+
+//        Session::flash('success','Your account request has been sent.');
+
+//        return view('request-quote')->withMessage('successful email');
+
+//        return redirect()->withMessage('success');
+
+        return redirect('request-account')->with('success', 'Your account request has been sent.');
+
     }
+
+
 
     public function adminSearch(){
         $adminQuery = Input::get ( 'adminQuery' );

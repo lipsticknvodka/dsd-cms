@@ -441,6 +441,8 @@
                 </form>
             </div>
         </div>
+
+
                 {{--<div class="form-group col-sm-4" id="search-input">--}}
                     {{--<div class="icon-addon addon-sm">--}}
                         {{--<input type="text" placeholder="Search by MAWB or Reference No." class="form-control" id="search">--}}

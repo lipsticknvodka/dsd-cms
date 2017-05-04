@@ -19,11 +19,17 @@
                     <?php if(isset($_GET['CaptchaFail'])){ ?>
                     <div class="FormElement" id="captcha-fail">CAPTCHA failed. Please try again.</div>
                     <?php } ?>
-                    <form data-toggle="validator"  method="post" action="send-quote.php">
-                        {{--<form data-toggle="validator"  method="post" action="/request-quote">--}}
-                        {!! Form::hidden('_token', csrf_token()) !!}
-                        <div class="form-group">
 
+                        {{--@include('errors.list')--}}
+
+                        <form action="{{ url('request-quote') }}" method="POST">
+
+                        {{--<form data-toggle="validator"  method="post" action="send-quote.php">--}}
+                        {{--<form data-toggle="validator"  method="post" action="/request-quote">--}}
+{{--                        {!! Form::hidden('_token', csrf_token()) !!}--}}
+                            {{ csrf_field() }}
+
+                        <div class="form-group">
                             <label class="control-label">Full Name</label>
                             <input type="text" class="form-control" name="inputName" placeholder="First Last" required>
                         </div>
@@ -56,19 +62,19 @@
                             <p class="col-xs-3"><strong>Package 1:</strong></p>
                             <div class="form-group col-xs-3">
                                 <label class="control-label">L</label>
-                                <input type="number" class="form-control" name="inputLength-1" data-error="Enter length" required>
+                                <input type="number" class="form-control" name="inputLength_1" data-error="Enter length" required>
 
                             </div>
 
                             <div class="form-group col-xs-3">
                                 <label class="control-label">W</label>
-                                <input type="number" class="form-control" name="inputWidth-1" data-error="Enter width" required>
+                                <input type="number" class="form-control" name="inputWidth_1" data-error="Enter width" required>
 
                             </div>
 
                             <div class="form-group col-xs-3">
                                 <label class="control-label">H</label>
-                                <input type="number" class="form-control" name="inputHeight-1" data-error="Enter height" required> </div>
+                                <input type="number" class="form-control" name="inputHeight_1" data-error="Enter height" required> </div>
 
                         </div>
 
@@ -76,19 +82,19 @@
                             <p class="col-xs-3"><strong>Package 2:</strong></p>
                             <div class="form-group col-xs-3">
                                 <label class="control-label">L</label>
-                                <input type="number" class="form-control" name="inputLength-2" data-error="Enter length">
+                                <input type="number" class="form-control" name="inputLength_2" data-error="Enter length">
 
                             </div>
 
                             <div class="form-group col-xs-3">
                                 <label class="control-label">W</label>
-                                <input type="number" class="form-control" name="inputWidth-2" data-error="Enter width">
+                                <input type="number" class="form-control" name="inputWidth_2" data-error="Enter width">
 
                             </div>
 
                             <div class="form-group col-xs-3">
                                 <label class="control-label">H</label>
-                                <input type="number" class="form-control" name="inputHeight-2" data-error="Enter height"> </div>
+                                <input type="number" class="form-control" name="inputHeight_2" data-error="Enter height"> </div>
 
                         </div>
 
@@ -96,19 +102,19 @@
                             <p class="col-xs-3"><strong>Package 3:</strong></p>
                             <div class="form-group col-xs-3">
                                 <label class="control-label">L</label>
-                                <input type="number" class="form-control" name="inputLength-3" data-error="Enter length">
+                                <input type="number" class="form-control" name="inputLength_3" data-error="Enter length">
 
                             </div>
 
                             <div class="form-group col-xs-3">
                                 <label class="control-label">W</label>
-                                <input type="number" class="form-control" name="inputWidth-3" data-error="Enter width">
+                                <input type="number" class="form-control" name="inputWidth_3" data-error="Enter width">
 
                             </div>
 
                             <div class="form-group col-xs-3">
                                 <label class="control-label">H</label>
-                                <input type="number" class="form-control" name="inputHeight-3" data-error="Enter height"> </div>
+                                <input type="number" class="form-control" name="inputHeight_3" data-error="Enter height"> </div>
 
                         </div>
 
@@ -153,9 +159,9 @@
 
 
 
-                        <div class="form-group">
-                            <div class="g-recaptcha" data-sitekey="6LeOWRQTAAAAAFGjlyorJ6kk9Cx5Ya52Xlw7iUSE"></div>
-                        </div>
+                        {{--<div class="form-group">--}}
+                            {{--<div class="g-recaptcha" data-sitekey="6LeOWRQTAAAAAFGjlyorJ6kk9Cx5Ya52Xlw7iUSE"></div>--}}
+                        {{--</div>--}}
 
 
                         <input name="submitButton" type="submit" class="btn btn-warning pull-left" id="submitButton" value="Submit"></button>
@@ -166,4 +172,5 @@
                 <img src="images/cfs-vertical.jpg" class="col-sm-4 hidden-xs" id="faq-img" alt="request quote">
                 <img src="images/mobile/ocean-freight/hero-image.jpg" class="col-xs-12 img-responsive visible-xs" alt="intermodal shipping">
 
+            </div></div></div>
 @endsection

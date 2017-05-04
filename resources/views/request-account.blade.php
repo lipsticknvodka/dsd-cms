@@ -15,13 +15,19 @@
             <div class="row">
                 <div class="col-sm-8">
 
-                    {{--<?php if(isset($_GET['CaptchaPass'])){ ?>--}}
-                    {{--<div class="FormElement" id="captcha-success">Message Sent</div>--}}
-                    {{--<?php } ?>--}}
-                    {{--<?php if(isset($_GET['CaptchaFail'])){ ?>--}}
-                    {{--<div class="FormElement" id="captcha-fail">CAPTCHA failed. Please try again.</div>--}}
-                    {{--<?php } ?>--}}
-                    <form data-toggle="validator" method="post" action="send-app-request.php">
+                    <?php if(isset($_GET['CaptchaPass'])){ ?>
+                    <div class="FormElement" id="captcha-success">Message Sent</div>
+                    <?php } ?>
+                    <?php if(isset($_GET['CaptchaFail'])){ ?>
+                    <div class="FormElement" id="captcha-fail">CAPTCHA failed. Please try again.</div>
+                    <?php } ?>
+                    <form action="{{ url('request-account') }}" method="POST">
+
+                        {{ csrf_field() }}
+
+                    {{--<form data-toggle="validator" action="{{url('request-account')}}" method="POST">--}}
+
+                    {{--<form data-toggle="validator" method="post" action="send-app-request.php">--}}
                         <div class="form-group">
                             <label class="control-label">Full Name</label>
                             <input type="text" class="form-control" name="inputName" placeholder="First Last" required>
@@ -58,8 +64,6 @@
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
-
-
 
 
                         <div class="form-group">

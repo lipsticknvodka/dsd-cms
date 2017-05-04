@@ -40,8 +40,6 @@ Route::get('/', function () {
 
 //Route::get('/logout', ['as' => 'logout', 'uses' => 'Auth\AuthController@logout']);
 
-
-Route::post('/request-quote', 'HomeController@sendQuoteRequest');
 Route::auth();
 
 //Route::get('register', ['middleware'=>'auth', 'uses'=>function(){
@@ -340,6 +338,12 @@ Route::get('/facilities','HomeController@facilities');
 
 Route::get('/contact','HomeController@contact');
 
+Route::post('/contact','HomeController@postContact');
+
 Route::get('/request-account','HomeController@requestAccount');
 
+Route::post('/request-account','HomeController@postRequestAccount');
+
 Route::get('/request-quote','HomeController@requestQuote');
+
+Route::post('request-quote','HomeController@postRequestQuote');
