@@ -55,7 +55,7 @@
                                                 <td>{{$hawb->pallet_ct}}</td>
                                                 <td>{{$hawb->piece_ct}}</td>
                                                 <td>{{$hawb->weight_no}} {{$hawb->weight_type}}</td>
-                                                {{--<td><small><a href = "#editHawb" data-toggle="modal">Edit</a></small></td>--}}
+                                                <td><small><a href = "{{url('#editHawb')}}" data-toggle="modal">Edit</a></small></td>
                                             </tr>
 
                                             <tr>
@@ -127,6 +127,7 @@
                                 <h4 class="modal-title">Add New HAWB</h4>
                             </div>
                             <div class="modal-body">
+
                                 {{--                                            {!! Form::open(['action'=>'/cfs/{{$cfs->id}}/addHawb', $cfsDelivery->id]) !!}--}}
                                 <form action="/cfs/{{$cfs->id}}/addHawb" method="POST">
                                     {{csrf_field()}}
@@ -224,8 +225,9 @@
                     <h4 class="modal-title">Edit HAWB</h4>
                 </div>
                 <div class="modal-body">
-                    {{--                                            {!! Form::open(['action'=>'/cfs/{{$cfs->id}}/addHawb', $cfsDelivery->id]) !!}--}}
-                    <form action="/cfs/{{$hawb->id}}/editHawb" method="POST">
+                    {!! Form::model($hawb, ['method'=>'PATCH', 'url'=>['CfsDeliveryController@editHawb', $hawb->id]]) !!}
+{{--                                                                {!! Form::model($hawb, ['action'=>'/cfs/{{$cfs->id}}/editHawb/{{$hawb->id}}', $hawb->id]) !!}--}}
+{{--                    <form action="/cfs/{{$hawb->id}}/editHawb" method="POST">--}}
                         {{csrf_field()}}
 
                         {{--<div class="row">--}}

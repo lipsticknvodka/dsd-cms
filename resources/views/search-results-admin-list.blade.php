@@ -5,27 +5,28 @@
         <div class="row-fluid">
             <div class="col-xs-12 col-sm-10 col-sm-offset-1">
                 <div class="panel panel-default" id="content">
-                    <div class="panel-heading">Dashboard</div>
+                    <div class="panel-heading">Admin Search</div>
 
                     <div class="panel-body">
-                        <form action="/freight-availability/trucking" method="POST" role="search">
-                            {{ csrf_field() }}
-                            <div class="input-group col-xs-12">
-                                {{Form::open(['method'=>'GET','url'=>'search-results', 'role'=>'search'])}}
+                        {{--<form action="/freight-availability/trucking" method="POST" role="search">--}}
+                            {{--{{ csrf_field() }}--}}
+                            {{--<div class="input-group col-xs-12">--}}
+                                {{--{{Form::open(['method'=>'GET','url'=>'search-results', 'role'=>'search'])}}--}}
 
-                                {!! Form::label('truckingQuery','Search by MAWB, HAWB, or Reference/Load #')  !!}
-                                <input type="text" class="form-control" name="truckingQuery"
-                                       placeholder="{{$query}}"> <span class="input-group-btn">
-                                    <button type="submit" id='search' class="btn btn-warning">
-                                    <span class="glyphicon glyphicon-search"></span>
-                                    </button>
-                                    </span>
-                                {{Form::close()}}
-                            </div>
-                        </form>
+                                {{--{!! Form::label('truckingQuery','Search by MAWB, HAWB, or Reference/Load #')  !!}--}}
+                                {{--<input type="text" class="form-control" name="truckingQuery"--}}
+                                       {{--placeholder="{{$query}}"> <span class="input-group-btn">--}}
+                                    {{--<button type="submit" id='search' class="btn btn-warning">--}}
+                                    {{--<span class="glyphicon glyphicon-search"></span>--}}
+                                    {{--</button>--}}
+                                    {{--</span>--}}
+                                {{--{{Form::close()}}--}}
+                            {{--</div>--}}
+                        {{--</form>--}}
 
 
                         @if(isset($details))
+{{--                        @if(!empty($query))--}}
                             <p>Showing search results for <b> {{ $query }} </b> :</p>
 
                             <table class="table table-striped">
@@ -50,7 +51,9 @@
                                 </tbody>
                             </table>
                         @else
-                            <h4>There are no results for {{$query}}. Please try your search again.</h4>
+                            @if(!empty($query))
+                            <p>There are no results for <strong>{{$query}}</strong>. Please try your search again.</p>
+                            @endif
                         @endif
 
 

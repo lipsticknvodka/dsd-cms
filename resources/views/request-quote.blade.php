@@ -3,16 +3,22 @@
 @section('content')
     <div id="page-wrapper" class="row-fluid">
         <div class="container" id="page-header">
-            <h4>Request A Quote</h4>
+            <h4>Request Quote</h4>
             <ol class="breadcrumb">
                 <li><a href="/">Home</a></li>
-                <li><a href="about">Request A Quote</a></li>
+                <li><a href="about">Request Quote</a></li>
             </ol>
         </div>
         <!-- <img src="images/hero-images/intermodal-containers.jpg" class="img-responsive">-->
         <div class="container">
             <div class="row">
                 <div class="col-sm-8">
+                    @if(session()->has('success'))
+                        <div class="alert alert-success">
+                            {{ session()->get('success') }}
+                        </div>
+                    @endif
+
                     <?php if(isset($_GET['CaptchaPass'])){ ?>
                     <div class="FormElement" id="captcha-success">Your shipping quote has been sent. A representative will contact you shortly.</div>
                     <?php } ?>

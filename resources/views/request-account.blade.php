@@ -4,7 +4,7 @@
 
     <div id="page-wrapper" class="row-fluid">
         <div class="container" id="page-header">
-            <h4>Request An Account</h4>
+            <h4>Request Account</h4>
             <ol class="breadcrumb">
                 <li><a href="/">Home</a></li>
                 <li class="active"><a href="">Request Account</a></li>
@@ -14,6 +14,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-8">
+
+                    @if(session()->has('success'))
+                        <div class="alert alert-success">
+                            {{ session()->get('success') }}
+                        </div>
+                    @endif
 
                     <?php if(isset($_GET['CaptchaPass'])){ ?>
                     <div class="FormElement" id="captcha-success">Message Sent</div>
@@ -58,7 +64,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label">Additional Comments:</label>
+                            <label class="control-label">Additional Comments</label>
                             <div class="controls">
                                 <textarea id="accountComments" name="comments" rows="10" class="form-control col-xs-12" data-error="Please enter a message and resubmit the form."></textarea>
                                 <div class="help-block with-errors"></div>

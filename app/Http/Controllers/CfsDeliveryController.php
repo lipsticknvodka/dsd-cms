@@ -98,6 +98,7 @@ class CfsDeliveryController extends Controller
      */
     public function edit(Request $request, $id)
     {
+
         $cfs = CfsDelivery::findOrFail($id);
 
         $request->session()->put('cfs', $cfs);
@@ -105,6 +106,24 @@ class CfsDeliveryController extends Controller
         return redirect()->action('CfsDeliveryController@getCfsStep', ['step' => 1]);
 
         return view('cfs.edit', compact('cfsDelivery'));
+
+    }
+
+    public function editHawb(Request $request, $id)
+    {
+//        $hawb = Hawb::findOrFail($id);
+
+//        $cfsDelivery = CfsDelivery::findOrFail($id);
+//
+        $input = $request->all();
+
+//        $hawb = $cfs->hawb;
+
+//        $request->session()->put('hawb', $hawb);
+//
+        return redirect()->action('CfsDeliveryController@getCfsStep', ['step' => 1]);
+//
+//        return view('cfs.edit', compact('cfsDelivery'));
 
     }
 

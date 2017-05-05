@@ -50,7 +50,9 @@
                                 </tbody>
                             </table>
                         @else
-                            <h4>There are no results for {{$query}}. Please try your search again.</h4>
+                            @if(!empty($query))
+                                <p>There are no results for <strong>{{$query}}</strong>. Please try your search again.</p>
+                            @endif
                         @endif
 
 

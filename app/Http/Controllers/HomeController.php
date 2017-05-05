@@ -119,17 +119,13 @@ class HomeController extends Controller
             'email' =>  $request->inputEmail,
             'phone' =>  $request->inputPhone,
             'company' =>  $request->inputCompanyName,
-            'recipient' =>  $request->recipient,
+            'subject' =>  $request->recipient,
             'messageBody' =>  $request->inputMessage,
         );
-//
+
         $recipient = array(
-//            'michelleprather@gmail.com'=>$request->mailTo == 'air-freight',
-//            'evelyn@dsdcompanies.com' ,'jovita@dsdcompanies.com'=>$request->mailTo == 'general',
-
-
-            'general'=>'evelyn@dsdcompanies.com, jovita@dsdcompanies.com', //general
-
+            'general'=> ['evelyn@dsdcompanies.com', 'jovita@dsdcompanies.com'], //general
+            //'general'=>'michelleprather@gmail.com',
             'air-freight'=>'carlos@dsdcompanies.com', //Air Freight
             'ocean-freight'=>'jose@dsdcompanies.com', //Ocean Freight/Intermodal
             'trucking-pick-up'=>'roberto@dsdcompanies.com', //Trucking-Pick up ??
@@ -139,19 +135,19 @@ class HomeController extends Controller
             'cargo-screening'=>'edbuccio@dsdcompanies.com', //Cargo Screening
 
         );
-//
-////        $exploded_recipients = explode(",", 'recipient');
-//////
-////        foreach($exploded_recipients as $value) {
-//
-//            $email_to = $recipient;
 
-            Mail::send('emails.contact', $data, function ($message) use ($data, $recipient) {
+        $exploded_recipients = explode(",",$_REQUEST['recipient']);
+
+        foreach($exploded_recipients as $value)
+        {
+            $my_email = $recipient[$value];
+
+            Mail::send('emails.contact', $data, function ($message) use ($data, $my_email) {
                 $message->from($data['email']);
-                $message->to($recipient);
+                $message->to($my_email);
                 $message->subject('You have a new contact form inquiry.');
             });
-//        }
+        }
 //        Session::flash('success','Your contact request has been sent.');
 
 //        return view('request-quote')->withMessage('successful email');
@@ -208,7 +204,8 @@ class HomeController extends Controller
 
         Mail::send('emails.request-quote', $data, function($message) use ($data){
             $message->from($data['email']);
-            $message->to('michelleprather@gmail.com');
+//            $message->to('michelleprather@gmail.com');
+            $message->to(['evelyn@dsdcompanies.com', 'jovita@dsdcompanies.com']);
             $message->subject('You have a new quote request');
         });
 
@@ -228,7 +225,7 @@ class HomeController extends Controller
     }
 
     public function postRequestAccount(Request $request) {
-        $token = $request->input('g-recaptcha-response');
+//        $token = $request->input('g-recaptcha-response');
 
 //        if($token) {
 
@@ -253,7 +250,8 @@ class HomeController extends Controller
 
             Mail::send('emails.request-account', $data, function($message) use ($data){
                 $message->from($data['email']);
-                $message->to('michelleprather@gmail.com');
+//                $message->to('michelleprather@gmail.com');
+                $message->to(['evelyn@dsdcompanies.com', 'jovita@dsdcompanies.com']);
                 $message->subject('You have a new account request');
             });
 
@@ -295,7 +293,7 @@ class HomeController extends Controller
             return view('search-results-account-list')->withDetails($account)->withQuery ( $adminQuery );
 
 
-        else return view('search-results-admin-list')->withMessage('No Details found. Please try your search again !');
+        else return view('search-results-admin-list')->withQuery ( $adminQuery );
 
     }
 

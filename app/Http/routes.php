@@ -256,6 +256,8 @@ Route::get('cfs/{id}/edit/step/{step}', 'CfsDeliveryController@edit');
 
 Route::post('cfs/{id}/edit/step/{step}', 'CfsDeliveryController@postEditCfsStep')->where(['step' => '[1-3]']);
 
+//Route::get('cfs/{id}/editHawb/{id}', 'CfsDeliveryController@editHawb');
+
 
 //TRUCKING ROUTES
 
