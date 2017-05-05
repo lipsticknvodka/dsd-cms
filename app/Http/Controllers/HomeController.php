@@ -230,7 +230,7 @@ class HomeController extends Controller
     public function postRequestAccount(Request $request) {
         $token = $request->input('g-recaptcha-response');
 
-
+//        if($token) {
 
             $this->validate($request,[
     //            'name' => 'required',
@@ -251,8 +251,6 @@ class HomeController extends Controller
                 'comments' =>  $request->comments
             );
 
-        if($token) {
-
             Mail::send('emails.request-account', $data, function($message) use ($data){
                 $message->from($data['email']);
                 $message->to('michelleprather@gmail.com');
@@ -266,10 +264,10 @@ class HomeController extends Controller
     //        return redirect()->withMessage('success');
 
             return redirect('request-account')->with('success', 'Your account request has been sent.');
-        } else {
-
-            return redirect('request-account');
-        }
+//        } else {
+//
+//            return redirect('request-account');
+//        }
     }
 
 
