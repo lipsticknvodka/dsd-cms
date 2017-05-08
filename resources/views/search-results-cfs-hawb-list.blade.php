@@ -40,8 +40,11 @@
                             <thead>
                             <tr>
                                 <th>MAWB</th>
-                                <th>HAWB</th>
+                                {{--<th>HAWB</th>--}}
+                                <th>Weight</th>
                                 <th>Arrival Date</th>
+                                <th>Pieces</th>
+                                <th>Pallets</th>
                                 <th>Status</th>
                             </tr>
                             </thead>
@@ -51,8 +54,11 @@
 {{--                            @foreach($cfsDelivery->hawbs as $hawb)--}}
                             <tr>
                                 <td><a href="/freight-availability/cfs/{{$cfsDelivery->cfs_delivery_id}}">{{$cfsDelivery->hawb}}</a></td>
-                                <td>{{$cfsDelivery->mawb}}</td>
+{{--                                <td>{{$cfsDelivery->mawb}}</td>--}}
                                 <td>{{$cfsDelivery->arrival_date}}</td>
+                                <td>{{$cfsDelivery->weight_no}}<small>{{$cfsDelivery->weight_type}}</small></td>
+                                <td>{{$cfsDelivery->piece_ct}}</td>
+                                <td>{{$cfsDelivery->pallet_ct}}</td>
                                 <td>{{$cfsDelivery->status}}</td>
                             </tr>
                             {{--@endforeach--}}

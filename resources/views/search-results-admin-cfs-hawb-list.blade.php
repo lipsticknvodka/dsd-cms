@@ -32,8 +32,11 @@
                                 <thead>
                                 <tr>
                                     <th>HAWB</th>
-                                    <th>MAWB</th>
+                                    {{--<th>MAWB</th>--}}
+                                    <th>Arrival Date</th>
                                     <th>Weight</th>
+                                    <th>Pieces</th>
+                                    <th>Pallets</th>
                                     <th>Availability</th>
                                     {{--<th>Status</th>--}}
                                 </tr>
@@ -43,8 +46,11 @@
 
                                     <tr>
                                         <td><a href="/cfs/{{$cfsDelivery->cfs_delivery_id}}">{{$cfsDelivery->hawb}}</a></td>
-                                        <td>{{$cfsDelivery->mawb}}</td>
+                                        {{--<td>{{$cfsDelivery->mawb}}</td>--}}
+                                        <td>{{$cfsDelivery->arrival_date}}</td>
                                         <td>{{$cfsDelivery->weight_no}}<small>{{$cfsDelivery->weight_type}}</small></td>
+                                        <td>{{$cfsDelivery->piece_ct}}</td>
+                                        <td>{{$cfsDelivery->pallet_ct}}</td>
                                         <td>{{$cfsDelivery->availability}}</td>
                                         {{--<td>{{$cfsDelivery->ref_no}}</td>--}}
                                     </tr>

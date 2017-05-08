@@ -422,6 +422,10 @@ class TruckingDeliveryController extends Controller
     {
         $data = TruckingDelivery::get()->toArray();
 
+//        $data = TruckingDelivery::join('trucking_deliveries', 'trucking_deliveries.id', '=', 'account.id')
+////            ->where('users.updated_at', '>=', Carbon::now()->subMonths(2))
+//            ->get();
+
         $pod = Pod::get()->toArray();
 
         $exception = Exception::get()->toArray();

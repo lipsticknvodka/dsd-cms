@@ -308,7 +308,7 @@ Route::get('trucking/{id}/edit', 'TruckingDeliveryController@edit');
 
 Route::get('trucking/{id}/edit/step/{step}', 'TruckingDeliveryController@edit');
 
-Route::get('downloadExcel/{type}', 'TruckingDeliveryController@downloadExcel');
+//Route::get('downloadExcel/{type}', 'TruckingDeliveryController@downloadExcel');
 
 //Route::get('dateFilterResults','TruckingController@index');
 
