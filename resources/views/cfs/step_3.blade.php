@@ -24,7 +24,7 @@
                             @include('errors.list')
                         </div>
 
-                        {!! Form::model($cfs) !!}
+{{--                        {!! Form::model($cfs) !!}--}}
 
 
 
@@ -34,7 +34,7 @@
                                     @if(!empty($cfs->hawbs))
                                         <h3>HOUSE LEVEL</h3>
 
-                            @if(count($cfs->hawbs))
+                             @if(count($cfs->hawbs))
                                         <div class="table-responsive">
                                             {{--<h4 class="col-xs-12">Houses</h4>--}}
                                             <table class="table table-striped">
@@ -44,6 +44,7 @@
                                                     <th>Pallet Count</th>
                                                     <th>Piece Count</th>
                                                     <th>Weight</th>
+                                                    <th></th>
                                                     <th></th>
                                                 </tr>
                                                 </thead>
@@ -55,12 +56,23 @@
                                                 <td>{{$hawb->pallet_ct}}</td>
                                                 <td>{{$hawb->piece_ct}}</td>
                                                 <td>{{$hawb->weight_no}} {{$hawb->weight_type}}</td>
-                                                <td><small><a href = "{{url('#editHawb')}}" data-toggle="modal">Edit</a></small></td>
+                                                <td><small><a href="{{url('cfs/edit-hawb', $hawb->id)}}">Edit</a></small></td>
+                                                <td>
+                                                    <small>
+                                                        <form method="POST" action="/hawb/{{$hawb->id}}" >
+                                                            {!! csrf_field() !!}
+
+                                                            <input type="hidden" name="_method" value="DELETE">
+
+                                                            <input type="submit" class="deleteLink" value="Delete" >
+                                                        </form>
+                                                    </small>
+                                                </td>
                                             </tr>
 
                                             <tr>
-                                                <div id="{{$hawb->hawb}}" class="collapse hawb-more-info">
-                                                  <div class="row">
+                                                <div id="{{$hawb->hawb}}" class="panel collapse hawb-more-info">
+                                                  <div class="row panel">
                                                     <div class="col-sm-6">
                                                         <h4>{{$hawb->hawb}}</h4>
                                                         <p>{{$hawb->status}}</p>
@@ -70,6 +82,7 @@
                                                     </div>
 
                                                     <div class="col-sm-6">
+                                                        {{--<span class="pull-right clickable" data-effect="fadeOut" data-dismiss><i class="fa fa-times"></i></span>--}}
                                                         <h4>{{$hawb->availability}}</h4>
                                                         <p><strong>Company Name </strong>{{$hawb->co_name}}</p>
                                                         <p><strong>Driver Name </strong>{{$hawb->driver_name}}</p>
@@ -77,7 +90,7 @@
                                                     </div>
 
                                                </div>
-                                                    <hr />
+                                                    {{--<hr />--}}
                                             </div>
                                             </tr>
 
@@ -96,9 +109,13 @@
                         <div class="col-xs-12">
                             {{--<div class="col-xs-12">--}}
                             <a href="#addHawb" role="button" class="btn btn-large btn-primary" data-toggle="modal">Add HAWB</a>
+
+
                             <div class="input-group-md pull-right">
                                 <a id="back-btn" class="btn btn-warning" href="{{ URL::previous() }}">Back</a>
-                                <button type="submit" class="btn btn-warning">Submit</button>
+                                {{--<button type="submit" class="btn btn-warning">Submit</button>--}}
+                                <a href="/cfs" class="btn btn-warning">Submit</a>
+
                             </div>
                         </div>
 
@@ -111,12 +128,12 @@
 
 
 
-                        {!! Form::close() !!}
+{{--                        {!! Form::close() !!}--}}
                         </div>
                     </div>
             </div>
         </div>
-    </div>
+    {{--</div>--}}
 
 
                 <div id="addHawb" class="modal fade">
@@ -217,105 +234,20 @@
 
 
 
-    <div id="editHawb" class="modal fade">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">Edit HAWB</h4>
-                </div>
-                <div class="modal-body">
-                    {!! Form::model($hawb, ['method'=>'PATCH', 'url'=>['CfsDeliveryController@editHawb', $hawb->id]]) !!}
-{{--                                                                {!! Form::model($hawb, ['action'=>'/cfs/{{$cfs->id}}/editHawb/{{$hawb->id}}', $hawb->id]) !!}--}}
-{{--                    <form action="/cfs/{{$hawb->id}}/editHawb" method="POST">--}}
-                        {{csrf_field()}}
-
-                        {{--<div class="row">--}}
-                        {{--<div class="row">--}}
-                        <div class="form-group col-xs-12">
-                            {!! Form::label('hawb','HAWB')  !!}
-                            {!! Form::text('hawb', null, ['class'=>'form-control']) !!}
-                        </div>
-                        {{--</div>--}}
-
-                        {{--<div class="row">--}}
-                        <div class="form-group col-xs-3">
-                            {!! Form::label('weight','Weight')  !!}
-                            {!! Form::text('weight', null, ['class'=>'form-control']) !!}
-                        </div>
-                        <div class="form-group col-xs-3">
-                            {!! Form::label('weight_type','')  !!}
-                            {{--{!! Form::text('weight_type', null, ['class'=>'form-control']) !!}--}}
-                            {{--                                                        {!! Form::select('weight_type', ['lb' => 'lb', 'kg' => 'kg'] , null, ['class'=>'form-control']) !!}--}}
-                            {!! Form::select('weight_type', ['lb' => 'lb', 'kg' => 'kg'], null, ['class'=>'form-control']) !!}
-                        </div>
-
-                        <div class="form-group col-xs-3">
-                            {!! Form::label('pallet_ct','Pallets')  !!}
-                            {!! Form::text('pallet_ct', null, ['class'=>'form-control']) !!}
-                        </div>
-                        <div class="form-group col-xs-3">
-                            {!! Form::label('piece_ct','Pieces')  !!}
-                            {!! Form::text('piece_ct', null, ['class'=>'form-control']) !!}
-                        </div>
-                        {{--</div>--}}
-
-                        {{--<div class="row">--}}
-                        <div class="form-group col-xs-12">
-                            {!! Form::label('availability','Availability')  !!}
-                            {!! Form::select('availability', ['Ready for pick up' => 'Ready for pick up', 'Not ready for pick up' => 'Not ready for pick up'], null, ['class'=>'form-control']) !!}
-                        </div>
-                        {{--</div>--}}
-
-                        {{--<div class="row">--}}
-                        <div class="form-group col-xs-6">
-                            {!! Form::label('co_name','Company Name')  !!}
-                            {!! Form::text('co_name', null, ['class'=>'form-control']) !!}
-                        </div>
-                        <div class="form-group col-xs-6">
-                            {!! Form::label('driver_name','Driver Name')  !!}
-                            {!! Form::text('driver_name', null, ['class'=>'form-control']) !!}
-                        </div>
-                        {{--</div>--}}
-
-                        <div class="row">
-                            <div class="form-group col-xs-3" style="padding-left:30px;">
-                                {!! Form::label('closed_date','Closed Date')  !!}
-                                {!! Form::text('closed_date', null, ['class'=>'date form-control']) !!}
-                            </div>
-                            <div class="form-group col-xs-3">
-                                {!! Form::label('closed_time','Time')  !!}
-                                {!! Form::text('closed_time',  null, ['placeholder'=>'12:00 AM','class'=>'form-control em-time-input em-time-single']) !!}
-
-                            </div>
-
-                            <div class="col-xs-6" style="padding-top: 35px;">
-                                {{--                                            <a id="back-btn" class="btn btn-warning" href="{{ URL::previous() }}">Close</a>--}}
-                                <button type="submit" class="btn btn-warning">Submit</button>
-                            </div>
-                        </div>
-                    </form>
-                    {{--{!! Form::close() !!}--}}
-                    {{--<form action="{{ url('/closeHawb/' . $hawb->id) }}" method="POST">--}}
-                    {{--{!! csrf_field() !!}--}}
-                    {{--<button type="submit" class="btn btn-danger">Close</button>--}}
-                    {{--</form>--}}
-                    {{--<div class="col-xs-2">--}}
-                    {{--Add another HAWB--}}
-
-                </div>
-
-
-            </div>
-
-        </div>
 
         {{--</div>--}}
-    </div>
+    {{--</div>--}}
 
+    {{--<script type="text/javascript">--}}
+        {{--$(function(){--}}
+            {{--$('.clickable').on('click',function(){--}}
+                {{--var effect = $(this).data('effect');--}}
+                {{--$(this).closest('.panel')[effect]();--}}
+            {{--})--}}
+        {{--})--}}
+    {{--</script>--}}
 
 @endsection
-
 
 
 

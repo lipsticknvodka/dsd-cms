@@ -14,7 +14,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-                    <div class="panel panel-default">
+                    <div class="panel panel-default" id="content">
 
                             <div class="panel-heading">CFS Delivery Details</div>
 
@@ -59,59 +59,132 @@
 
                                 <hr/>
 
+                                @if(!empty($cfsDelivery->hawbs))
+                                    <h3>HOUSE LEVEL</h3>
+
+                                    @if(count($cfsDelivery->hawbs))
+                                        <div class="table-responsive">
+                                            {{--<h4 class="col-xs-12">Houses</h4>--}}
+                                            <table class="table table-striped">
+                                                <thead>
+                                                <tr>
+                                                    <th>HAWB</th>
+                                                    <th>Pallet Count</th>
+                                                    <th>Piece Count</th>
+                                                    <th>Weight</th>
+                                                    {{--<th></th>--}}
+                                                    {{--<th></th>--}}
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                @foreach($cfsDelivery->hawbs as $hawb)
+                                                    <tr>
+                                                        <td><a data-toggle="collapse" data-target="#{{$hawb->hawb}}">{{$hawb->hawb}}</a></td>
+
+                                                        <td>{{$hawb->pallet_ct}}</td>
+                                                        <td>{{$hawb->piece_ct}}</td>
+                                                        <td>{{$hawb->weight_no}} {{$hawb->weight_type}}</td>
+                                                        {{--<td><small><a href="{{url('cfs/edit-hawb', $hawb->id)}}">Edit</a></small></td>--}}
+                                                        {{--<td>--}}
+                                                            {{--<small>--}}
+                                                                {{--<form method="POST" action="/hawb/{{$hawb->id}}" >--}}
+                                                                    {{--{!! csrf_field() !!}--}}
+
+                                                                    {{--<input type="hidden" name="_method" value="DELETE">--}}
+
+                                                                    {{--<input type="submit" class="deleteLink" value="Delete" >--}}
+                                                                {{--</form>--}}
+                                                            {{--</small>--}}
+                                                        {{--</td>--}}
+                                                    </tr>
+
+                                                    <tr>
+                                                        <div id="{{$hawb->hawb}}" class="panel collapse hawb-more-info">
+                                                            <div class="row panel">
+                                                                <div class="col-sm-6">
+                                                                    <h4>{{$hawb->hawb}}</h4>
+                                                                    <p>{{$hawb->status}}</p>
+                                                                    <p><strong>Pallet Count </strong>{{$hawb->pallet_ct}}</p>
+                                                                    <p><strong>Piece Count </strong>{{$hawb->piece_ct}}</p>
+                                                                    <p><strong>Weight </strong>{{$hawb->weight_no}}<small>{{$hawb->weight_type}}</small></p>
+                                                                </div>
+
+                                                                <div class="col-sm-6">
+                                                                    {{--<span class="pull-right clickable" data-effect="fadeOut" data-dismiss><i class="fa fa-times"></i></span>--}}
+                                                                    <h4>{{$hawb->availability}}</h4>
+                                                                    <p><strong>Company Name </strong>{{$hawb->co_name}}</p>
+                                                                    <p><strong>Driver Name </strong>{{$hawb->driver_name}}</p>
+                                                                    <p><strong>Pick Up </strong>{{$hawb->pick_up_date}} @ {{$hawb->pick_up_time}}</p>
+                                                                </div>
+
+                                                            </div>
+                                                            {{--<hr />--}}
+                                                        </div>
+                                                    </tr>
+
+                                                @endforeach
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    @else
+                                        <p> No HAWBs entered.</p>
+                                    @endif
+
+                                @endif
 
 
-                                <div class="table-responsive">
+                                {{--<div class="table-responsive">--}}
 
-                                    @if(!empty($cfsDelivery->hawbs))
-                                        <h3>HOUSES</h3>
-                                        @foreach($cfsDelivery->hawbs as $hawb)
+                                    {{--@if(!empty($cfsDelivery->hawbs))--}}
+                                        {{--<h3>HOUSES</h3>--}}
+                                        {{--@foreach($cfsDelivery->hawbs as $hawb)--}}
 
-                                            <div class="row" id="{{$hawb->id}}">
-                                                <div class="col-xs-1">
-                                                    <form method="POST" action="/hawb/{{$hawb->id}}" class="col-xs-1">
+                                            {{--<div class="row" id="{{$hawb->id}}">--}}
+                                                {{--<div class="col-xs-1">--}}
+                                                    {{--<form method="POST" action="/hawb/{{$hawb->id}}" class="col-xs-1">--}}
                                                         {{--                                <form method="POST" action="{{route('deleteException')}}">--}}
-                                                        {!! csrf_field() !!}
+                                                        {{--{!! csrf_field() !!}--}}
 
-                                                        <input type="hidden" name="_method" value="DELETE">
+                                                        {{--<input type="hidden" name="_method" value="DELETE">--}}
 
-                                                        <button type="submit" class="fa fa-times" id="deleteFileButton"></button>
-                                                    </form>
-                                                </div>
+                                                        {{--<button type="submit" class="fa fa-times" id="deleteFileButton"></button>--}}
+                                                    {{--</form>--}}
+                                                {{--</div>--}}
 
-                                                <div class="col-xs-11">
-                                                    <h4><strong>HAWB </strong>{{$hawb->hawb}}</h4>
-                                                    @if($hawb->status == "Closed")
-                                                        <h4>Transaction <strong><span class="closed">{{$hawb->status}}</span></strong> </h4>
-                                                        <p>on {{$hawb->closed_date}} @ {{$hawb->closed_time}}</p>
-                                                        <p><strong>Company </strong>{{$hawb->co_name}}</p>
-                                                        <p><strong>Driver </strong>{{$hawb->driver}}</p>
-                                                        <p><strong>Transaction <span class="closed">Closed</span> </strong>{{$hawb->closed_date}} @ {{$hawb->closed_time}}</p>
-                                                    @else
-                                                        <h4>Transaction <strong><span class="Open">{{$hawb->status}}</span></strong></h4>
-                                                    @endif
-                                                    <h4>{{$hawb->availability}}</h4>
+                                                {{--<div class="col-xs-11">--}}
+                                                    {{--<h4><strong>HAWB </strong>{{$hawb->hawb}}</h4>--}}
+                                                    {{--@if($hawb->status == "Closed")--}}
+                                                        {{--<h4>Transaction <strong><span class="closed">{{$hawb->status}}</span></strong> </h4>--}}
+                                                        {{--<p>on {{$hawb->closed_date}} @ {{$hawb->closed_time}}</p>--}}
+                                                        {{--<p><strong>Company </strong>{{$hawb->co_name}}</p>--}}
+                                                        {{--<p><strong>Driver </strong>{{$hawb->driver}}</p>--}}
+                                                        {{--<p><strong>Transaction <span class="closed">Closed</span> </strong>{{$hawb->closed_date}} @ {{$hawb->closed_time}}</p>--}}
+                                                    {{--@else--}}
+                                                        {{--<h4>Transaction <strong><span class="Open">{{$hawb->status}}</span></strong></h4>--}}
+                                                    {{--@endif--}}
+                                                    {{--<h4>{{$hawb->availability}}</h4>--}}
 
-                                                    <div class="row">
-                                                        <div class="col-xs-7">
-                                                            <p><strong>Weight</strong> {{$hawb->weight_no}} {{$hawb->weight_type}}</p>
-                                                            <p><strong>Pallet Count</strong> {{$hawb->pallet_ct}}</p>
-                                                            <p><strong>Piece Count</strong> {{$hawb->piece_ct}}</p>
-                                                        </div>
-                                                        <div class="col-xs-5">
-                                                            <p><strong>Driver</strong> {{$hawb->driver_name}}</p>
-                                                            <p><strong>Company </strong> {{$hawb->company_name}}</p>
-                                                        </div>
+                                                    {{--<div class="row">--}}
+                                                        {{--<div class="col-xs-7">--}}
+                                                            {{--<p><strong>Weight</strong> {{$hawb->weight_no}} {{$hawb->weight_type}}</p>--}}
+                                                            {{--<p><strong>Pallet Count</strong> {{$hawb->pallet_ct}}</p>--}}
+                                                            {{--<p><strong>Piece Count</strong> {{$hawb->piece_ct}}</p>--}}
+                                                        {{--</div>--}}
+                                                        {{--<div class="col-xs-5">--}}
+                                                            {{--<p><strong>Driver</strong> {{$hawb->driver_name}}</p>--}}
+                                                            {{--<p><strong>Company </strong> {{$hawb->company_name}}</p>--}}
+                                                        {{--</div>--}}
                                                         {{--<div class="col-xs-4">--}}
                                                         {{--<p><strong>Closed</strong> {{$hawb->closed_date}} @ {{$hawb->closed_time}}</p>--}}
                                                         {{--</div>--}}
-                                                    </div>
+                                                    {{--</div>--}}
 
-                                                    <hr/>
-                                                </div>
-                                            </div>
+                                                    {{--<hr/>--}}
+                                                {{--</div>--}}
+                                            {{--</div>--}}
 
-                                        @endforeach
+                                        {{--@endforeach--}}
 
 
                                         {{--@else--}}
@@ -119,7 +192,7 @@
                                         {{--'No HAWBS entered.'--}}
 
 
-                                    @endif
+                                    {{--@endif--}}
 
 
                                     {{--</div>--}}
@@ -133,7 +206,7 @@
                                         {{--{{ Form::close() }}--}}
                                     {{--</div>--}}
 
-                                </div>
+                                {{--</div>--}}
 
                             </div>
 

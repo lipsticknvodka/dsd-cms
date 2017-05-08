@@ -53,13 +53,13 @@
                                                     {{--</a>--}}
                                                     {{--</small>--}}
 
-                                                    <form method="POST" action="/user/{{$user->id}}" class="col-xs-1">
+                                                    <form method="POST" action="/user/{{$user->id}}" >
 
                                                         {!! csrf_field() !!}
 
                                                         <input type="hidden" name="_method" value="DELETE">
 
-                                                        <button type="submit" class="fa fa-times"></button>
+                                                        <input type="submit" class="deleteLink" value="Delete" >
                                                     </form>
                                                 </td>
 

@@ -11,6 +11,7 @@ namespace App\Http\Controllers;
 use App\Account;
 use App\Hawb;
 use App\TruckingDelivery;
+use GuzzleHttp\Psr7\Response;
 use Illuminate\Http\Request;
 use Illuminate\Html;
 use App\CfsDelivery;
@@ -109,21 +110,11 @@ class CfsDeliveryController extends Controller
 
     }
 
-    public function editHawb(Request $request, $id)
+    public function editHawb($id)
     {
-//        $hawb = Hawb::findOrFail($id);
+        $hawb = Hawb::findOrFail($id);
 
-//        $cfsDelivery = CfsDelivery::findOrFail($id);
-//
-        $input = $request->all();
-
-//        $hawb = $cfs->hawb;
-
-//        $request->session()->put('hawb', $hawb);
-//
-        return redirect()->action('CfsDeliveryController@getCfsStep', ['step' => 1]);
-//
-//        return view('cfs.edit', compact('cfsDelivery'));
+        return view('cfs.edit-hawb', compact('hawb'));
 
     }
 
@@ -134,9 +125,15 @@ class CfsDeliveryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function updateHawb(Request $request, $id)
     {
-        //
+        $hawb = Hawb::findOrFail($id);
+
+        $input = $request->all();
+
+        $hawb->update($input);
+
+        return redirect('/cfs')->with('success', 'HAWB was successfully edited.');
     }
 
     /**
@@ -295,9 +292,8 @@ class CfsDeliveryController extends Controller
 
         $cfsDelivery->hawbs()->create($request->all());
 
-        return back();
-
-//        }
+//        return back();
+        return view('cfs.step_3', compact('account'), ['cfs' => $request->session()->get('cfs')]);
 
     }
 
@@ -326,6 +322,8 @@ class CfsDeliveryController extends Controller
 
 
     public function trashed(){
+
+        $hawb = Hawb::onlyTrashed()->latest()->paginate(10);
 
         $cfsDeliveries = CfsDelivery::onlyTrashed()->latest()->paginate(10);
 

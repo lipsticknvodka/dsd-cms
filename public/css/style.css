@@ -230,6 +230,8 @@ input.deleteLink {
     padding: 25px 50px ;
 }
 
+
+
 #customer-content.panel.panel-default {
 	margin-top:170px !important;
 }
@@ -245,7 +247,9 @@ input.deleteLink {
 /*nav.sidebar .navbar-nav > li {*/
      /*border-bottom: none !important;*/
 /*}*/
-
+.hawb-more-info {
+	border-bottom: 0px !important;
+}
 
 /*SIDE MENU*/
 
@@ -458,6 +462,10 @@ input.deleteLink {
 	margin-bottom:0px;
 
 }
+
+
+
+
 
 /*SIDE MENU END*/
 
