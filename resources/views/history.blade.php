@@ -10,7 +10,7 @@
                     <div class="panel-body">
                         <div class="row">
                             @foreach($revisions as $history )
-                                 @if(nullValue($history->oldValue()))
+{{--                                 @if(notNullValue($history->oldValue()))--}}
                                     @if($history->key == 'created_at' && !$history->old_value)
                                         <p class="history col-xs-12">
                                             <strong>{{ $history->userResponsible()->name or 'A user' }}</strong>
@@ -29,7 +29,7 @@
                                     </p>
 @endif
 
-                                @endif
+                                {{--@endif--}}
 
                             @endforeach
 
