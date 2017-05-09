@@ -163,7 +163,7 @@
                                     No shipper address entered.
                                 @endif
                                 @if($truckingDelivery->shipper_contact)
-                                    <p><strong>Contact</strong> {{$truckingDelivery->shipper_contact}} | {{$truckingDelivery->shipper_phone}}</p>
+                                    <h4><strong>Contact</strong></h4> <p>{{$truckingDelivery->shipper_contact}} | {{$truckingDelivery->shipper_phone}}</p>
                                 @else
                                     No shipper contact entered.
                                 @endif

@@ -142,7 +142,7 @@
                         <hr />
 
                         <div class="row">
-                            <div class="col-sm-4">
+                            <h4 class="col-sm-4">
                                 <h3>Shipper Details</h3>
                                 <p>{{$truckingDelivery->account ? $truckingDelivery->account->name : "No account selected."}}</p>
                                 {{--                                        <h4>{{$truckingDelivery->shipper_name}}</h4>--}}
@@ -155,7 +155,7 @@
                                     No shipper address entered.
                                 @endif
                                 @if($truckingDelivery->shipper_contact)
-                                    <p><strong>Contact</strong> {{$truckingDelivery->shipper_contact}} | {{$truckingDelivery->shipper_phone}}</p>
+                                    <h4><strong>Contact</strong></h4> <p>{{$truckingDelivery->shipper_contact}} | {{$truckingDelivery->shipper_phone}}</p>
                                 @else
                                     No shipper contact entered.
                                 @endif
