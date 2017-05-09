@@ -25,7 +25,6 @@
                                 @if($truckingDelivery->availability == "Closed")
                                     <h3><strong><span class="closed">{{$truckingDelivery->availability}}</span></strong></h3>
 
-                                    <p><strong>Transaction Closed </strong>{{$truckingDelivery->trans_closed_date ? $truckingDelivery->trans_closed_date : 'No date entered.'}} {{$truckingDelivery->trans_closed_time ? 'at '.$truckingDelivery->trans_closed_time : ''}}</p>
                                 @else
 
                                     <h3><strong><span class="Open">Open</span></strong></h3>
@@ -105,9 +104,11 @@
 
 
                             <div class="col-sm-4">
+                                <p><strong>Transaction Closed </strong>{{$truckingDelivery->trans_closed_date ? $truckingDelivery->trans_closed_date : 'No date entered.'}} {{$truckingDelivery->trans_closed_time ? 'at '.$truckingDelivery->trans_closed_time : ''}}</p>
 
+                                <hr />
                                 {{--<div class="row">--}}
-                                <h4>PODs</h4>
+                                <h4>POD</h4>
 
                                 @if (count($truckingDelivery->pods))
 
