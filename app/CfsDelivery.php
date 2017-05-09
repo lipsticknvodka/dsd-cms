@@ -71,6 +71,8 @@ class CfsDelivery extends Model
         'last_free_day',
         'general_order',
         'availability',
+        'master_company',
+        'master_driver',
         'received_date',
         'received_time',
     ];
@@ -88,7 +90,7 @@ class CfsDelivery extends Model
     public function getStatusAttribute()
     {
 
-        if (!empty($this->pick_up_date && $this->pick_up_time)) return 'Closed';
+        if (!empty($this->master_company && $this->master_driver)) return 'Closed';
 
         return 'Open';
     }

@@ -71,14 +71,21 @@ class Hawb extends Model
         return $this->belongsTo('App\CfsDelivery');
     }
 
+//    public function getStatusAttribute()
+//    {
+//
+//        if(!empty($this->co_name && $this->driver_name && $this->closed_date && $this->closed_time)) return 'Closed';
+//
+//        return 'Open';
+//    }
+
     public function getStatusAttribute()
     {
 
-        if(!empty($this->co_name && $this->driver_name && $this->closed_date && $this->closed_time)) return 'Closed';
+        if (!empty($this->co_name && $this->driver_name)) return 'Closed';
 
         return 'Open';
     }
-
 //    public function delete(){
 //
 ////        Hawb::delete();

@@ -37,6 +37,8 @@ class CreateCfsDeliveriesTable extends Migration
             $table->string('last_free_day');
             $table->string('general_order');
             $table->string('availability');
+            $table->string('master_driver');
+            $table->string('master_company');
 
             $table->timestamps();
 

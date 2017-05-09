@@ -64,7 +64,7 @@
                     {{--<div class="row">--}}
                     <div class="form-group col-xs-12">
                         {!! Form::label('availability','Availability')  !!}
-                        {!! Form::select('availability', ['Ready for pick up' => 'Ready for pick up', 'Not ready for pick up' => 'Not ready for pick up'], null, ['class'=>'form-control']) !!}
+                        {!! Form::select('availability', ['Ready for pick up' => 'Ready for pick up', 'Not ready for pick up' => 'Not ready for pick up', 'Cargo Has been picked up' => 'Cargo Has been picked up'], null, ['class'=>'form-control']) !!}
                     </div>
                     {{--</div>--}}
 

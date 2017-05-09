@@ -51,7 +51,7 @@
                                                 <tbody>
                                         @foreach($cfs->hawbs as $hawb)
                                             <tr>
-                                                <td><a data-toggle="collapse" data-target="#{{$hawb->hawb}}">{{$hawb->hawb}}</a></td>
+                                                <td><a data-toggle="collapse" data-target="#{{$hawb->id}}">{{$hawb->hawb}}</a></td>
 
                                                 <td>{{$hawb->pallet_ct}}</td>
                                                 <td>{{$hawb->piece_ct}}</td>
@@ -71,7 +71,7 @@
                                             </tr>
 
                                             <tr>
-                                                <div id="{{$hawb->hawb}}" class="panel collapse hawb-more-info">
+                                                <div id="{{$hawb->id}}" class="panel collapse hawb-more-info">
                                                   <div class="row panel">
                                                     <div class="col-sm-6">
                                                         <h4>{{$hawb->hawb}}</h4>
@@ -182,7 +182,7 @@
                                     {{--<div class="row">--}}
                                     <div class="form-group col-xs-12">
                                         {!! Form::label('availability','Availability')  !!}
-                                        {!! Form::select('availability', ['Ready for pick up' => 'Ready for pick up', 'Not ready for pick up' => 'Not ready for pick up'], null, ['class'=>'form-control']) !!}
+                                        {!! Form::select('availability', ['Ready for pick up' => 'Ready for pick up', 'Not ready for pick up' => 'Not ready for pick up', 'Cargo Has been picked up' => 'Cargo Has been picked up'], null, ['class'=>'form-control']) !!}
                                     </div>
                                     {{--</div>--}}
 

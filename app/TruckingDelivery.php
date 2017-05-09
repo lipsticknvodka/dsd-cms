@@ -127,29 +127,35 @@ class TruckingDelivery extends Model
 
     }
 
-    public function exception()
+    public function exceptions()
     {
 
-        return $this->hasOne('App\Exception', 'trucking_delivery_id');
+        return $this->hasMany('App\Exception', 'trucking_delivery_id');
     }
+
+//    public function exception()
+//    {
+//
+//        return $this->hasOne('App\Exception', 'trucking_delivery_id');
+//    }
 
     public function addException(Exception $exception)
     {
 
-        return $this->exception()->save($exception);
+        return $this->exceptions()->save($exception);
 
     }
 
-    public function pod()
+    public function pods()
     {
 
-        return $this->hasOne('App\Pod', 'trucking_delivery_id');
+        return $this->hasMany('App\Pod', 'trucking_delivery_id');
     }
 
     public function addPod(Pod $pod)
     {
 
-        return $this->pod()->save($pod);
+        return $this->pods()->save($pod);
 
     }
 
@@ -201,7 +207,7 @@ class TruckingDelivery extends Model
 
 //        $this->attributes['availability'] = strtolower($request);
 
-        if (!empty($this->received_by && $this->trans_closed_date && $this->trans_closed_time && $this->pod)) return 'Closed';
+        if (!empty($this->received_by && $this->trans_closed_date && $this->trans_closed_time) && $this->pods()->count()) return 'Closed';
 //        if (!empty($this->received_by && $this->trans_closed_date  )) return 'Closed';
 
         return 'Open';

@@ -217,7 +217,7 @@ class TruckingDeliveryController extends Controller
 
         $this->validate($request, [
 
-            'file'=> 'required|mimes:jpg,jpeg,png,bmp',
+            'file'=> 'required|mimes:jpg,jpeg,png,bmp,gif',
 
         ]);
 
