@@ -46,12 +46,6 @@
                     </div>
                 @endif
 
-                {{--<?php if(isset($_GET['CaptchaPass'])){ ?>--}}
-                {{--<div class="FormElement" id="captcha-success">Your message has been sent. A representative will be in contact with you shortly.</div>--}}
-                {{--<?php } ?>--}}
-                {{--<?php if(isset($_GET['CaptchaFail'])){ ?>--}}
-                {{--<div class="FormElement" id="captcha-fail">CAPTCHA failed. Please try again.</div>--}}
-                {{--<?php } ?>--}}
 
 
                 <form action="{{ url('contact') }}" method="POST">
