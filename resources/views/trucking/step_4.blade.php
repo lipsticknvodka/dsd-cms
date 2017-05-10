@@ -64,7 +64,7 @@
                                 <div class="col-xs-9">
                                     {!! Form::label('cargo_status','Cargo Status')  !!}
 
-                                    {!! Form::select('cargo_status', [''=>'Choose option','Picked Up' => 'Picked Up', 'At DSD location' => 'At DSD location', 'Out for delivery'=>'Out for delivery'], null, ['class'=>'form-control']) !!}
+                                    {!! Form::select('cargo_status', [''=>'Choose option','Picked Up' => 'Picked Up', 'At DSD location' => 'At DSD location', 'Out for delivery'=>'Out for delivery','Delivered'=>'Delivered'], null, ['class'=>'form-control']) !!}
                                 </div>
 
                                 <div class="form-group col-xs-3 hidden_input at_dsd">
