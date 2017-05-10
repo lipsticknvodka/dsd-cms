@@ -10,8 +10,8 @@ if(isset($_POST['submitButton'])){
 		if(isset($data->success) AND $data->success==true){
 			
 			$recipient = array( 
-			 'general'=>'evelyn@dsdcompanies.com, jovita@dsdcompanies.com', //general
-			  //'general'=>'michelleprather@gmail.com',
+//			 'general'=>'evelyn@dsdcompanies.com, jovita@dsdcompanies.com', //general
+			  'general'=>'michelleprather@gmail.com',
 			  'air-freight'=>'carlos@dsdcompanies.com', //Air Freight
 			  'ocean-freight'=>'jose@dsdcompanies.com', //Ocean Freight/Intermodal
 			  'trucking-pick-up'=>'roberto@dsdcompanies.com', //Trucking-Pick up ??

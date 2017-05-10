@@ -47,8 +47,11 @@
                 @endif
 
 
+                <form action="{{ action('send-contact-form') }}" method="POST">
 
-                <form action="{{ url('contact') }}" method="POST">
+
+
+                {{--<form action="{{ url('contact') }}" method="POST">--}}
 
                     {{ csrf_field() }}
                 {{--<form name="contact-form" data-toggle="validator" method="post" action="send-contact-form.php">--}}
