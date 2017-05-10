@@ -46,12 +46,12 @@
                     </div>
                 @endif
 
-                <?php if(isset($_GET['CaptchaPass'])){ ?>
-                <div class="FormElement" id="captcha-success">Your message has been sent. A representative will be in contact with you shortly.</div>
-                <?php } ?>
-                <?php if(isset($_GET['CaptchaFail'])){ ?>
-                <div class="FormElement" id="captcha-fail">CAPTCHA failed. Please try again.</div>
-                <?php } ?>
+                {{--<?php if(isset($_GET['CaptchaPass'])){ ?>--}}
+                {{--<div class="FormElement" id="captcha-success">Your message has been sent. A representative will be in contact with you shortly.</div>--}}
+                {{--<?php } ?>--}}
+                {{--<?php if(isset($_GET['CaptchaFail'])){ ?>--}}
+                {{--<div class="FormElement" id="captcha-fail">CAPTCHA failed. Please try again.</div>--}}
+                {{--<?php } ?>--}}
 
 
                 <form action="{{ url('contact') }}" method="POST">
@@ -111,9 +111,9 @@
                 </form>
             </div></div>
 
-        <script type="text/javascript">
-            (function() {if (!window['___grecaptcha_cfg']) { window['___grecaptcha_cfg'] = {}; };if (!window['___grecaptcha_cfg']['render']) { window['___grecaptcha_cfg']['render'] = 'onload'; };window['__google_recaptcha_client'] = true;var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;po.src = 'https://www.gstatic.com/recaptcha/api2/r20160229165133/recaptcha__en.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);})();
-        </script>
+        {{--<script type="text/javascript">--}}
+            {{--(function() {if (!window['___grecaptcha_cfg']) { window['___grecaptcha_cfg'] = {}; };if (!window['___grecaptcha_cfg']['render']) { window['___grecaptcha_cfg']['render'] = 'onload'; };window['__google_recaptcha_client'] = true;var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;po.src = 'https://www.gstatic.com/recaptcha/api2/r20160229165133/recaptcha__en.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);})();--}}
+        {{--</script>--}}
 
     <!-- <p class="col-xs-12"><strong>General Manager – Carlos Guerra</strong> <i class="fa fa-phone 2x"></i><a href="tel:13107251999"> 310-725–1999</a> | <i class="fa fa-envelope 2x"></i> <a href="mailto: carlos@dsdcompanies.com"> carlos@dsdcompanies.com</a>.</p>
     -->
