@@ -104,56 +104,57 @@ class HomeController extends Controller
 //        $token = $request->input('g-recaptcha-response');
 //        dd($token);
 
-        $this->validate($request,[
-//            'name' => 'required',
-//            'email' => 'required|email',
-//            'phone' => 'required',
-//            'company' => 'required',
-//            'subject' => 'required',
-//            'messageBody' => 'required',
-        ]);
+//        $this->validate($request,[
+////            'name' => 'required',
+////            'email' => 'required|email',
+////            'phone' => 'required',
+////            'company' => 'required',
+////            'subject' => 'required',
+////            'messageBody' => 'required',
+//        ]);
+//
+//        $data = array(
+//
+//            'name' => $request->inputName,
+//            'email' =>  $request->inputEmail,
+//            'phone' =>  $request->inputPhone,
+//            'company' =>  $request->inputCompanyName,
+//            'subject' =>  $request->recipient,
+//            'messageBody' =>  $request->inputMessage,
+//        );
+//
+//        $recipient = array(
+////            'general'=> ['evelyn@dsdcompanies.com', 'jovita@dsdcompanies.com'], //general
+//            'general'=>'michelleprather@gmail.com',
+//            'air-freight'=>'carlos@dsdcompanies.com', //Air Freight
+//            'ocean-freight'=>'jose@dsdcompanies.com', //Ocean Freight/Intermodal
+//            'trucking-pick-up'=>'roberto@dsdcompanies.com', //Trucking-Pick up ??
+//            'trucking-deliveries'=>'simon@dsdcompanies.com', //Trucking-Deliveries ??
+//            // 'hot-shot'=>'',
+//            'warehousing'=>'fausto@dsdcompanies.com', //Warehousing - Carlos ???
+//            'cargo-screening'=>'edbuccio@dsdcompanies.com', //Cargo Screening
+//
+//        );
+//
+//        $exploded_recipients = explode(",",$_REQUEST['recipient']);
+//
+//        foreach($exploded_recipients as $value)
+//        {
+//            $my_email = $recipient[$value];
+//
+//            Mail::send('emails.contact', $data, function ($message) use ($data, $my_email) {
+//                $message->from($data['email']);
+//                $message->to($my_email);
+//                $message->subject('You have a new contact form inquiry.');
+//            });
+//        }
+////        Session::flash('success','Your contact request has been sent.');
+//
+////        return view('request-quote')->withMessage('successful email');
+//
+//        return redirect('contact')->with('success', 'Your contact form inquiry has been sent.');
 
-        $data = array(
-
-            'name' => $request->inputName,
-            'email' =>  $request->inputEmail,
-            'phone' =>  $request->inputPhone,
-            'company' =>  $request->inputCompanyName,
-            'subject' =>  $request->recipient,
-            'messageBody' =>  $request->inputMessage,
-        );
-
-        $recipient = array(
-//            'general'=> ['evelyn@dsdcompanies.com', 'jovita@dsdcompanies.com'], //general
-            'general'=>'michelleprather@gmail.com',
-            'air-freight'=>'carlos@dsdcompanies.com', //Air Freight
-            'ocean-freight'=>'jose@dsdcompanies.com', //Ocean Freight/Intermodal
-            'trucking-pick-up'=>'roberto@dsdcompanies.com', //Trucking-Pick up ??
-            'trucking-deliveries'=>'simon@dsdcompanies.com', //Trucking-Deliveries ??
-            // 'hot-shot'=>'',
-            'warehousing'=>'fausto@dsdcompanies.com', //Warehousing - Carlos ???
-            'cargo-screening'=>'edbuccio@dsdcompanies.com', //Cargo Screening
-
-        );
-
-        $exploded_recipients = explode(",",$_REQUEST['recipient']);
-
-        foreach($exploded_recipients as $value)
-        {
-            $my_email = $recipient[$value];
-
-            Mail::send('emails.contact', $data, function ($message) use ($data, $my_email) {
-                $message->from($data['email']);
-                $message->to($my_email);
-                $message->subject('You have a new contact form inquiry.');
-            });
-        }
-//        Session::flash('success','Your contact request has been sent.');
-
-//        return view('request-quote')->withMessage('successful email');
-
-        return redirect('contact')->with('success', 'Your contact form inquiry has been sent.');
-
+        return redirect()->action('send-contact-form.php');
     }
 
 
