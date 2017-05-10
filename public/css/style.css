@@ -90,6 +90,16 @@ i.fa.fa-ship.pull-right.showopacity {
 	margin-right:-4px !important;
 }
 
+li {
+	list-style: none !important;
+
+}
+
+ul {
+	padding-left:0px;
+
+}
+
 .navbar-nav {
     /*margin-bottom: 0px;*/
 	margin:auto !important;
