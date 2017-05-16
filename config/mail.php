@@ -55,7 +55,10 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
+//    'from' => ['address' => null, 'name' => null],
+
+    'from' => ['address' => 'info@dsdcompanies.com', 'name' => 'DSD Companies'],
+
 
     /*
     |--------------------------------------------------------------------------
@@ -108,5 +111,8 @@ return [
     */
 
     'sendmail' => '/usr/sbin/sendmail -bs',
+
+
+    'pretend' => false,
 
 ];
